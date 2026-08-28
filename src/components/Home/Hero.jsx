@@ -26,7 +26,7 @@ const Hero = () => {
                 </h2>
 
                 {/* Lotus Divider */}
-                <div className="w-full max-w-[550px] my-5 flex items-center justify-center gap-4">
+                <div className="w-full max-w-[550px] my-3 flex items-center justify-center gap-4">
                     <div className="h-px flex-1 bg-blue-500/80" />
                     <PiFlowerLotusFill className="text-[2.5rem] text-blue-500 shrink-0" />
                     <div className="h-px flex-1 bg-blue-500/80" />
@@ -37,7 +37,7 @@ const Hero = () => {
                 </p>
 
                 {/* Booking CTA */}
-                <Link to="/booking" className="mt-7 bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-medium tracking-wide py-3 px-7 rounded-lg flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-blue-950/30">
+                <Link to="/booking" className="mt-3 bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-medium tracking-wide py-3 px-7 rounded-lg flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-blue-950/30">
                     Book a Consultation
                     <BsArrowRight size={20} />
                 </Link>
