@@ -7,6 +7,7 @@ import Treatments from './pages/Treatments';
 import TreatmentDetails from './pages/TreatmentDetails';
 import NoPageFound from './pages/NoPageFound';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 const router = createBrowserRouter([
     {
