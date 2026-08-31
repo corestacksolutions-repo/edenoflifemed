@@ -19,7 +19,9 @@ const router = createBrowserRouter([
         ],
     },
 
-    {path: '*', Component: NoPageFound}
+    {path: '*', Component: NoPageFound},
+            
+    {path: '/contact', Component: Contact}
 ])
 
 export default router;
