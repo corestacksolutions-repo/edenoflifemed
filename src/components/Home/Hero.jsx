@@ -26,7 +26,7 @@ const Hero = () => {
                 </h2>
 
                 {/* Lotus Divider */}
-                <div className="w-full max-w-[550px] my-3 flex items-center justify-center gap-4">
+                <div className="w-full max-w-[550px] mt-3 mb-1 flex items-center justify-center gap-4">
                     <div className="h-px flex-1 bg-blue-500/80" />
                     <PiFlowerLotusFill className="text-[2.5rem] text-blue-500 shrink-0" />
                     <div className="h-px flex-1 bg-blue-500/80" />
