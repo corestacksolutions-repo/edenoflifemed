@@ -6,6 +6,7 @@ import Booking from './pages/Booking';
 import Treatments from './pages/Treatments';
 import TreatmentDetails from './pages/TreatmentDetails';
 import NoPageFound from './pages/NoPageFound';
+import About from './pages/About';
 
 const router = createBrowserRouter([
     {
@@ -15,8 +16,9 @@ const router = createBrowserRouter([
             {index: true, Component: Home},
             {path: '/booking', Component: Booking},
             {path: '/treatments', Component: Treatments},
-            {path: '/treatments/:treatmentId', Component: TreatmentDetails}
-        ],
+            {path: '/treatments/:treatmentId', Component: TreatmentDetails},
+            {path: '/about', Component: About}
+        ]
     },
 
     {path: '*', Component: NoPageFound},
