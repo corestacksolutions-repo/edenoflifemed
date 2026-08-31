@@ -15,7 +15,7 @@ const Hero = () => {
             <div className="absolute inset-0 w-full h-full bg-black/55 z-10" />
 
             {/* Hero Content */}
-            <div className="w-[90%] md:w-[75%] lg:w-[70%] flex flex-col items-center justify-center z-20 text-white text-center px-4 pb-[100px]">
+            <div className="w-[90%] md:w-[75%] lg:w-[70%] flex flex-col items-center justify-center z-20 text-white text-center px-4 py-[100px]">
 
                 <h1 className="text-5xl sm:text-6xl md:text-7xl  leading-[105%] font-serif font-bold uppercase tracking-wide">
                     Eden of Life
