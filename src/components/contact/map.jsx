@@ -8,7 +8,7 @@ const Map = () => {
              <div className="w-full h-full space-y-4 text-sm md:w-[80%] rounded-xl">
                 <small className="uppercase text-blue-700">visit us</small>
                 <p className="text-2xl font-bold">
-                     We'd Love To Welcome You
+                     We Always Welcome You
                 </p>
                 <p className="">
                     Our center is a peaceful space 

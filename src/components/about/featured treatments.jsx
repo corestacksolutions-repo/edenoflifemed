@@ -95,56 +95,56 @@ const FeaturedTreatment = ()=>{
                     </div>
               </div>
               {/*why choose us */}
-              <div className="h-fit bg-black lue-800 border-blue-300 rounded-2xl text-white p-6">
-                 <small className="">reasons for choosing us</small>
+              <div className="h-fit bg-emerald-50 border border-emerald-950/30 rounded-3xl text-emerald-800  p-6">
+                 <small className="">Reasons for Eden of Life</small>
                  <h1 className="text-2xl font-bold">Why Clients Choose Us</h1>
                  
                  <div className="my-10  space-y-3">
                     <p className="flex gap-3 items-center">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4 "/> 
                       </span>
                       Get personalised natural healthcare
                     </p>
                     <p className="flex gap-3 items-center ">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4 "/> 
                       </span>
                       Treat your whole wellbeing
                     </p>
                     <p className="flex gap-3 items-center ">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4 "/> 
                       </span>
                       Address underlying health causes
                     </p>
                     <p className="flex gap-3 items-center ">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4 "/> 
                       </span>
                       Access diverse natural therapies
                     </p>
                     <p className="flex gap-3 items-center">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4 "/> 
                       </span>
                       Make informed health decisions
                     </p>
                     <p className="flex gap-3 items-center">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4 "/> 
                       </span>
                       Experience compassionate professional care
                     </p>
                     <p className="flex gap-3 items-center">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4"/> 
                       </span>
                       Use natural therapies responsibly
                     </p>
                     <p className="flex gap-3 items-center">
-                      <span className="p-1 rounded-full bg-white">
-                        <FiCheck className="size-4 text-blue-800"/> 
+                      <span className="p-1 rounded-full bg-green-600 text-white">
+                        <FiCheck className="size-4 "/> 
                       </span>
                       Build long-term wellness
                     </p>

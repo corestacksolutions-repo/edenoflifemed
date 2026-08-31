@@ -1,10 +1,13 @@
-import { BiSolidMapPin } from "react-icons/bi";
-import { BsFillEnvelopeOpenHeartFill } from "react-icons/bs";
+
 import { FaClock, FaPhone, FaWhatsapp } from "react-icons/fa";
-import { FaMapPin } from "react-icons/fa6";
-import { FiMapPin } from "react-icons/fi";
+import { PiMapPinFill, } from "react-icons/pi";
+import { TbMailFilled } from "react-icons/tb";
+
+import backgroundLeaf from "../../assets/contact page/flower.png"
 
 import Form from "./form";
+
+
 const ContactDetails = () => {
     return (
         <div className="w-full text-black">
@@ -25,7 +28,7 @@ const ContactDetails = () => {
                         {/*phone */}
                         <div className="flex items-center gap-4 border p-2 rounded-xl">
                              <div className="flex items-center p-4 bg-gray-100 rounded-full">
-                                <FaPhone className="tex text-[1.2rem]"/>
+                                <FaPhone className="tex text-[1.2rem] text-gray-400"/>
                              </div>
                              <div className="flex flex-col gap-1 text-[0.7rem]">
                                 <h3 className="font-bold text-[0.8rem]">Phone</h3>
@@ -37,7 +40,7 @@ const ContactDetails = () => {
                         {/*email */}
                         <div className="flex items-center gap-4 border p-2 rounded-xl">
                              <div className="flex items-center p-4 bg-gray-100 rounded-full">
-                                <BsFillEnvelopeOpenHeartFill className="text-[1.2rem]"/>
+                                <TbMailFilled className="text-[1.2rem] text-gray-400"/>
                              </div>
                              <div className="flex flex-col gap-1 text-[0.7rem]">
                                 <h3 className="font-bold text-[0.8rem]">Email</h3>
@@ -53,7 +56,7 @@ const ContactDetails = () => {
                         {/*address */}
                         <div className="flex items-center gap-4 border p-2 rounded-xl">
                              <div className="flex items-center p-4 bg-gray-100 rounded-full">
-                                <FiMapPin className="text-[1.2rem]"/>
+                                <PiMapPinFill className="text-[1.2rem] text-gray-400"/>
                              </div>
                              <div className="flex flex-col gap-1 text-[0.7rem]">
                                 <h3 className="font-bold text-[0.8rem]">Address</h3>
@@ -65,7 +68,7 @@ const ContactDetails = () => {
                         {/*hours */}
                         <div className="flex items-center gap-4 border p-2 rounded-xl">
                              <div className="flex items-center p-4 bg-gray-100 rounded-full">
-                                <FaClock className="text-[1.2rem]"/>
+                                <FaClock className="text-[1.2rem] text-gray-400"/>
                              </div>
                              <div className="flex flex-col gap-1 text-[0.7rem]">
                                 <h3 className="font-bold text-[0.8rem]">Hours</h3>
@@ -77,11 +80,16 @@ const ContactDetails = () => {
                     </div>
 
                     {/*whatsapp */}
-                    <article className="flex items-center gap-4 border p-6 rounded-xl bg-green-900 text-white">
-                        <div className=" w-20 h-full flex items-center p-4  rounded-lg border">
-                           
+                    <article className="relative flex items-center gap-4 border p-6 rounded-xl bg-green-900 text-white overflow-hidden">
+                        {/*overlay */}
+                        <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-950 to-transparent"></div>
+                        <img src={backgroundLeaf} 
+                                 alt="natural leaf" 
+                                 className="absolute inset-0 object-cover h-full w-full mix-blend-overlay opacity-50" />
+                        <div className=" h-full flex items-center rounded-lg">
+                            
                         </div>
-                        <div className="flex flex-col gap-3 text-[0.9rem]">
+                        <div className="relative flex flex-col gap-3 text-[0.9rem]">
                             <h3 className="font-bold text-[1rem]">Prefer a Quick Chat?</h3>
                             <p className="">
                                 Connect with us on WhatsApp for 
