@@ -18,13 +18,14 @@ const router = createBrowserRouter([
             {path: '/booking', Component: Booking},
             {path: '/treatments', Component: Treatments},
             {path: '/treatments/:treatmentId', Component: TreatmentDetails},
-            {path: '/about', Component: About}
+            {path: '/about', Component: About},
+            {path: '/contact', Component: Contact}
         ]
     },
 
     {path: '*', Component: NoPageFound},
             
-    {path: '/contact', Component: Contact}
+    
 ])
 
 export default router;
