@@ -8,7 +8,7 @@ const TreatmentGrids = () => {
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {/* Individual Card */}
       {
-        treatments.map(({ id, title, slug, description, icon: Icon }) => (
+        treatments.map(({ id, title, slug, excerpt, icon: Icon }) => (
           <article key={id} className="bg-white border border-black/10 flex flex-col gap-2 rounded-3xl p-5 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             {/* Watermark */}
             <GiTreeBranch size={65} className="-rotate-180 absolute top-4 right-2 text-gray-300/15" />
@@ -25,7 +25,7 @@ const TreatmentGrids = () => {
 
             {/* Description */}
             <p className="text-sm tracking-wide text-black/60 leading-relaxed">
-              {description}
+              {excerpt}
             </p>
 
             {/* CTA */}

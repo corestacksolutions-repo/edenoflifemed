@@ -15,7 +15,7 @@ const Hero = () => {
             <div className="absolute inset-0 w-full h-full bg-black/55 z-10" />
 
             {/* Hero Content */}
-            <div className="w-[90%] md:w-[75%] lg:w-[70%] flex flex-col items-center justify-center z-20 text-white text-center px-4 pb-[100px]">
+            <div className="w-[90%] md:w-[75%] lg:w-[70%] flex flex-col items-center justify-center z-20 text-white text-center px-4 pb-[130px] pt-[30px]">
 
                 <h1 className="text-5xl sm:text-6xl md:text-7xl  leading-[105%] font-serif font-bold uppercase tracking-wide">
                     Eden of Life
@@ -26,7 +26,7 @@ const Hero = () => {
                 </h2>
 
                 {/* Lotus Divider */}
-                <div className="w-full max-w-[550px] my-3 flex items-center justify-center gap-4">
+                <div className="w-full max-w-[550px] mt-3 mb-1 flex items-center justify-center gap-4">
                     <div className="h-px flex-1 bg-blue-500/80" />
                     <PiFlowerLotusFill className="text-[2.5rem] text-blue-500 shrink-0" />
                     <div className="h-px flex-1 bg-blue-500/80" />
