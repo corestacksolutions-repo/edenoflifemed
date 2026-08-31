@@ -6,7 +6,7 @@ import Offers from "./Offers";
 
 const Hero = () => {
     return (
-        <div className="w-full min-h-screen overflow-hidden relative flex flex-col items-center justify-center bg-black">
+        <div className="w-full h-[90vh] screen overflow-hidden relative flex flex-col items-center justify-center bg-black">
 
             {/* Video Background */}
             <video src={bgvideo} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0" />
@@ -44,7 +44,9 @@ const Hero = () => {
             </div>
 
             {/* Offers */}
-            <Offers />
+            <div className="w-full hidden md:block">
+                <Offers/>
+            </div>
 
             {/* Video Indicator */}
             {/* <div className="absolute bottom-5 right-6 md:right-10 z-30 flex items-center gap-2 text-white/80 text-sm">

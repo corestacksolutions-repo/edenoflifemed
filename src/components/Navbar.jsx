@@ -62,7 +62,7 @@ const Navbar = () => {
                     <LuGrid3X3 className="size-5 text-black/70"/>
                 </button>
                 
-               <div className={` w-screen fixed top-0 left-0 text-white h-[40vh] bg-white/70 backdrop-blur-md border
+               <div className={` w-screen fixed top-0 left-0 text-white h-[50vh] bg-black/80 backdrop-blur-[10px] border
                      ${openMenu ? '-translate-y-full opacity-0':'translate-y-0 opacity-100'} transition-all duration-500 rounded-xl
                    `}>
                     {/*close menu */}
