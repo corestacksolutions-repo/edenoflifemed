@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import NavLayout from './layouts/NavLayout'
 import Booking from './pages/Booking';
 import Treatments from './pages/Treatments';
+import TreatmentDetails from './pages/TreatmentDetails';
+import NoPageFound from './pages/NoPageFound';
 
 const router = createBrowserRouter([
     {
@@ -12,9 +14,12 @@ const router = createBrowserRouter([
         children: [
             {index: true, Component: Home},
             {path: '/booking', Component: Booking},
-            {path: '/treatments', Component: Treatments}
-        ]
-    }
+            {path: '/treatments', Component: Treatments},
+            {path: '/treatments/:treatmentId', Component: TreatmentDetails}
+        ],
+    },
+
+    {path: '*', Component: NoPageFound}
 ])
 
 export default router;
