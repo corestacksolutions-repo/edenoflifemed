@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.jpeg";
+import logo from "../assets/logo/logo2.png";
 import { LucideMenuSquare, X } from "lucide-react";
 import { LuGrid3X3, LuLayoutGrid } from "react-icons/lu";
 import { BsChat } from "react-icons/bs";
@@ -19,8 +19,12 @@ const Navbar = () => {
          setOpenMenu(!openMenu);
     }
     return (
-        <header className="fixed top-0 left-0 w-full min-h-[80px] z-30 text-white bg-white/10 backdrop-blur-[4px]">
-            <nav className="hidden w-[92%] lg:w-[70%] max-w-[1200px] mx-auto h-full px-2 md:px-4 py-4 lg:flex items-center justify-between">
+        <header className=" w-full  z-30 backdrop-blur-[4px] py-3">
+            <nav className="hidden w-[92%] lg:w-[85%] max-w-[1200px] mx-auto h-full  py-3 lg:flex items-center justify-between">
+                 <NavLink to="/" className=" top-3 group bg-red-700 rounded px-2 ">
+                     <p className="text-bold">logo</p>
+                    <img src={logo} alt="Eden of Life logo" className="hidden w-[62px] h-[62px] md:w-[72px] md:h-[72px] rounded-full object-cover border border-white/30 shadow-lg transition-all duration-300 group-hover:scale-105" />
+                </NavLink>
 
                 <div className="flex items-center gap-6 md:gap-10">
                     <NavLink to="/about" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300">
@@ -28,15 +32,12 @@ const Navbar = () => {
                     </NavLink>
 
                     <NavLink to="/treatments" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300">
+                        Services
+                    </NavLink>
+
+                    <NavLink to="/treatments" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300">
                         Treatments
                     </NavLink>
-                </div>
-
-                <NavLink to="/" className="absolute left-1/2 -translate-x-1/2 top-3 group">
-                    <img src={logo} alt="Eden of Life logo" className="w-[62px] h-[62px] md:w-[72px] md:h-[72px] rounded-full object-cover border border-white/30 shadow-lg transition-all duration-300 group-hover:scale-105" />
-                </NavLink>
-
-                <div className="flex items-center gap-6 md:gap-10">
                     <NavLink to="/contact" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300">
                         Contact
                     </NavLink>

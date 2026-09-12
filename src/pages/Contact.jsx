@@ -3,11 +3,13 @@ import Hero from '../components/contact/hero'
 import ContactDetails from '../components/contact/contactDetails'
 import Map from '../components/contact/map'
 import Footer from '../components/contact/footer'
+
+import HeroDemo from '../components/contact/hero-demo'
 const Contact = () =>{
        
        return(
             <div>
-               <Hero/>
+               <HeroDemo/>
                <ContactDetails/>
                <Map/>
                <Footer/>

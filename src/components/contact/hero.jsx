@@ -24,12 +24,12 @@ const Hero = () => {
                     <div className="absolute h-[1px] w-[32px] -bottom-1 left-0 border border-blue-700"></div>
                 </div>
                 {/* Heading */}
-                <h2 className="font-serif text-[42px] md:text-[48px] leading-[105%] my-4 max-w-[460px] text-white">
+                <h2 className="font-display font-bold text-[42px] md:text-[48px] leading-[105%] my-4 lg:w-1/2 text-white">
                 Navigate Your Health Journey With <span className="text-blue-700">
                 Confidence.</span>
                 </h2>
 
-                <p className="text-lg italic p-3 border border-dotted rounded-2xl w-fit bg-white/10 backdrop-blur-sm">
+                <p className="text-lg  p-3 bordr border-doted rounded-2xl w-fit bg-whte/10 backdrop-b">
                     Have a question or ready to begin? 
                     <br/>
                     Reach out to us. We'd love to hear from you.
