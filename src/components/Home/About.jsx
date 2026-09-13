@@ -47,8 +47,8 @@ export default function About(){
                     </div>
 
                      {/*mission & vission */}
-                    <div className="w-full md:col-span-2 space-y-6 my-10">
-                        <h2 className="text-[2.25rem] text-blue-800 text-cener">Mission</h2>
+                    <div className="w-full md:col-span-2 space-y-6 my-10 text-center md:text-left">
+                        <h2 className="text-[2.25rem] text-blue-800 ">Mission</h2>
                         <p className="text-[1.12rem] leading-relaxed text-sky-950 leading-7 md:w-[70%]">
                             To empower individuals to achieve lasting vitality through an integrative
                             approach that combines traditional natural medicine with modern scientific
@@ -57,13 +57,13 @@ export default function About(){
                         </p>
 
                     </div>
-                    <div className="flex w-full  md:col-span-2 gap-x-8 gap-y-6 items-center">
+                    <div className="flex flex-col md:flex-row w-full  md:col-span-2 gap-x-8 gap-y-6 items-center">
                         <figure className="border md:w-[40%] rounded-2xl overflow-hidden">
                             <img src={medicine} alt="our medicine" className="w-full h-full object-cover" />
                         </figure>
-                        <div className="space-y-6 max-w-[60%]">
-                            <h2 className="text-[2.25rem] text-blue-800 text-cente">vision</h2>
-                            <p className=" text-[1.12rem] leading-relaxed text-ed text-sky-950 leading-7 ">
+                        <div className="space-y-6 w-full md:max-w-[60%] text-center md:text-left">
+                            <h2 className="text-[2.25rem] text-blue-800 ">vision</h2>
+                            <p className=" text-[1.12rem] leading-relaxed  text-sky-950 leading-7 ">
                                 To help shape the future of healthcare by establishing integrative, root-cause
                                 natural medicine as a trusted standard for community wellness, disease
                                 prevention, and healthy longevity.
