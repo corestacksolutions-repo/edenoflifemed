@@ -30,8 +30,7 @@ const testimonials = [
        The advice felt relevant to me rather than like a one-size-fits-all solution.`,
     name: "Mary B.",
     role: "Client",
-  },
-  /* 
+  }, 
   {
     id: 5,
     quote:
@@ -39,7 +38,8 @@ const testimonials = [
        explanations and practical steps that made me feel more involved in my own health.`,
     name: "Linda P.",
     role: "Client",
-  },*/
+  },
+  
 ];
 
 export default testimonials;

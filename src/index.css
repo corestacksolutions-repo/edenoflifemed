@@ -21,7 +21,7 @@ body{
     /*brand colors */
     --color-heading: #C10007;
     --color-paragraph: #052F4A;
-    --color-cta:#C10007;
+    --color-cta: rgb(193, 0, 7);
 
     /*font sizes*/
     --text-display: 4rem;
@@ -31,6 +31,20 @@ body{
     --text-body: 1rem;
     --text-small: 0.85rem;
     
+
+    /*animations*/
+    
+      --animate-marquee: slider 20s linear infinite;
+      @keyframes slider {
+            from {
+            transform: translateX(0);
+            }
+
+            to {
+            transform: translateX(-50%);
+            }
+      }
+      
 }
 
  /*font sizes*/

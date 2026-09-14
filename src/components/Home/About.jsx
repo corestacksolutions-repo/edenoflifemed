@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import medicalPractioner from "../../assets/images/about-images/edenam-practioner.png"
 import medicine from "../../assets/images/about-images/medicine.jpg"
+
+import aboutmetrics from "../../data/about-metrics"
 export default function About(){
       return(
            <section className="w-full my-40">
@@ -12,7 +14,7 @@ export default function About(){
 
                     {/*about content */}
                     <div className=" space-y-3">
-                        <h1 className="text-3xl  text-blue-900 mb-4">Our Clinic</h1>
+                        <h1 className="text-3xl  text-blue-800 mb-4">Our Clinic</h1>
                         <p className="text-[1.12rem] text-sky-950/70">
                             At Eden of Life, we believe good healthcare starts with understanding the person, 
                             not just the health concern. We take time to understand your health desires, lifestyle 
@@ -25,24 +27,18 @@ export default function About(){
                         </p>   
                          
                          {/*micro metrics */}
-                         <div className="grid md:grid-cols-2 w-full hidden">
-                            <span className="w-full p-3 border space-y-4">
-                                <h3 className="font-semibold text-blue-900">Personalised</h3>
-                                <p className="text-sky-950/70">Care for every individual</p>
-                            </span>
-                            <span className="w-full p-3 border space-y-4">
-                                <h3 className="font-semibold text-blue-900">Qualified</h3>
-                                <p className="text-sky-950/70">Professional practitioners</p>
-                            </span>
-                            <span className="w-full p-3 border space-y-4">
-                                <h3 className="font-semibold text-blue-900">Natural</h3>
-                                <p className="text-sky-950/70">Evidence-informed therapies</p>
-                            </span>
-                            <span className="w-full p-3 border space-y-4">
-                                <h3 className="font-semibold text-blue-900">Patient-first</h3>
-                                <p className="text-sky-950/70">Care built around you</p>
-                            </span>
+                         <div className="grid md:grid-cols-2 gap-4 w-full">                            
+                            {aboutmetrics.map((metric) => (
+                                <span key={metric.id} className="flex items-center gap-4  w-full h-fit px-2 py-1 border border-blue-200 bg-blue-50/20 rounded-full">
+                                    <div className="size-10 bg-blue-800  rounded-full">
 
+                                    </div>
+                                    <div className="">
+                                        <h3 className="font-semibold text-blue-900">{metric.title}</h3>
+                                        <p className="text-sky-950/70">{metric.description}</p>
+                                    </div>
+                                </span>
+                            ))}                          
                          </div>
                     </div>
 
