@@ -52,7 +52,7 @@ const Hero = () => {
             </div>
 
             {/* Whats App */}
-            <div  className="
+            <div  className=" hidden
                     group
                     fixed 
                     bottom-10 

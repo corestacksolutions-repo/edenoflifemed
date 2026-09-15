@@ -11,7 +11,7 @@ import { Car } from "lucide-react"
 
 export default function Testmonials(){
     return(
-        <section className="w-full ">
+        <section className="w-full mx-auto  rounded-3xl  py-20 space-y-10 relative overflow-hidden">
             <header className="w-[92%] md:w-[50%] mx-auto text-center space-y-6">
                 <h2 className="text-3xl text-blue-800">From our clients</h2>
                 <p className="text-sky-900 text-[1.12rem] leading-relaxed">
@@ -26,7 +26,7 @@ export default function Testmonials(){
             <div className="w-[92%] lg:w-[85%] mx-auto relative">
                <Carousel slides={testimonials} />
             </div>
-            
+
         </section>
     )
 }
