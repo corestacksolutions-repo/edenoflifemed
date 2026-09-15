@@ -1,19 +1,32 @@
 import { Link } from "react-router-dom"
 import medicalPractioner from "../../assets/images/about-images/edenam-practioner.png"
 import medicine from "../../assets/images/about-images/medicine.jpg"
-
 import aboutmetrics from "../../data/about-metrics"
+import { easeOut, motion } from "framer-motion"
+
+
 export default function About(){
       return(
            <section className="relative z-10 bg-white w-full py-20 mt-[50vh] lg:mt-[100vh] z-20">
                 <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 gap-6">
-                    <figure className="w-full overflow-hidden rounded-xl">
+
+                    <motion.figure className="w-full overflow-hidden rounded-xl"
+                      initial={{opacity:0, x:-80}}
+                      whileInView={{opacity:1, x:0}}
+                      viewport={{once:true, amount:0.8}}
+                      transition={{duration:2, ease: "easeOut"}}
+                    >
                         <img src={medicalPractioner} alt="Medical Practitioner" className="w-full h-full object-cover" />
-                    </figure>
+                    </motion.figure>
                                      
 
                     {/*about content */}
-                    <div className="space-y-8 ">
+                    <motion.div className="space-y-8 "
+                        initial={{opacity:0, x:80}}
+                        whileInView={{opacity:1, x:0}}
+                        viewport={{once:true, amount:0.8}}
+                        transition={{duration:2, ease: "easeOut"}}
+                    >
                         <h1 className="heading-one">Our Clinic</h1>
                         <p className="p">
                             At Eden of Life, we believe good healthcare starts with understanding the person, 
@@ -40,10 +53,15 @@ export default function About(){
                                 </span>
                             ))}                          
                          </div>
-                    </div>
+                    </motion.div>
 
                      {/*mission & vission */}
-                    <div className="w-full md:col-span-2 space-y-6 my-10 text-center md:text-left">
+                    <motion.div className="w-full md:col-span-2 space-y-6 my-10 text-center md:text-left"
+                            initial={{opacity:0, x:-80}}
+                            whileInView={{opacity:1, x:0}}
+                            viewport={{once:true, amount:0.8}}
+                            transition={{duration:2, ease: "easeOut"}}
+                     >
                         <h2 className="text-[2.25rem] text-blue-800 font-[Roboto]">Mission</h2>
                         <p className="p leading-7 md:w-[70%] text-justify md:text-left">
                             To empower individuals to achieve lasting vitality through an integrative
@@ -52,8 +70,15 @@ export default function About(){
                             illness to support meaningful, sustainable health outcomes.
                         </p>
 
-                    </div>
-                    <div className="flex flex-col md:flex-row w-full  md:col-span-2 gap-x-8 gap-y-6 items-center">
+                    </motion.div>
+
+
+                    <motion.div className="flex flex-col md:flex-row w-full  md:col-span-2 gap-x-8 gap-y-6 items-center"
+                           initial={{opacity:0, x:80}}
+                           whileInView={{opacity:1, x:0}}
+                           viewport={{once:true, amount:0.8}}
+                           transition={{duration:2, ease: "easeOut"}}   
+                    >
                         <figure className="border md:w-[40%] rounded-2xl overflow-hidden">
                             <img src={medicine} alt="our medicine" className="w-full h-full object-cover" />
                         </figure>
@@ -66,7 +91,7 @@ export default function About(){
                             </p>
                         </div>
 
-                    </div>
+                    </motion.div>
 
                     
                 </div>

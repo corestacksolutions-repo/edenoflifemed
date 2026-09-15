@@ -7,7 +7,8 @@ import {
  } from "react-icons/lu";
 import services from "../../data/services";
 import { Link } from "react-router-dom";
-import { ArrowBigRight, ArrowBigRightDash, ArrowDownLeftFromCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Services(){
        {/*icon map 
@@ -19,11 +20,41 @@ export default function Services(){
                     "heart-pulse": LuHeartPulse,
                     brain: LuBrain,
               };
+      // services cards animations
+      const container ={
+          hidden:{},
+          show:{
+            transition:{
+               staggerChildren: 0.4
+            }
+          }
+      };
+      const card ={
+         hidden:{
+            opacity:0,
+            y:40
+         },
+         show:{
+            opacity:1,
+            y:0
+         },
+         transition:{
+            duration: 0.6,
+            ease:"easeOut"
+         }
+      }
         
        return(
             <section className="relative w-full bg-sky-50 py-16">
-                 <header className="max-w-3xl mx-auto text-justify md:text-center space-y-6 mb-6  px-6">
-                     <h2 className="heading-one">our services</h2>
+                 <header className="max-w-3xl mx-auto text-center space-y-6 mb-6  px-6">
+                     <motion.h2
+                        initial={{opacity:0, y:40}} 
+                        whileInView={{opacity:1, y:0}}
+                        viewport={{once:true, amount:0.2}}
+                        transition={{duration:2, ease:"easeOut"}}
+                        className="heading-one ">
+                        our services
+                     </motion.h2>
                      <p className="p">
                         From natural medicine and nutrition to digestive and women's health, 
                         we offer a range of services designed to support different aspects of 
@@ -32,12 +63,21 @@ export default function Services(){
 
                  </header>
 
-                <div className="relative w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-3 gap-x-6 gap-y-4">
+                <motion.div className="relative w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-3 gap-x-6 gap-y-4"
+                      variants={container}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{once:true, amount: 0.5}}
+                >
                       {services.map((service)=>{
                         const Icon = iconMap[service.icon];
 
                         return(
-                          <article key={service.id} className="relative group w-full shadow bg-gradient-to-tr from-blue-200 via-blue-100/80 to-blue-200  space-y-4 p-8 rounded-xl">
+                          <motion.article 
+                                 key={service.id} 
+                                 variants={card}
+                                 className="relative group w-full shadow bg-gradient-to-tr from-blue-200 via-blue-100/80 to-blue-200  space-y-4 p-8 rounded-xl"   
+                          >
                              <div className="w-fit p-3 rounded-full border border-blue-100">
                                <Icon className="size-6"/>
                              </div>
@@ -54,7 +94,7 @@ export default function Services(){
                                               group-hover:opacity-100 transitiona-all duration-500">
                                  <ArrowRight/>
                               </Link>
-                          </article>
+                          </motion.article>
                         )})}
                         
                         <Link to="/services "
@@ -62,7 +102,7 @@ export default function Services(){
                              <span className="m-auto text-white">See all</span> 
                         </Link>
                       
-                </div>
+                </motion.div>
 
                 <footer className="">
 

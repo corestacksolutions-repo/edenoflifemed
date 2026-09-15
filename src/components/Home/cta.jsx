@@ -2,12 +2,17 @@ import {
     Link 
  } from "react-router-dom"
  import medicalAttendance from "../../assets/images/cta-images/medical-attendance.png"
-import { HeartPulseIcon } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function CTA() {
     return(
         <section className="relative bg-white/90 sky-50 w-full py-16">
-            <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 rounded-xl lg:rounded-3xl bg-gradient-to-tr from-blue-950 to-blue-900  overflow-hidden">
+            <motion.div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 rounded-xl lg:rounded-3xl bg-gradient-to-tr from-blue-950 to-blue-900  overflow-hidden"
+                  initial={{opacity:0, y: 60}}
+                   whileInView={{opacity:1, y:0}}
+                   viewport={{once:true, amount:0.2}}
+                   transition={{duration:0.9, ease:"easeOut"}}
+            >
                  <div className="flex flex-col justify-center  w-full h-full space-y-4 px-6 py-8 md:pl-12">
                      <span className="text-xl font-[roboto] text-white/80 font-[Rubik]">
                         Your health,your priority
@@ -32,6 +37,6 @@ export default function CTA() {
                   
                  </div>
                  
-            </div>
+            </motion.div>
         </section>
     )}
