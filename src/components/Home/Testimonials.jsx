@@ -11,10 +11,10 @@ import { Car } from "lucide-react"
 
 export default function Testmonials(){
     return(
-        <section className="w-full mx-auto  rounded-3xl  py-20 space-y-10 relative overflow-hidden">
+        <section className="relative bg-white  w-full py-20 space-y-10 relative overflow-hidden">
             <header className="w-[92%] md:w-[50%] mx-auto text-center space-y-6">
-                <h2 className="text-3xl text-blue-800">From our clients</h2>
-                <p className="text-sky-900 text-[1.12rem] leading-relaxed">
+                <h2 className="heading-one">From our clients</h2>
+                <p className="p">
                     The experience of care can be just as important as the care itself. 
                     Here's what some of our clients have to say about their experience 
                     at Eden of Life.

@@ -5,7 +5,7 @@ import medicine from "../../assets/images/about-images/medicine.jpg"
 import aboutmetrics from "../../data/about-metrics"
 export default function About(){
       return(
-           <section className="w-full my-40">
+           <section className="relative z-10 bg-white w-full py-20 mt-[50vh] lg:mt-[100vh] z-20">
                 <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 gap-6">
                     <figure className="w-full overflow-hidden rounded-xl">
                         <img src={medicalPractioner} alt="Medical Practitioner" className="w-full h-full object-cover" />
@@ -13,29 +13,29 @@ export default function About(){
                                      
 
                     {/*about content */}
-                    <div className=" space-y-3">
-                        <h1 className="text-3xl  text-blue-800 mb-4">Our Clinic</h1>
-                        <p className="text-[1.12rem] text-sky-950/70">
+                    <div className="space-y-8 ">
+                        <h1 className="heading-one">Our Clinic</h1>
+                        <p className="p">
                             At Eden of Life, we believe good healthcare starts with understanding the person, 
                             not just the health concern. We take time to understand your health desires, lifestyle 
                             and the factors that may be affecting your wellness.
                         </p> 
-                        <p className="text-lg text-sky-950/70">
+                        <p className="p">
                             Through natural therapies, nutritional guidance and personalized care, we support 
                             you in making informed choices about your health and building habits that can support 
                             your wellbeing over time.
                         </p>   
-                         
+                        
                          {/*micro metrics */}
-                         <div className="grid md:grid-cols-2 gap-4 w-full">                            
+                         <div className="grid md:grid-cols-2 gap-4 w-full mt-8">                            
                             {aboutmetrics.map((metric) => (
-                                <span key={metric.id} className="flex items-center gap-4  w-full h-fit px-2 py-1 border border-blue-200 bg-blue-50/20 rounded-full">
+                                <span key={metric.id} className="flex items-center gap-4  w-full h-fit ">
                                     <div className="size-10 bg-blue-800  rounded-full">
 
                                     </div>
                                     <div className="">
                                         <h3 className="font-semibold text-blue-900">{metric.title}</h3>
-                                        <p className="text-sky-950/70">{metric.description}</p>
+                                        <p className="">{metric.description}</p>
                                     </div>
                                 </span>
                             ))}                          
@@ -44,8 +44,8 @@ export default function About(){
 
                      {/*mission & vission */}
                     <div className="w-full md:col-span-2 space-y-6 my-10 text-center md:text-left">
-                        <h2 className="text-[2.25rem] text-blue-800 ">Mission</h2>
-                        <p className="text-[1.12rem] leading-relaxed text-sky-950 leading-7 md:w-[70%]">
+                        <h2 className="text-[2.25rem] text-blue-800 font-[Roboto]">Mission</h2>
+                        <p className="p leading-7 md:w-[70%] text-justify md:text-left">
                             To empower individuals to achieve lasting vitality through an integrative
                             approach that combines traditional natural medicine with modern scientific
                             knowledge. We focus on identifying and addressing the underlying causes of
@@ -58,8 +58,8 @@ export default function About(){
                             <img src={medicine} alt="our medicine" className="w-full h-full object-cover" />
                         </figure>
                         <div className="space-y-6 w-full md:max-w-[60%] text-center md:text-left">
-                            <h2 className="text-[2.25rem] text-blue-800 ">vision</h2>
-                            <p className=" text-[1.12rem] leading-relaxed  text-sky-950 leading-7 ">
+                            <h2 className="text-[2.25rem] text-blue-800 font-[Roboto]">Vision</h2>
+                            <p className="p leading-7 text-justify md:text-left">
                                 To help shape the future of healthcare by establishing integrative, root-cause
                                 natural medicine as a trusted standard for community wellness, disease
                                 prevention, and healthy longevity.

@@ -8,22 +8,22 @@ import slideImageOne from "../../assets/images/hero-images/doctor-preparing-test
 
 const Hero = () => {
     return (
-        <div className="w-full lg:w-[99%] mx-auto h-[60vh] md:h-[70vh] lg:h-[100vh] overflow-hidden relative flex flex-col items-center justify-center bg-zinc-200 lg:rounded-3xl lg:mt-2 overflow-hidden ">
+        <div className="fixed inset-0 z-0 h-[50dvh] lg:h-[100dvh] flex bg-black ">
 
             {/* Video Background */}
-            <video src={bgvideo} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0" />
+            <video src={bgvideo} autoPlay loop muted playsInline className="hidden absolute inset-0 w-full h-full object-cover" />
             
 
               {/* Video image  
             <img src={slideImageOne} alt='our doctor preparing tests'  className=" absolute inset-0 w-full h-full object-cover z-0" />    
                 */}
             {/* Dark Overlay */}
-            <div className="absolute inset-0 w-full h-full bg-black/5 gradient-to-r from-zinc-50 via-zinc-50/50 to-transparent 05 z-10" />
+            <div className="absolute inset-0 w-full h-full bg-black/5 gradient-to-r from-zinc-50 via-zinc-50/50 to-transparent 05" />
 
             {/* Hero Content */}
-            <div className="w-[92%] lg:w-[85%] flex flex-col items-center gap-3 z-20 text-white rounded-lg">
+            <div className="w-[92%] lg:w-[85%] m-auto flex flex-col items-center gap-3 text-white rounded-lg pt-16 bg-black/70">
 
-                <h1 className="md:text-8xl text-center  font-bold display text-blue-700">
+                <h1 className="text-5xl md:text-8xl text-center font-[Roboto]  font-bold display text-blue-700">
                    Eden of Life,<br/>
                    <span className="text">Natural Medicine</span>    
                 </h1>
@@ -45,7 +45,7 @@ const Hero = () => {
                 </p>
 
                 {/* Booking CTA */}
-                <Link to="/booking" className="mt-3 bg-red-700 hover:bg-red-800 active:bg-red-900 text-white font-medium tracking-wide py-3 px-7 rounded-lg flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-red-950/30">
+                <Link to="/booking" className="mt-3 bg-red-700 hover:bg-red-800 text-white font-medium tracking-wide py-3 px-7 rounded-lg flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-red-950/30">
                     Book an Appointment
                     <BsArrowRight size={20} />
                 </Link>
