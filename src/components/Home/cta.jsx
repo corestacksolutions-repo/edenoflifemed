@@ -21,7 +21,7 @@ export default function CTA() {
                         Let's discuss the next chapter of your life today.
                      </h2>
                      <div className="flex flex-col md:flex-row gap-x-4 gap-y-1">
-                         <Link to="/booking" className="mt-3 bg-red-800 p-3 rounded-lg hover:bg-red-00 font-bold text-center text-white/80">
+                         <Link to="/consultation" className="mt-3 bg-red-800 p-3 rounded-lg hover:bg-red-00 font-bold text-center text-white/80">
                            Book an Appointment
                          </Link>
                          <Link to="/contact" className="mt-3 border border-green-800/40 px-12 p-3 text-center  rounded-lg bg-green-700 hover:bg-green-800/50 font-bold text-white">

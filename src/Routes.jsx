@@ -2,7 +2,7 @@ import {createBrowserRouter} from 'react-router-dom';
 
 import Home from './pages/Home'
 import NavLayout from './layouts/NavLayout'
-import Booking from './pages/Booking';
+import ConsultationBooking from './pages/ConsultationBooking'
 import Treatments from './pages/Treatments';
 import TreatmentDetails from './pages/TreatmentDetails';
 import NoPageFound from './pages/NoPageFound';
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         Component: NavLayout,
         children: [
             {index: true, Component: Home},
-            {path: '/booking', Component: Booking},
+            {path: '/consultation', Component: ConsultationBooking},
             {path: '/treatments', Component: Treatments},
             {path: '/treatments/:treatmentId', Component: TreatmentDetails},
             {path: '/about', Component: About},
