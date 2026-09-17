@@ -7,7 +7,7 @@ import { easeOut, motion } from "framer-motion"
 
 export default function About(){
       return(
-           <section className="relative z-10 bg-white w-full py-20 mt-[50vh] lg:mt-[100vh] z-20">
+           <section className="relative w-full z-10 bg-white w-full py-20 mt-[50vh] lg:mt-[100vh] z-20">
                 <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 gap-6">
 
                     <motion.figure className="w-full overflow-hidden rounded-xl"

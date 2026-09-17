@@ -8,7 +8,7 @@ import slideImageOne from "../../assets/images/hero-images/doctor-preparing-test
 
 const Hero = () => {
     return (
-        <div className="fixed inset-0 z-0 h-[50dvh] lg:h-[100dvh] flex bg-black ">
+        <div className="w-full fixed inset-0 z-0 h-[50dvh] lg:h-[100dvh] flex bg-black ">
 
             {/* Video Background */}
             <video src={bgvideo} autoPlay loop muted playsInline className="hidden absolute inset-0 w-full h-full object-cover" />
@@ -45,7 +45,7 @@ const Hero = () => {
                 </p>
 
                 {/* Booking CTA */}
-                <Link to="/booking" className="cursor-pointer relative mt-3 bg-red-700 hover:bg-red-800 text-white font-medium tracking-wide py-3 px-7 rounded-lg flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-red-950/30 z-10">
+                <Link to="/consultation" className="cursor-pointer relative mt-3 bg-red-700 hover:bg-red-800 text-white font-medium tracking-wide py-3 px-7 rounded-lg flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-red-950/30 z-10">
                     Book an Appointment
                     <BsArrowRight size={20} />
                 </Link>

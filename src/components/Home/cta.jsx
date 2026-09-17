@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export default function CTA() {
     return(
-        <section className="relative bg-white/90 sky-50 w-full py-16">
+        <section className="relative w-full bg-white/90 sky-50 w-full py-16">
             <motion.div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 rounded-xl lg:rounded-3xl bg-gradient-to-tr from-blue-950 to-blue-900  overflow-hidden"
                   initial={{opacity:0, y: 60}}
                    whileInView={{opacity:1, y:0}}

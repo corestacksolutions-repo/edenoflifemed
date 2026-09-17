@@ -37,6 +37,39 @@ const Hero = () => {
              </div>
             </div> 
           </div> 
+
+
+          {/*
+          
+            <small className="">Our Story</small>
+                <h1 className="">
+                    Our Journey to
+                    <br/>
+                    better <span className="text-blue-700"> wellness</span>
+                </h1>
+                <div className="bg-blue-600 h-px w-[35px]"/>
+                <p className="">
+                   Eden of Life was founded on a simple belief:
+                   the body has an icredible ability to heal itself
+                   when given th right support.
+                </p>
+                <p className="">
+                  We continue the wisdom of nature evidence informed 
+                  practices to address the root causes of health concerns.
+                </p>
+                <p className="">
+                    Every treatment we give is guided by companssion, integrity
+                    and deep respect for your wellness journey.
+                </p>
+
+                <button className="flex items-center gap-3 p-2 border border-blue-600/40 text-blue-600 font-semibold rounded-md mt-[40px]">
+                    <LuArrowRight className='size-5'/>
+                    Learn More About Our Approach
+                </button>
+          
+          */}
+
+
         </div>
     )
     

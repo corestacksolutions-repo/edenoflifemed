@@ -8,8 +8,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: rgb(253, 252, 252);
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: clip;
+  background-color: rgb(253, 252, 252);
 }
 
 .heading-one {
@@ -58,12 +64,3 @@ body{
       }
       
 }
-
- /*font sizes*/
- /*   --text-display: 4rem;
- /* --text-h1: 3rem;
- /* --text-h2: 2.25rem;
- /*   --text-h3: 1.75rem;
- /* --text-body: 1rem;
- /*   --text-small: 0.85rem;
-    */

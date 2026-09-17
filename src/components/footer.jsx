@@ -166,7 +166,7 @@ export default function Footer() {
                     </div>
                 </footer>
 
-                <div className="absolute left-1/2 -translate-x-1/2 text-white/10">
+                <div className="absolute left-1/2 -translate-x-1/2 text-white/10 whitespace-nowrap">
                   Powered by 
                   <a href="https://www.corestacksolutions.tech" 
                      target="_blank"

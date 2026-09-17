@@ -7,10 +7,24 @@ import { IoLeafOutline } from "react-icons/io5";
 
 const Story = ()=>{
       return(
-        <div className="w-[92%] lg:w-[85%] m-auto  grid md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-10  my-10">
-            <div className="space-y-4">
-                <small className="text-blue-600 uppercase font-semibold">Our Story</small>
-                <h1 className="text-3xl font-serif">
+        <div id="our-story" className="scroll-mt-40 w-[92%] lg:w-[85%] m-auto  grid md:grid-cols-2 gap-6 gap-y-10 my-10">
+            <article className="sticky top-0 h-fit space-y-8 md:pt-40">
+                <p className="p">
+                    When someone puts their health in our hands, 
+                    we treat that trust with patience, kindness 
+                    and genuine care.
+                </p>
+                <p className="">
+                Dr. Dominic James Dombola
+                <br className="" />
+                <small className="">Managing Director</small>
+                </p>
+            </article>
+
+             {/*
+          
+            <small className="">Our Story</small>
+                <h1 className="">
                     Our Journey to
                     <br/>
                     better <span className="text-blue-700"> wellness</span>
@@ -34,18 +48,16 @@ const Story = ()=>{
                     <LuArrowRight className='size-5'/>
                     Learn More About Our Approach
                 </button>
-            </div>
-            <div className="relative w-full h-full border rounded-2xl lg:col-span-2 ">
-                 <img src='https://i.pinimg.com/1200x/c2/7f/3b/c27f3bd8346a588a9295d9f317efb506.jpg' 
+          
+          */}
+            <div className="relative w-full  border rounded-2xl">
+                 <img src='https://i.pinimg.com/1200x/63/61/a5/6361a5ededda4a9cad21c5b98c1ca12d.jpg' 
                       alt="naturalpathy treatment" 
-                      className="max-h-[500px] w-full rounded-2xl" />
+                      className="w-full max-h-[600px] rounded-2xl" />
 
-                 <div className="z-100 absolute -right-5 -bottom-5 w-[250px] bg-white p-4 shadow rounded-2xl space-y-4">
-                     <div className="w-fit p-2 rounded-full border">
-                        <IoLeafOutline className="size-8 text-green-900 rotate-45"/>
-                     </div>
+                 <div className="z-100 absolute right-3 bottom-3 w-[250px] bg-white p-4 shadow rounded-2xl space-y-4">
                     <h2 className="text-xl font-semibold">Healing naturaly</h2>
-                    <p className="text-sm tracking-wide">
+                    <p className="font-[Roboto] font-light text-sm tracking-wide">
                         We use natural therapies to 
                         support balance, restore vitality,
                         and promote long-term wellness.
