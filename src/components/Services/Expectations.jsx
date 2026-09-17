@@ -1,7 +1,7 @@
 import { GiTreeBranch } from "react-icons/gi";
 import { PiFlowerLotusDuotone } from "react-icons/pi";
 import { IoCheckmarkOutline } from "react-icons/io5";
-import { expectations } from "../../data/treatmentExpectations";
+import { expectations } from "../../data/serviceExpectations";
 
 const Expectations = () => {
   return (

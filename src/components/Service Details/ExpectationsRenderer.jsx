@@ -1,5 +1,5 @@
 import { IoCheckmarkOutline } from "react-icons/io5";
-import { treatmentPhilosophies } from "../../data/treatmentPhilosophies";
+import { treatmentPhilosophies } from "../../data/servicePhilosophies";
 
 const ExpectationsRenderer = ({expectations}) => {
   return (

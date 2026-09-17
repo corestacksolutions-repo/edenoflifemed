@@ -5,7 +5,7 @@ import {
     LuHeartPulse,
     LuBrain
  } from "react-icons/lu";
-import services from "../../data/services";
+import services from "../../data/featured services";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";

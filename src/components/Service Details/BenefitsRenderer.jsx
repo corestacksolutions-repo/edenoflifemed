@@ -1,4 +1,4 @@
-import { treatmentPhilosophies } from "../../data/treatmentPhilosophies";
+import { treatmentPhilosophies } from "../../data/servicePhilosophies";
 
 const BenefitsRenderer = ({benefits}) => {
   return (

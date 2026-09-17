@@ -49,7 +49,7 @@ const Navbar = () => {
                         About
                     </NavLink>
 
-                    <NavLink to="/treatments" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bl ack/5 px-3 py-2 rounded-full transition-colors duration-300">
+                    <NavLink to="/services" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bl ack/5 px-3 py-2 rounded-full transition-colors duration-300">
                         Services
                     </NavLink>
 

@@ -1,18 +1,18 @@
 import { useParams } from 'react-router-dom'
-import Approach from '../components/Treatment Details/Approach'
-import Benefits from '../components/Treatment Details/Benefits'
-import CTA from '../components/Treatment Details/CTA'
-import Expectations from '../components/Treatment Details/Expectations'
-import Hero from '../components/Treatment Details/Hero'
-import LocalNavigation from '../components/Treatment Details/LocalNavigation'
-import Overview from '../components/Treatment Details/Overview'
-import { treatments } from '../data/treatments'
+import Approach from '../components/Service Details/Approach'
+import Benefits from '../components/Service Details/Benefits'
+import CTA from '../components/Service Details/CTA'
+import Expectations from '../components/Service Details/Expectations'
+import Hero from '../components/Service Details/Hero'
+import LocalNavigation from '../components/Service Details/LocalNavigation'
+import Overview from '../components/Service Details/Overview'
+import { services } from '../data/services'
 
-const TreatmentDetails = () => {
+const ServiceDetails = () => {
 
     const { treatmentId } = useParams()
 
-    const treatment = treatments.find(
+    const treatment = services.find(
         (treatment) => treatment.slug === treatmentId
     )
 
@@ -43,4 +43,4 @@ const TreatmentDetails = () => {
   )
 }
 
-export default TreatmentDetails
+export default ServiceDetails

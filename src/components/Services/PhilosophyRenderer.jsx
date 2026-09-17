@@ -4,7 +4,7 @@ import {
   UserRound,
   Lightbulb,
 } from "lucide-react";
-import { treatmentPhilosophies } from "../../data/treatmentPhilosophies";
+import { treatmentPhilosophies } from "../../data/servicePhilosophies";
 
 const PhilosophyRenderer = () => {
   return (

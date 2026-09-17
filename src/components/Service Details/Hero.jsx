@@ -1,6 +1,6 @@
 import bg from '../../assets/treatment page/treats.jpg';
 import { PiFlowerLotusDuotone } from "react-icons/pi";
-import { treatments } from '../../data/treatments';
+
 
 const Hero = ({hero}) => {
   return (
