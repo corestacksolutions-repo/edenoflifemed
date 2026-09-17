@@ -171,7 +171,7 @@ export default function Footer() {
                   <a href="https://www.corestacksolutions.tech" 
                      target="_blank"
                      rel="noopener noreferrer"
-                     referrerpolicy="no-referrer"
+                     referrerPolicy="no-referrer"
                      className="ml-2 text-blue-950 italic">
                      Costack Solutions
                   </a>

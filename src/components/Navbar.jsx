@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo/logo2.png";
 
-import { LuGrid3X3, LuLayoutGrid, LuMenu } from "react-icons/lu";
-import { BsChat } from "react-icons/bs";
 
 import { useState, useEffect, useRef } from "react";
 import { X } from "lucide-react";
@@ -71,8 +69,8 @@ const Navbar = () => {
             </nav>
 
             {/**mobile */}
-            <div className="w-full flex justify-between items-center lg:hidden py-5 px-5">
-                <div className="w-full flex items-center justify-between border p-3 rounded-3xl bg-white/10 backdrop-blur-sm border-white/20  ">
+            <div className="w-full flex justify-between items-center lg:hidden px-5">
+                <div className="w-full flex items-center justify-between border p-3 rounded-3xl bg-black/40 backdrop-blur-sm border-white/20  ">
                     <NavLink to="/" className="flex items-center gap-2 rounded-r-full  rounded ">
                      <p className="size-[40px] rounded-full bg-white border border-black"></p>
                      <p className="uppercase text-xl font-bold text-white">edenam</p>
@@ -85,7 +83,7 @@ const Navbar = () => {
                 </div>
                 
                 
-               <div className={` w-screen fixed top-0  left-0 text-white h-[60vh] bg-white/60 backdrop-blur-[10px] 
+               <div className={` w-screen fixed top-0  left-0 text-white h-[50vh] bg-blue-900/80 backdrop-blur-[10px] 
                      ${openMenu ? 'translate-y-0 opacity-100 ':'-translate-y-full opacity-0'} transition-all duration-500
                    `}>
                     {/*close menu */}
@@ -97,20 +95,20 @@ const Navbar = () => {
                     
                    <nav className={`w-[92%] mx-auto mt-5 flex flex-col bg-black/20 rounded-xl
                      `}>
-                      <NavLink onClick={toggleMenu} to="/" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300 border-b p-3">
+                      <NavLink onClick={toggleMenu} to="/" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300 border-b border-white/20 p-3">
                         Home
                       </NavLink>
-                      <NavLink onClick={toggleMenu} to="/about" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300 border-b p-3">
+                      <NavLink onClick={toggleMenu} to="/about" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300 border-b border-white/20 p-3">
                         About
                       </NavLink>
 
-                      <NavLink onClick={toggleMenu} to="/services" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300  border-b p-3">
+                      <NavLink onClick={toggleMenu} to="/services" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300  border-b border-white/20 p-3">
                         Services
                       </NavLink>
-                      <NavLink onClick={toggleMenu} to="/treatments" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300  border-b p-3">
+                      <NavLink onClick={toggleMenu} to="/treatments" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300  border-b border-white/20 p-3">
                         Treatments
                       </NavLink>
-                      <NavLink onClick={toggleMenu} to="/contact" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300  border-b p-3">
+                      <NavLink onClick={toggleMenu} to="/contact" className="text-sm text-center md:text-base font-normal tracking-wide hover:text-blue-400 transition-colors duration-300  border-b border-white/20 p-3">
                         Contact
                       </NavLink>
 

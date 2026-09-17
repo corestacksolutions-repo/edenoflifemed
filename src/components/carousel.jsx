@@ -21,7 +21,6 @@ export default function Carousel({slides, intervalMs = 10000 }) {
     };
     const handleNext = () =>{
           setItemIndex((prev) => Math.min(prev + itemsPerView, slides.length));
-          console.log(slides)
     }
     const handleTransitionEnd = () => {
       if (itemIndex === slides.length) {

@@ -1,12 +1,7 @@
-import { PiArrowLeft, PiArrowRight, PiQuotesBold, PiQuotesLight, PiShieldChevronLight } from "react-icons/pi"
-import testimonials from "../../data/testimonials"
-import TestimonialCard from "./testimonialCard"
 
+import testimonials from "../../data/testimonials"
 import Carousel from "../carousel"
-import { AnimatePresence } from "framer-motion"
-import { GoQuote } from "react-icons/go"
-import { BsFillChatQuoteFill } from "react-icons/bs"
-import { Car } from "lucide-react"
+
 
 
 export default function Testmonials(){
@@ -20,7 +15,6 @@ export default function Testmonials(){
                     at Eden of Life.
                 </p>
             </header>
-
 
             {/*carousel */}
             <div className="w-[92%] lg:w-[85%] mx-auto relative">
