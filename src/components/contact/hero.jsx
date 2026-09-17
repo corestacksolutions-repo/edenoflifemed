@@ -1,75 +1,16 @@
-import backgroundImage from '../../assets/contact page/medical equipment.jpg'
-import heart from "../../assets/contact page/heart.jpg"
-import naturalPathy from "../../assets/contact page/natural-therapy.png"
-import { PiFloppyDiskBackDuotone, PiFlowerLotusDuotone } from 'react-icons/pi'
+
 
 const Hero = () => {
     return (
-        <div className="relative w-[100%] min-h-[380px] py-8 pt-20  text-white text-center flex bg-emerald-800 black/40 overflow-hidden">  
-            {/*overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"/>
-            {/*bg image */}
-            <img src={backgroundImage} 
-                 alt="background image" 
-                 className="hidden absolute inset-0 w-full h-full object-cover mix-blend-overlay" />
-          
+       <div className="relative w-[100%] min-h-[280px] py-8 pt-[100px]  text-white text-center flex bg-blue-950 overflow-hidden">  
+          {/*overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/70 via-black/50 to-transparent"/>
           {/*hero content*/} 
-          <div className="w-[92%] md:w-[85%] mx-auto">
-            <div className="relative flex flex-col gap-6 md:flex-row justify-between overflow-hidden ">
-              {/*left content */}
-             <div className="text-start w-full my-auto space-y-6">
-                 <div className="text-blue-700 font-semibold tracking-wide relative uppercase flex items-center gap-3 text-sm w-fit">
-                    <PiFlowerLotusDuotone size={30} />
-                    <span>Contact us</span>
-                    <div className="absolute h-[1px] w-[32px] -bottom-1 left-0 border border-blue-700"></div>
-                </div>
-                {/* Heading */}
-                <h2 className="font-display font-bold text-[42px] md:text-[48px] leading-[105%] my-4 lg:w-1/2 text-white">
-                Navigate Your Health Journey With <span className="text-blue-700">
-                Confidence.</span>
-                </h2>
-
-                <p className="text-lg  p-3 bordr border-doted rounded-2xl w-fit bg-whte/10 backdrop-b">
-                    Have a question or ready to begin? 
-                    <br/>
-                    Reach out to us. We'd love to hear from you.
-                </p>
-             </div>
-            </div> 
+          <div className="relative w-[98%] md:w-[85%] mx-auto text-center text-white/60 px-4">
+                <h1 className="heading font-bold text-[2.5rem] lg:text-[4rem] leading-[40px] lg:leading-[60px] my-4 ">
+                  Contact Us
+                </h1>       
           </div> 
-
-
-          {/*
-          
-            <small className="">Our Story</small>
-                <h1 className="">
-                    Our Journey to
-                    <br/>
-                    better <span className="text-blue-700"> wellness</span>
-                </h1>
-                <div className="bg-blue-600 h-px w-[35px]"/>
-                <p className="">
-                   Eden of Life was founded on a simple belief:
-                   the body has an icredible ability to heal itself
-                   when given th right support.
-                </p>
-                <p className="">
-                  We continue the wisdom of nature evidence informed 
-                  practices to address the root causes of health concerns.
-                </p>
-                <p className="">
-                    Every treatment we give is guided by companssion, integrity
-                    and deep respect for your wellness journey.
-                </p>
-
-                <button className="flex items-center gap-3 p-2 border border-blue-600/40 text-blue-600 font-semibold rounded-md mt-[40px]">
-                    <LuArrowRight className='size-5'/>
-                    Learn More About Our Approach
-                </button>
-          
-          */}
-
-
         </div>
     )
     

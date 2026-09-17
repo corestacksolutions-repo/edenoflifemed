@@ -1,7 +1,4 @@
-import backgroundImage from '../../assets/contact page/medical equipment.jpg'
-import heart from "../../assets/contact page/heart.jpg"
-import naturalPathy from "../../assets/contact page/natural-therapy.png"
-import { PiFloppyDiskBackDuotone, PiFlowerLotusDuotone } from 'react-icons/pi'
+
 
 const Hero = () => {
     return (
