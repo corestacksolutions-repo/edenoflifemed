@@ -17,12 +17,12 @@ export default function AssessmentWellnessRender({treatments}){
                                  about your health and lifestyle.
                              </p>
                              <Link to={item.cta} className="flex gap-3 items-center w-fit md:absolute bottom-5  font-bold text-red-800 text-lg my-8 ">
-                                Eplore
+                                Explore
                                 <ArrowRight className="size-5 "/>
                              </Link>
                         </div>
                         <figure className="rounded-xl overflow-hidden">
-                          <img src={item.image} alt={item.imageAlt} className="w-full max-h-[400px] object-cover" />
+                          <img src={item.image} alt={item.imageAlt} className="w-full max-h-[450px] object-contain" />
                         </figure>
                     </article>   
                 )}

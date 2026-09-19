@@ -1,5 +1,5 @@
 
-
+import qrma from "../assets/images/treatments/QRMA.png"
 
 const treatments = [
   
@@ -1323,7 +1323,7 @@ const treatments = [
   excerpt:
     "A non-invasive assessment tool that records selected measurements and generates a computer-based report for discussion with a practitioner.",
 
-  image: "https://i.pinimg.com/1200x/34/67/02/346702245af738714feb524f38e7c1bc.jpg",
+  image: qrma,
   imageAlt: "Quantum Resonance Magnetic Analyser assessment",
 
   hero: {

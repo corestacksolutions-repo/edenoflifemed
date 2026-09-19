@@ -31,7 +31,7 @@ export default function NaturalAndPlantsRender({treatments}){
                                    {item.excerpt}
                                </p>
                                <Link to={item.cta} className="w-fit text-red-800 font-semibold px-3 py-1 border rounded-3xl">
-                                  lear more
+                                  learn more
                                </Link>
                             </div>
                                
