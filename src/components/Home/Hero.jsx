@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import bgvideo from "../../assets/videos/bgvideo.mp4";
-import { PiArrowRightBold, PiFlowerLotusFill, PiHeart, PiHeartbeatFill } from "react-icons/pi";
-import { BsArrowRight, BsWhatsapp } from "react-icons/bs";
-import Offers from "./Offers";
+import {  PiHeartbeatFill } from "react-icons/pi";
+import { BsArrowRight,} from "react-icons/bs";
 
-import slideImageOne from "../../assets/images/hero-images/doctor-preparing-tests.jpg"
 
 const Hero = () => {
     return (
@@ -13,7 +11,6 @@ const Hero = () => {
             {/* Video Background */}
             <video src={bgvideo} autoPlay loop muted playsInline className="hidden absolute inset-0 w-full h-full object-cover" />
             
-
               {/* Video image  
             <img src={slideImageOne} alt='our doctor preparing tests'  className=" absolute inset-0 w-full h-full object-cover z-0" />    
                 */}
@@ -50,44 +47,6 @@ const Hero = () => {
                     <BsArrowRight size={20} />
                 </Link>
             </div>
-
-            {/* Whats App */}
-            <div  className=" hidden
-                    group
-                    fixed 
-                    bottom-10 
-                    right-10  
-                    cursor-pointer
-                    flx
-    
-                    z-50
-                    h-[80px]
-                    w-[80px]
-                    rounded-xl
-                    border 
-                    border-white/20 
-                    p-5 
-                    bg-white/10 
-                    space-y-3
-                    backdrop-blur-sm
-                    hover:h-[120px]
-                    hover:w-[200px]
-                    hover:rounded-md
-                    transition-all transform
-                    duration-500
-            ">
-                <BsWhatsapp className="size-8 text-emerald-800 group-hover:opacity-0 transition-opacity duration-1000"/>
-                <p className="group-hover:flex justify-between rounded-full text-emerald-800 font-semibold border  border-white/30 px-3 py-2 opacity-0 group-hover:opacity-100 enter:opacity-100 transition-opacity ease-in duration-1000 group-hover:duration-1000  group-hover:ease-in ease-out duration-500">
-                  <span className=" text-xs">Chat on WhatsApp</span>
-                  <BsWhatsapp className=""/>
-                </p>   
-            </div>
-
-            {/* Video Indicator */}
-            {/* <div className="absolute bottom-5 right-6 md:right-10 z-30 flex items-center gap-2 text-white/80 text-sm">
-                <span className="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center text-xs">Ⅱ</span>
-                <span className="hidden sm:block">Pause Video</span>
-            </div> */}
         </div>
     );
 };
