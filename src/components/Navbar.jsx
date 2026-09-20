@@ -15,11 +15,11 @@ const Navbar = () => {
 
         useEffect(() => {
             const handleScroll = () => {
-            setVisible(false);  // hide immediately on any scroll
+            //setVisible(false);  // hide immediately on any scroll
             clearTimeout(timeoutRef.current);
             
             timeoutRef.current = setTimeout(() => {
-                setVisible(true);          // show again once scrolling stops
+              //  setVisible(true);          // show again once scrolling stops
             }, 150);                     // "stopped" = no scroll event for 150ms
             };
 
