@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const apiBase = import.meta.env.VITE_BACKEND_API_URL
+
 const Form = () => {
     const [formData, setFormData] = useState({
         fullName: "",
@@ -31,20 +33,36 @@ const Form = () => {
             // Your API/payment logic will go here
             console.log("Consultation booking:", formData);
 
-            // Example:
-            // await fetch("/api/consultations", {
-            //     method: "POST",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     body: JSON.stringify(formData),
-            // });
+            const payload = {
+                ...formData               
+            }
 
-            // After successful submission:
-            // navigate("/payment");
+            console.log(payload)
+
+            const response = await fetch(`${apiBase}/api/create-consultation`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+
+            const data = await response.json()
+            console.log(`Data from the server: `, data)
+
+            if (data.redirectUrl) {
+                window.location.href = data.redirectUrl;
+                return;
+            }
+
+            throw new Error(result.error || "Consultation booking failed");
+
 
         } catch (error) {
             console.error("Booking submission failed:", error);
+
+            // fallback safety
+            window.location.href = "/registration-failed?reason=network";
         } finally {
             setIsSubmitting(false);
         }

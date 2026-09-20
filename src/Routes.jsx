@@ -9,6 +9,8 @@ import ServiceDetails from './pages/ServicesDetails';
 import NoPageFound from './pages/NoPageFound';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import BookingSuccess from './pages/BookingSuccessful';
+import BookingFailed from './pages/BookingFailed';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,16 @@ const router = createBrowserRouter([
     },
 
     {path: '*', Component: NoPageFound},
+
+    // ✅ Success / Failure routes (outside layout for full-screen UX)
+    {
+        path: "/booking-success",
+        Component: BookingSuccess,
+    },
+    {
+        path: "/booking-failed",
+        Component: BookingFailed,
+    },
             
     
 ])
