@@ -21,8 +21,8 @@ export default function BodyMovementRender({treatments}){
                               </div>
                               <div className="flex flex-col justify-between space-y-2">
                                  <p className="font-semibold font-[Roboto]">{item.title}</p>   
-                                 <Link to={item.cta} className="text-red-800">
-                                    Explore
+                                 <Link to={`/treatments/${item.slug}`} className="text-red-800">
+                                    Explore {item.title}
                                  </Link>
                               </div> 
                           </article>   

@@ -29,7 +29,7 @@ const ServiceGrids = () => {
             </p>
 
             {/* CTA */}
-            <Link to={`/treatments/${slug}`} className="mt-auto pt-2 flex gap-1 tracking-wide items-center text-sm text-blue-700 font-medium w-fit hover:gap-2 transition-all duration-300">
+            <Link to={`/services/${slug}`} className="mt-auto pt-2 flex gap-1 tracking-wide items-center text-sm text-blue-700 font-medium w-fit hover:gap-2 transition-all duration-300">
               Learn More
               <IoIosArrowRoundForward size={20} />
             </Link>

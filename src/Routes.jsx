@@ -6,6 +6,7 @@ import ConsultationBooking from './pages/ConsultationBooking'
 import Services from './pages/Services';
 import Treatments from './pages/Treatments';
 import ServiceDetails from './pages/ServicesDetails';
+import TreatmentDetail from './pages/treatmentDetails';
 import NoPageFound from './pages/NoPageFound';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
             {path: '/consultation', Component: ConsultationBooking},
             {path: '/services', Component: Services},
             {path: '/treatments', Component: Treatments},
-            {path: '/treatments/:treatmentId', Component: ServiceDetails},
+            {path: '/services/:serviceId', Component: ServiceDetails},
+            {path: '/treatments/:treatmentId', Component: TreatmentDetail},
             {path: '/about', Component: About},
             {path: '/contact', Component: Contact}
         ]

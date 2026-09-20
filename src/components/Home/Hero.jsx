@@ -6,7 +6,7 @@ import { BsArrowRight,} from "react-icons/bs";
 
 const Hero = () => {
     return (
-        <div className="w-full fixed inset-0 z-0 h-[50dvh] lg:h-[100dvh] flex bg-black ">
+        <div className="w-full fixed inset-0 z-0 h-[50dvh] lg:h-[100dvh] flex bg-black/10 ">
 
             {/* Video Background */}
             <video src={bgvideo} autoPlay loop muted playsInline className="hidden absolute inset-0 w-full h-full object-cover" />
@@ -15,10 +15,10 @@ const Hero = () => {
             <img src={slideImageOne} alt='our doctor preparing tests'  className=" absolute inset-0 w-full h-full object-cover z-0" />    
                 */}
             {/* Dark Overlay */}
-            <div className="absolute inset-0 w-full h-full bg-black/5 gradient-to-r from-zinc-50 via-zinc-50/50 to-transparent 05" />
+            <div className="absolute inset-0 w-full h-full gradient-to-r from- bg-black via-zinc- bg-black/90 to-transparent" />
 
             {/* Hero Content */}
-            <div className="w-[92%] lg:w-[85%] m-auto flex flex-col items-center gap-3 text-white rounded-lg pt-16 bg-black/70">
+            <div className="relative w-[92%] lg:w-[85%] m-auto flex flex-col items-center gap-3 text-white rounded-lg pt-16">
 
                 <h1 className="text-5xl md:text-8xl text-center font-[Roboto]  font-bold display text-blue-700">
                    Eden of Life,<br/>
