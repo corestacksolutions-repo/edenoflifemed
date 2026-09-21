@@ -73,7 +73,9 @@ const Form = () => {
             onSubmit={handleSubmit}
             className="basis-[68%] w-full p-2 flex flex-col"
         >
-
+            <div className="hidden font-bold text-[2.25rem] mb-6">
+                Book Consultation
+            </div>
             {/* Full Name + Email */}
             <div className="flex items-center justify-between mb-4 gap-5">
 

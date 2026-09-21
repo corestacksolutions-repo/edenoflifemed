@@ -6,6 +6,7 @@ import OverView from "../components/treatment Details/overView";
 import Session from "../components/treatment Details/sessions";
 import Suitability from "../components/treatment Details/Suitability";
 import Expectations from "../components/treatment Details/Expectations";
+import CTA from "../components/treatment Details/cta";
 
 import RelatedTreatment from "../components/treatment Details/RelatedTreatments";
 
@@ -38,6 +39,7 @@ export default function TreatmentDetail(){
                 <Session treatment={treatment} />
                 <Suitability treatment={treatment} />
                 <Expectations treatment={treatment}/>
+                <CTA treatment={treatment}/>
                 <RelatedTreatment relatedTreatments={randomTreatments}/>
               </>
         )

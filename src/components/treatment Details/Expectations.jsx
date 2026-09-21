@@ -18,9 +18,9 @@ export default function Expectations({treatment}){
                          
                          <h3 className="font-bold text-lg mb-4">Before Treatment</h3>
                          {treatment.expectations.before.map((item)=>
-                           <span className="flex gap-3 items-center">
+                           <span key={item} className="flex gap-3 items-center">
                               <div className="size-[30px] shrink-0 border border-black/50 rounded-full"/>
-                              <p key={item} className="my-2 text-sm tracking-wide" >
+                              <p className="my-2 text-sm tracking-wide" >
                                  {item} 
                               </p>
                            </span> 
@@ -31,9 +31,9 @@ export default function Expectations({treatment}){
                      <article className="w-full border border-sky-400/70 p-6 rounded-2xl  bg-sky-100">
                          <h3 className="font-bold text-lg mb-3">During Treatment</h3>
                          {treatment.expectations.during.map((item)=>(
-                           <span className="flex gap-3 items-center">
+                           <span key={item} className="flex gap-3 items-center">
                               <div className="size-[30px] shrink-0 border border-black/50 rounded-full"/>
-                              <p key={item} className="my-2 text-sm tracking-wide" >
+                              <p  className="my-2 text-sm tracking-wide" >
                                  {item} 
                               </p>
                            </span>
@@ -44,9 +44,9 @@ export default function Expectations({treatment}){
                      <article className="w-full border border-green-800/40 p-6 rounded-2xl  bg-green-100">
                          <h3 className="font-bold text-lg mb-3">After Treatment</h3>
                          {treatment.expectations.after.map((item)=>(
-                           <span className="flex gap-3 items-center">
+                           <span key={item} className="flex gap-3 items-center">
                               <div className="size-[30px] shrink-0 border border-black/50 rounded-full"/>
-                              <p key={item} className="my-2 text-sm tracking-wide" >
+                              <p  className="my-2 text-sm tracking-wide" >
                                  {item} 
                               </p>
                            </span>

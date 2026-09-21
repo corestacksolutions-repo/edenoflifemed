@@ -4,8 +4,8 @@ import Form from './Form'
 
 const Body = () => {
   return (
-    <section className='w-full mb-10 '>
-        <div className="w-[92%] md:w-[85%] mx-auto  flex items-center justify-between">
+    <section className='w-full mb-20 '>
+        <div className="w-[92%] md:w-[85%] mx-auto  flex flex-col md:flex-row gap-8 md:gap-4 items-center justify-between">
             <Expectations />
             <Form />
         </div>      
