@@ -1,5 +1,13 @@
+import {
+  Stethoscope,
+  ClipboardList,
+  HeartPulse,
+  TrendingUp
+} from "lucide-react";
 
 import qrma from "../assets/images/treatments/QRMA.png"
+
+
 
 const treatments = [
   
@@ -1318,7 +1326,7 @@ const treatments = [
   slug: "quantum-resonance-magnetic-analyser",
   category: "assessment-wellness",
 
-  title: "Quantum Resonance Magnetic Analyser (QRMA)",
+  title: "Quantum Resonance Magnetic Analyser",
 
   excerpt:
     "A non-invasive assessment tool that records selected measurements and generates a computer-based report for discussion with a practitioner.",

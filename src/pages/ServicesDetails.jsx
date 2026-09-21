@@ -10,34 +10,34 @@ import { services } from '../data/services'
 
 const ServiceDetails = () => {
 
-    const { treatmentId } = useParams()
+    const { serviceId } = useParams()
 
-    const treatment = services.find(
-        (treatment) => treatment.slug === treatmentId
+    const service = services.find(
+        (treatment) => treatment.slug === serviceId
     )
-
+    console.log(service)
     // if (!treatment) return <p>Treatment not found!</p>
 
   return (
     <main className="w-full min-h-screen overflow-x-hidden z-0 bg-white">
         <Hero 
-            hero={treatment}
+            hero={service}
         />
         <LocalNavigation />    
         <Overview 
-            overview={treatment.overview}
+            overview={service.overview}
         />
         <Benefits 
-            benefits={treatment.benefits}
+            benefits={service.benefits}
         />
         <Expectations 
-            expectations={treatment.expectations}
+            expectations={service.expectations}
         />
         <Approach 
-            approach={treatment.approach}
+            approach={service.approach}
         />
         <CTA 
-            cta={treatment.cta}
+            cta={service.cta}
         />
     </main>
   )

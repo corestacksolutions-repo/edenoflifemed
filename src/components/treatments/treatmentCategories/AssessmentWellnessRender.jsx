@@ -16,10 +16,11 @@ export default function AssessmentWellnessRender({treatments}){
                                  that can help to better understand areas of your wellbeing and guide further discussion 
                                  about your health and lifestyle.
                              </p>
-                             <Link to={item.cta} className="flex gap-3 items-center w-fit md:absolute bottom-5  font-bold text-red-800 text-lg my-8 ">
-                                Explore
-                                <ArrowRight className="size-5 "/>
-                             </Link>
+                             <Link to={`/treatments/${item.slug}`} 
+                                   className="flex gap-3 items-center w-fit md:absolute bottom-5  font-bold text-red-800 text-lg my-8">
+                                    Explore {item.title}
+                                    <ArrowRight className="size-5 "/>
+                              </Link>
                         </div>
                         <figure className="rounded-xl overflow-hidden">
                           <img src={item.image} alt={item.imageAlt} className="w-full max-h-[450px] object-contain" />

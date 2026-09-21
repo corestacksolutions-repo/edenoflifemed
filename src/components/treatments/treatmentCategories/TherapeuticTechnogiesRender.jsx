@@ -32,9 +32,9 @@ export default function TherapeuticTechnologiesRender({treatments}){
                                    <p className="">
                                       {item.excerpt}
                                    </p>
-                                  <Link to={item.cta} className="text-red-800">
-                                   Learn more
-                                  </Link>
+                                  <Link to={`/treatments/${item.slug}`} className="text-red-800">
+                                    Explore {item.title}
+                                 </Link>
                                   
                                </div>  
                          </article>  
