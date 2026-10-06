@@ -1,7 +1,7 @@
 import { GiTreeBranch } from "react-icons/gi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { services } from "../../data/services";
+import services from "../../data/services";
 
 const ServiceGrids = () => {
   return (
