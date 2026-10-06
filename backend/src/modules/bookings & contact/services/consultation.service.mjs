@@ -9,7 +9,7 @@ export const createConsultation = async ({
             email,
             phone,
             country,
-            date_time,
+            // date_time,
             purpose,
             message
         }) => {
@@ -39,7 +39,7 @@ export const createConsultation = async ({
             full_name,
             email,
             phone,
-            date_time,
+            // date_time,
             country,
             purpose,
             message,
@@ -47,10 +47,10 @@ export const createConsultation = async ({
             // ...data
         }
 
-        const available = await consultationRepository
-                            .isSlotAvailable(date_time)
+        // const available = await consultationRepository
+        //                     .isSlotAvailable(date_time)
                 
-        if (!available) throw new Error(`Appointment slot is unavailable`)
+        // if (!available) throw new Error(`Appointment slot is unavailable`)
 
         const {data: finalData , error} = await consultationRepository
                                 .createConsultation([payload])

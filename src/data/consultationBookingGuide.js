@@ -5,13 +5,13 @@ export const bookingSteps = [
     {
         id: 1,
         title: "Complete the form",
-        description: "Provide your details and preferred consultation date and time.",
+        description: "Provide your details and information about your health concern in the form.",
         icon: LuClipboardPenLine,
     },
     {
         id: 2,
         title: "Complete payment",
-        description: "Proceed to the payment page and pay the consultation booking fee.",
+        description: "Proceed to the payment page and pay the consultation booking fee of MK15,000.",
         icon: LuCreditCard,
     },
     {

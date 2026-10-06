@@ -117,21 +117,21 @@ export const consultationValidationSchema = {
      * Whether the selected time is actually available should
      * be handled later by the service/business-logic layer.
      */
-    dateTime: {
-        trim: true,
+    // dateTime: {
+    //     trim: true,
 
-        notEmpty: {
-            errorMessage:
-                "Consultation date and time is required.",
-        },
+    //     notEmpty: {
+    //         errorMessage:
+    //             "Consultation date and time is required.",
+    //     },
 
-        matches: {
-            options:
-                /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/,
-            errorMessage:
-                "Please provide a valid consultation date and time.",
-        },
-    },
+    //     matches: {
+    //         options:
+    //             /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/,
+    //         errorMessage:
+    //             "Please provide a valid consultation date and time.",
+    //     },
+    // },
 
 
     /**

@@ -43,7 +43,9 @@ const Hero = () => {
 
                 {/* Booking CTA */}
                 <Link to="/consultation" className="cursor-pointer relative mt-3 bg-red-700 hover:bg-red-800 text-white font-medium tracking-wide py-3 px-7 rounded-lg flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-red-950/30 z-10">
-                    Book an Appointment
+                    Book a Consultation
+                    <span className="absolute inset-0 rounded-lg bg-red-800/20 blur opacity-0 transition duration-300 hover:opacity-100" />
+                    <span className="absolute inset-0 rounded-lg bg-red-800/20 opacity-0 transition duration-300 hover:opacity-100" />
                     <BsArrowRight size={20} />
                 </Link>
             </div>
