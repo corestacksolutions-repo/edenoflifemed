@@ -16,6 +16,13 @@ export default function Carousel({slides, intervalMs = 10000 }) {
     const clonedPage = slides.slice(0, itemsPerView);
     const renderSlides = [...slides, ...clonedPage];
      
+    {/*=========================================
+        PAGE COUNT FOR TESTIMONIAL INDICATORS
+    ============================================*/}
+    const pageCount = Math.ceil(slides.length / itemsPerView);
+    const activePage = Math.floor(itemIndex / itemsPerView);
+
+
     const handlePrev = () => {
           setItemIndex((prev) => Math.max(prev - itemsPerView, 0));
     };
@@ -48,19 +55,18 @@ export default function Carousel({slides, intervalMs = 10000 }) {
     }, [itemsPerView, slides.length, intervalMs]);
 
     return (
-    <div>
-      <div className="relative overflow-hidden rounded-xl border ">
+    <div className="">
+      <div className=" w-full">
         <div
           ref={trackRef}
-          className={`flex gap-4 p-4 ${transitionEnabled ? "transition-transform duration-1000 ease-out" : ""}`}
-          style={{ transform: `translateX(-${offsetPercent}%)` }}
-          onTransitionEnd={handleTransitionEnd}
+          className={`w-full flex overflow-hidden ${transitionEnabled ? " ease-out" : ""}`}
         >
           {renderSlides.map((slide, i) => (
             <div
               key={i}
-              className="shrink-0 box-border"
-              style={{ width: `${itemWidthPercent}%` }}
+              className={`w-full shrink-0 box-border ${transitionEnabled ? "transition-transform duration-1000 ease-out" : ""}`}
+             style={{ width: `${itemWidthPercent}%`, transform: `translateX(-${offsetPercent}%)` }}
+             onTransitionEnd={handleTransitionEnd}
             >
               <TestimonialCard testimonial={slide} />
             </div>
@@ -69,14 +75,31 @@ export default function Carousel({slides, intervalMs = 10000 }) {
       </div>
        
        {/*controllers */}
-      <footer className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between mb-20">
+      <div className="hidden absolute top-1/2 -translate-y-1/2 w-full flex justify-between mb-20">
         <button onClick={handlePrev} className="mt-3 p-1 border rounded bg-red-700/20 hover:bg-red-700/30 transition-colors">
           <MdNavigateBefore className="size-5" />
         </button>
         <button onClick={handleNext} className="mt-3  p-1 border rounded bg-red-700/20 hover:bg-red-700/30 transition-colors">
           <MdNavigateNext className="size-5" />
         </button>
-      </footer>
+      </div>
+      
+       {/* Slider indicators */}
+        <div className="flex justify-center gap-2 mt-6">
+          {Array.from({ length: pageCount }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setItemIndex(index * itemsPerView)}
+              aria-label={`Go to testimonial page ${index + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                activePage === index
+                  ? "w-6 bg-black"
+                  : "w-2 bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
+     
       
     </div>
   );

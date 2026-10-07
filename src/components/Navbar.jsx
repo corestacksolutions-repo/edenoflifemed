@@ -91,6 +91,10 @@ const Navbar = () => {
                     </button>
                     
                     <NavLink to="/blogs" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bla ck/5 px-3 py-2 rounded-full transition-colors duration-300">
+                        News
+                    </NavLink>
+
+                    <NavLink to="/blogs" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bla ck/5 px-3 py-2 rounded-full transition-colors duration-300">
                         Blogs
                     </NavLink>
                   </div>
@@ -205,7 +209,7 @@ const Navbar = () => {
                     {/*treatments */}
                       <button onClick={()=>handleExpansion('t')}  className="flex justify-between items-center w-full tracking-wide p-3 pl-8 border-b border-white/20">
                         Treatments
-                        <LuPlus className={`size-5 ${isExpanded==="t"?'-rotate-45':''} transition-all duration-500`}/>
+                        <LuPlus className={`size-5 ${isExpanded==="t" ? '-rotate-45':''} transition-all duration-500`}/>
                       </button>
                          <ul className={`flex flex-col ${isExpanded==="t" ? 'h-[510px] opacity-100 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
                             {treatmentsData.map((item)=>

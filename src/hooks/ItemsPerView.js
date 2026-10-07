@@ -4,8 +4,8 @@ export function useItemsPerView() {
 
   function calc() {
     const w = window.innerWidth;
-    if (w >= 1024) return 3;  // matches Tailwind's lg: breakpoint
-    if (w >= 640) return 2;   // matches Tailwind's sm: breakpoint
+    if (w >= 1024) return 1;  // matches Tailwind's lg: breakpoint
+    if (w >= 640) return 1;   // matches Tailwind's sm: breakpoint
     return 1;                 // mobile
   }
 
