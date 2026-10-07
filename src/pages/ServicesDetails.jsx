@@ -6,7 +6,7 @@ import Expectations from '../components/Service Details/Expectations'
 import Hero from '../components/Service Details/Hero'
 import LocalNavigation from '../components/Service Details/LocalNavigation'
 import Overview from '../components/Service Details/Overview'
-import { services } from '../data/services'
+import services  from '../data/services'
 
 const ServiceDetails = () => {
 

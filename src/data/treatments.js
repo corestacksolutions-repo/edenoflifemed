@@ -6,6 +6,10 @@ import {
 } from "lucide-react";
 
 import qrma from "../assets/images/treatments/QRMA.png"
+/*==================
+videos
+===================*/
+import massage from "../assets/videos/treatments/massage.mp4"
 
 
 
@@ -26,6 +30,8 @@ const treatments = [
 
     image: "https://i.pinimg.com/1200x/80/52/17/8052171c5245f23f8be1e3b64d20b1fe.jpg",
     imageAlt: "Massage therapy session",
+
+    video: massage,
 
     hero: {
       tagline:
@@ -140,6 +146,8 @@ const treatments = [
     image: "https://i.pinimg.com/1200x/5e/f7/05/5ef705717eba021d45f504e6a44d1e33.jpg",
     imageAlt: "Physiotherapy treatment session",
 
+    video: massage,
+    
     hero: {
         tagline:
         "Personalised physical care to support movement, recovery and everyday function.",
@@ -253,7 +261,9 @@ const treatments = [
 
   image: "https://i.pinimg.com/236x/48/bd/95/48bd95967b6a11f9f335f0346ca4fdf0.jpg",
   imageAlt: "Acupuncture treatment session",
-
+  
+  video: massage,
+  
   hero: {
     tagline:
       "Traditional needle-based therapy provided according to your individual needs and treatment goals.",
@@ -369,6 +379,8 @@ const treatments = [
   image: "https://i.pinimg.com/1200x/41/4d/22/414d226f1bac4eab778a69bd9441436e.jpg",
   imageAlt: "Hydrotherapy treatment session",
 
+  video: massage,
+    
   hero: {
     tagline:
       "Using the properties of water to support comfortable movement, physical function and relaxation.",
@@ -484,6 +496,8 @@ const treatments = [
   image: "https://i.pinimg.com/736x/88/66/0f/88660f8ccaec0df93224ca5103f7d72f.jpg",
   imageAlt: "Yoga and meditation session",
 
+  video: massage,
+    
   hero: {
     tagline:
       "Movement, breathing and mindfulness practices to support relaxation and mind-body wellbeing.",
@@ -598,6 +612,8 @@ const treatments = [
   image: "https://i.pinimg.com/736x/97/50/48/975048a7f2cba0ee059d3f9fb7771006.jpg",
   imageAlt: "Cupping therapy treatment",
 
+  video: massage,
+    
   hero: {
     tagline:
       "Traditional cupping therapy provided carefully and according to your individual needs.",
@@ -721,6 +737,8 @@ const treatments = [
   image: "https://i.pinimg.com/1200x/78/a1/d1/78a1d1e90a996fa183a6cc53501251e4.jpg",
   imageAlt: "TENS therapy treatment",
 
+  video: massage,
+    
   hero: {
     tagline:
       "Non-invasive electrical stimulation used as part of personalised care for pain and physical discomfort.",
@@ -843,6 +861,8 @@ const treatments = [
   image: "https://i.pinimg.com/236x/f3/b1/b6/f3b1b63955f8dcf7b0e730c0605b9d84.jpg",
   imageAlt: "Phototherapy treatment session",
 
+  video: massage,
+    
   hero: {
     tagline:
       "Controlled light-based therapy provided according to your skin condition and individual treatment needs.",
@@ -964,6 +984,8 @@ const treatments = [
   image: "https://i.pinimg.com/1200x/1e/f1/a3/1ef1a38afb1b069d2ce821241fa64671.jpg",
   imageAlt: "TeraHertz therapy treatment",
 
+  video: massage,
+    
   hero: {
     tagline:
       "A non-invasive technology-based approach offered according to individual needs and treatment goals.",
@@ -1087,6 +1109,8 @@ const treatments = [
   image: "https://i.pinimg.com/736x/db/1b/40/db1b4074f45bc20b80bb1e37f7f4d593.jpg",
   imageAlt: "Mud therapy treatment",
 
+  video: massage,
+    
   hero: {
     tagline:
       "A natural therapy using specially prepared mud as part of personalised physical and wellness care.",
@@ -1209,6 +1233,8 @@ const treatments = [
   image: "https://i.pinimg.com/1200x/a0/7b/84/a07b848f0363f9f6d3a7ad350c65cc25.jpg",
   imageAlt: "Phytotherapeutic medicine",
 
+  video: massage,
+    
   hero: {
     tagline:
       "Personalised plant-based care using medicinal plants and preparations according to individual health needs.",
@@ -1334,6 +1360,8 @@ const treatments = [
   image: qrma,
   imageAlt: "Quantum Resonance Magnetic Analyser assessment",
 
+  video: massage,
+    
   hero: {
     tagline:
       "A non-invasive wellness assessment tool providing additional information to support personalised health discussions.",

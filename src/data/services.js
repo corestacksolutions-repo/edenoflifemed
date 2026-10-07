@@ -48,8 +48,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
 
 
 
-
-export const services = [
+ const services = [
 
     {
         id: 1,
@@ -1067,3 +1066,5 @@ export const services = [
     },
 
 ];
+
+export default services;

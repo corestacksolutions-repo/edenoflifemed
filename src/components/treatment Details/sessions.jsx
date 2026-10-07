@@ -10,7 +10,7 @@ export default function Session({treatment}){
               </header>
              <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-4 gap-6 mt-8">
                    {treatment.session.steps.map((item)=>
-                      <article key={item.number} className="w-full shadow border-blue-800  p-6 rounded-2xl space-y-3 bg-white blue-00">
+                      <article key={item.number} className="w-full shadow border-blue-800  p-6 rounded-2xl space-y-3 bg-white hover:bg-blue-200 transition-colors duration-500">
                             <div className="w-[35px] h-[35px]  flex items-center justify-center p-2 shrink-0 rounded-full bg-blue-900/50 text-white font-serif font-semibold">
                                {item.number}
                             </div>

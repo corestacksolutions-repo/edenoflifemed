@@ -80,45 +80,45 @@ export default function Footer() {
                              <h3 className="font-[Roboto]">Treatments</h3>
                              <ul className="space-y-3 mt-3 text-white/50">
                                 <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
+                                   <Link to="/treatments/massage" className=" hover:text-white transition-all duration-300">
                                       Massage
                                    </Link>
                                 </li>
                                 <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
+                                   <Link to="/treatments/cupping" className=" hover:text-white transition-all duration-300">
                                       Cupping
                                    </Link>
                                 </li>
                                 <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
+                                   <Link to="/treatments/acupuncture" className=" hover:text-white transition-all duration-300">
                                       Acupuncture
                                    </Link>
                                 </li>
                                 <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
+                                   <Link to="/treatments/physiotherapy" className=" hover:text-white transition-all duration-300">
                                       Physiotherapy
                                    </Link>
                                 </li>
                                 <li>
-                                   <Link to="/services" className="text-white/50 hover:text-white transition-all duration-300">
+                                   <Link to="/treatments/hydrotherapy" className="text-white/50 hover:text-white transition-all duration-300">
                                       Hydrotherapy
                                    </Link>
                                 </li>
                                 <li>
-                                   <Link to="/services" className="text-white/50 hover:text-white transition-all duration-300">
+                                   <Link to="/treatments/phototherapy" className="text-white/50 hover:text-white transition-all duration-300">
                                      Photo therapy
                                    </Link>
                                 </li>
                                 <li>
-                                   <Link to="/services" className="text-white/50 hover:text-white transition-all duration-300">
+                                   <Link to="/treatments/quantum-resistance" className="text-white/50 hover:text-white transition-all duration-300">
                                       Quantum Resistance
                                    </Link>
                                 </li>
                              </ul>
-                             <button className=" flex items-center gap-2 mt-6 border-b text-white/50 italic border-white/20">
+                             <Link to="/treatments" className=" flex items-center gap-2 mt-6 border-b text-white/50 italic border-white/20">
                                 All treatments
                                 <ArrowRight className="size-4 -rotate-[35deg]"/>
-                             </button>
+                             </Link>
                           </div>
 
                           {/*home, contact, booking */}

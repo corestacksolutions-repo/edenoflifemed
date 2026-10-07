@@ -3,6 +3,8 @@ import treatments from "../data/treatments"
 
 import Hero from "../components/treatment Details/Hero"
 import OverView from "../components/treatment Details/overView";
+import VideoContainer from "../components/treatment Details/video";
+import massage from "../assets/videos/treatments/massage.mp4"
 import Session from "../components/treatment Details/sessions";
 import Suitability from "../components/treatment Details/Suitability";
 import Expectations from "../components/treatment Details/Expectations";
@@ -36,10 +38,13 @@ export default function TreatmentDetail(){
               <>
                 <Hero  treatment={treatment}/>
                 <OverView treatment={treatment} />
+                <VideoContainer treatment={treatment} />
+                
                 <Session treatment={treatment} />
                 <Suitability treatment={treatment} />
                 <Expectations treatment={treatment}/>
                 <CTA treatment={treatment}/>
+                
                 <RelatedTreatment relatedTreatments={randomTreatments}/>
               </>
         )
