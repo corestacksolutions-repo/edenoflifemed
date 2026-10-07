@@ -16,7 +16,7 @@ export const createConsultation = async (req, res, next) => {
             email,
             phone,
             country,
-            dateTime: date_time,
+            // dateTime: date_time,
             purpose,
             message
         } = req.validatedData
@@ -35,7 +35,7 @@ export const createConsultation = async (req, res, next) => {
                                         email,
                                         phone,
                                         country,
-                                        date_time,
+                                        // date_time,
                                         purpose,
                                         message
                                     })

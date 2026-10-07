@@ -3,6 +3,7 @@ import {createBrowserRouter} from 'react-router-dom';
 import Home from './pages/Home'
 import NavLayout from './layouts/NavLayout'
 import ConsultationBooking from './pages/ConsultationBooking'
+import AppointmentBooking from './pages/AppointmentBooking'
 import Services from './pages/Services';
 import Treatments from './pages/Treatments';
 import ServiceDetails from './pages/ServicesDetails';
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
         children: [
             {index: true, Component: Home},
             {path: '/consultation', Component: ConsultationBooking},
+            {path: '/appointment', Component: AppointmentBooking},
             {path: '/services', Component: Services},
             {path: '/treatments', Component: Treatments},
             {path: '/services/:serviceId', Component: ServiceDetails},

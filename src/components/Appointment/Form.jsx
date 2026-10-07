@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Loader2, AlertCircle } from "lucide-react";
+import { AlertCircle, Loader2 } from "lucide-react";
 
 const apiBase = import.meta.env.VITE_BACKEND_API_URL;
 
@@ -10,12 +10,13 @@ const Form = () => {
         email: "",
         phone: "",
         country: "",
-        purpose: "",
-        message: "",
+        dateTime: "",
+        notes: "",
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState("");
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,7 +26,7 @@ const Form = () => {
             [name]: value,
         }));
 
-        // Remove the previous error once the user starts editing again
+        // Clear any previous error when the user starts editing again.
         if (error) {
             setError("");
         }
@@ -41,7 +42,7 @@ const Form = () => {
         try {
 
             const response = await fetch(
-                `${apiBase}/api/create-consultation`,
+                `${apiBase}/api/create-appointment`,
                 {
                     method: "POST",
                     headers: {
@@ -51,40 +52,53 @@ const Form = () => {
                 }
             );
 
-            // Safely attempt to parse the server response
+
+            // Safely attempt to parse the response.
             const data = await response.json().catch(() => ({}));
 
             console.log("Data from the server:", data);
 
 
-            // Backend successfully created the consultation
-            // and returned the payment URL.
+            /*
+             * The backend is expected to return a redirectUrl
+             * after successfully creating the appointment.
+             */
             if (response.ok && data.redirectUrl) {
+
                 window.location.href = data.redirectUrl;
+
                 return;
             }
 
 
-            // Something went wrong on the server side.
-            if (!response.ok & !data.success) {
-                console.error("Server responded with an error:", data.Errors[0].msg);
-                setError(
-                    `Server responded with an error:", ${data.Errors[0].msg}`
-                )
+            /*
+             * The server responded with an error.
+             */
+            if (!response.ok) {
+
+                throw new Error(
+                    "We couldn't process your appointment booking right now."
+                );
             }
 
 
-            // Successful response but no payment URL was returned.
+            /*
+             * The request may have technically succeeded,
+             * but without a payment URL we cannot continue.
+             */
             throw new Error(
                 "We couldn't continue to the payment page. Please try again."
             );
 
         } catch (error) {
 
-            console.error("Consultation booking failed:", error);
+            console.error(
+                "Appointment booking failed:",
+                error
+            );
 
             setError(
-                "We couldn't process your consultation request right now. Please check your connection and try again. If the problem continues, please contact our team directly."
+                "We couldn't process your appointment booking right now. Please check your connection and try again. If the problem continues, please contact our team directly."
             );
 
         } finally {
@@ -105,12 +119,12 @@ const Form = () => {
             <div className="mb-6">
 
                 <h3 className="font-serif text-2xl md:text-3xl text-blue-950">
-                    Book Your Consultation
+                    Schedule Your Appointment
                 </h3>
 
                 <p className="mt-2 text-sm text-black/55 leading-relaxed">
-                    Tell us a little about yourself and what you'd like
-                    support with. We'll take it from there.
+                    Choose a date and time that works for you and provide
+                    your details below to continue with your booking.
                 </p>
 
             </div>
@@ -274,76 +288,83 @@ const Form = () => {
             </div>
 
 
-            {/* Purpose */}
+            {/* Date & Time */}
             <div className="w-full mb-5">
 
                 <label
-                    htmlFor="purpose"
+                    htmlFor="dateTime"
                     className="block text-sm mb-1"
                 >
-                    Purpose of Consultation
+                    Preferred Date & Time
                 </label>
 
-                <select
-                    id="purpose"
-                    name="purpose"
-                    value={formData.purpose}
+                <input
+                    type="datetime-local"
+                    id="dateTime"
+                    name="dateTime"
+                    value={formData.dateTime}
                     onChange={handleChange}
                     required
                     className="w-full p-2 border-b border-black outline-none bg-transparent focus:border-blue-800 transition-colors duration-300"
-                >
+                />
 
-                    <option value="" disabled>
-                        Select a purpose
-                    </option>
-
-                    <option value="General Wellness">
-                        General Wellness
-                    </option>
-
-                    <option value="Chronic Health Concern">
-                        Chronic Health Concern
-                    </option>
-
-                    <option value="Nutrition & Lifestyle">
-                        Nutrition & Lifestyle
-                    </option>
-
-                    <option value="Natural & Herbal Support">
-                        Natural & Herbal Support
-                    </option>
-
-                    <option value="Other Health Concern">
-                        Other Health Concern
-                    </option>
-
-                </select>
+                <p className="mt-2 text-xs text-black/45">
+                    Please choose a time that is convenient for you.
+                    Our team will confirm the appointment after your
+                    booking is reviewed.
+                </p>
 
             </div>
 
 
-            {/* Message */}
+            {/* Notes */}
             <div className="w-full">
 
                 <label
-                    htmlFor="message"
+                    htmlFor="notes"
                     className="block text-sm mb-1"
                 >
-                    Tell us more about your concern
+                    Additional Notes
                     <span className="text-black/40">
                         {" "}(Optional)
                     </span>
                 </label>
 
                 <textarea
-                    id="message"
-                    name="message"
+                    id="notes"
+                    name="notes"
                     rows="4"
-                    value={formData.message}
+                    value={formData.notes}
                     onChange={handleChange}
                     className="w-full p-2 border-b border-black outline-none resize-none bg-transparent focus:border-blue-800 transition-colors duration-300"
-                    placeholder="Tell us more about what you're experiencing..."
+                    placeholder="Is there anything else you'd like us to know?"
                 />
+
+            </div>
+
+
+            {/* Fee Notice */}
+            <div className="mt-6 rounded-lg bg-blue-950/5 border border-blue-950/10 px-4 py-3">
+
+                <div className="flex items-center justify-between gap-4">
+
+                    <div>
+
+                        <p className="text-sm font-medium text-blue-950">
+                            Appointment Booking Fee
+                        </p>
+
+                        <p className="text-xs text-black/50 mt-1">
+                            Required to proceed with your booking.
+                        </p>
+
+                    </div>
+
+                    <p className="text-lg font-semibold text-blue-950 whitespace-nowrap">
+                        MK15,000
+                    </p>
+
+                </div>
 
             </div>
 
@@ -352,7 +373,7 @@ const Form = () => {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="self-start mt-7 px-6 py-3 bg-red-700/90 text-white rounded-lg hover:bg-red-900 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-w-[170px]"
+                className="self-start mt-7 px-6 py-3 bg-red-700/90 text-white rounded-lg hover:bg-red-900 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-w-[190px]"
             >
 
                 {isSubmitting ? (
@@ -377,8 +398,8 @@ const Form = () => {
 
             {/* Payment Note */}
             <p className="mt-3 text-xs text-black/45 leading-relaxed">
-                You will be redirected to our secure payment page after
-                submitting your consultation details.
+                You will be redirected to our secure payment page to
+                complete the MK15,000 appointment booking fee.
             </p>
 
         </form>
