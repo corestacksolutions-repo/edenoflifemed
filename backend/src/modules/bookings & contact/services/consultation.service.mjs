@@ -1,4 +1,3 @@
-import { generateReference } from "../../../utils/generateReference.mjs"
 import * as consultationRepository from '../repositories/consultation.repository.mjs'
 
 export const createConsultation = async ({

@@ -40,7 +40,7 @@ export const appointmentValidationSchema = {
      * Prevents obviously invalid names and excessively large
      * input values.
      */
-    fullName: {
+    full_name: {
         trim: true,
 
         notEmpty: {
@@ -172,7 +172,7 @@ export const appointmentValidationSchema = {
      *
      * Availability belongs in the service/business-logic layer.
      */
-    dateTime: {
+    date_time: {
         trim: true,
 
         notEmpty: {
@@ -201,7 +201,7 @@ export const appointmentValidationSchema = {
      * max length:
      * Prevents unnecessarily large request payloads.
      */
-    message: {
+    notes: {
         optional: true,
 
         trim: true,
@@ -211,7 +211,7 @@ export const appointmentValidationSchema = {
                 max: 2000,
             },
             errorMessage:
-                "Message cannot exceed 2000 characters.",
+                "Notes cannot exceed 2000 characters.",
         },
     },
 };
