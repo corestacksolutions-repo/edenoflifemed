@@ -17,7 +17,7 @@ export const appointmentBookingGuide = [
         id: 2,
         title: "Complete payment",
         description:
-            "Proceed to the payment page and pay the MK15,000 appointment booking fee.",
+            "Proceed to the payment page and pay the MK4,000 appointment booking fee.",
         icon: LuCreditCard,
     },
     {

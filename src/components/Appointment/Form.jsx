@@ -41,6 +41,15 @@ const Form = () => {
 
         try {
 
+            const payload = {
+                full_name: formData.fullName,
+                email: formData.email,
+                phone: formData.phone,
+                country: formData.country,
+                date_time: formData.dateTime,
+                notes: formData.notes
+            }
+
             const response = await fetch(
                 `${apiBase}/api/create-appointment`,
                 {
@@ -48,7 +57,7 @@ const Form = () => {
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(formData),
+                    body: JSON.stringify(payload),
                 }
             );
 
@@ -70,16 +79,24 @@ const Form = () => {
                 return;
             }
 
-
             /*
              * The server responded with an error.
              */
-            if (!response.ok) {
-
-                throw new Error(
-                    "We couldn't process your appointment booking right now."
-                );
+            if (!response.ok || data.Errors) {
+                console.error("Server responded with an error:", data.Errors[0].msg);
+                setError(
+                    `Server responded with an error:", ${data.Errors[0].msg}`
+                )
             }
+
+            setFormData({
+                fullName: "",
+                email: "",
+                phone: "",
+                country: "",
+                dateTime: "",
+                notes: "",
+            })
 
 
             /*
@@ -361,7 +378,7 @@ const Form = () => {
                     </div>
 
                     <p className="text-lg font-semibold text-blue-950 whitespace-nowrap">
-                        MK15,000
+                        MK4,000
                     </p>
 
                 </div>
@@ -399,7 +416,7 @@ const Form = () => {
             {/* Payment Note */}
             <p className="mt-3 text-xs text-black/45 leading-relaxed">
                 You will be redirected to our secure payment page to
-                complete the MK15,000 appointment booking fee.
+                complete the MK4,000 appointment booking fee.
             </p>
 
         </form>
