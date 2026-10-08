@@ -734,7 +734,7 @@ const treatments = [
   excerpt:
     "A non-invasive therapy that uses mild electrical impulses through skin electrodes as part of care for certain types of pain and muscle discomfort.",
 
-  image: "https://i.pinimg.com/1200x/78/a1/d1/78a1d1e90a996fa183a6cc53501251e4.jpg",
+  image: "https://i.pinimg.com/736x/ba/19/89/ba1989d1a19fe0ee1c033f36508fb717.jpg",
   imageAlt: "TENS therapy treatment",
 
   video: massage,
@@ -858,7 +858,7 @@ const treatments = [
   excerpt:
     "A controlled light-based therapy used as part of care for selected skin conditions and other appropriate therapeutic applications.",
 
-  image: "https://i.pinimg.com/236x/f3/b1/b6/f3b1b63955f8dcf7b0e730c0605b9d84.jpg",
+  image: "https://i.pinimg.com/1200x/f0/8e/39/f08e39cb55b554a8bc5580c8cd273aa4.jpg",
   imageAlt: "Phototherapy treatment session",
 
   video: massage,
@@ -981,7 +981,7 @@ const treatments = [
   excerpt:
     "A non-invasive technology-based therapy using electromagnetic waves in the terahertz range as part of personalised wellness care.",
 
-  image: "https://i.pinimg.com/1200x/1e/f1/a3/1ef1a38afb1b069d2ce821241fa64671.jpg",
+  image: "https://i.pinimg.com/736x/be/3e/de/be3ede2e941c80c4a0fc4bfe78d9a5be.jpg",
   imageAlt: "TeraHertz therapy treatment",
 
   video: massage,

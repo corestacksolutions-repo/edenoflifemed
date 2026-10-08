@@ -10,7 +10,7 @@ const ServicesBody = () => {
       {/* Treatments Grid */}
       <div className="w-full lg:basis-[65%] min-w-0">
         <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <h4 className="text-3xl font-serif text-emerald-950">
+          <h4 className="text-3xl font-[Roboto] text-emerald-950">
             Our Services
           </h4>
 
@@ -27,7 +27,7 @@ const ServicesBody = () => {
       </div>
 
       {/* Offers & CTA */}
-      <div className="w-full lg:flex-1 min-w-0 flex flex-col gap-5">
+      <div className="w-full lg:w-[80%] lg:ml-[6%] lg:flex-1 min-w-0 flex flex-col gap-5">
         <Expectations />
         <CTA />
       </div>

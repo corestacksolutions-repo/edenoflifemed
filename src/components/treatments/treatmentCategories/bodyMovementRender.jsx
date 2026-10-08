@@ -1,31 +1,37 @@
+import { ArrowBigRight, ArrowRight } from "lucide-react";
+import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export default function BodyMovementRender({treatments}){
-               
-               
-               
+                            
                return(
-                <section className="w-full">
-                      <header className="hidden text-center">
-                          <h2 className="font-bold text-2xl">
-                              Body and Movement Treatments
+                <section className="w-full lg:py-20">
+                      <header className="text-center my-8">
+                          <h2 className="font-bold font-[Roboto] text-2xl">
+                              Body Movement Treatments
                           </h2>
                       </header>
                       
-                      <div className="bg-blue-50 py-20 lg:py-40 ">
-                        <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-3 lg:grd-cols-4 gap-4">
+                      <div className="">
+                        <div className="w-[92%]  md:w-[85%] lg:w-[60%] mx-auto grid md:grid-cols-3 lg:grd-cols-4 lg:gap-y-10 gap-10">
                         {treatments.map((item)=>
-                           <Link to={`/treatments/${item.slug}`} key={item.id} className="group flex gap-4 bg-white shadow w-full h-20 rounded-2xl p-2">
-                              <div  className="w-20 overflow-hidden border bg-red-50 30 rounded-xl">
-                                 <img src={item.image} alt={item.imageAlt} className="w-full h-full object-cober" />
+                           <article to={`/treatments/${item.slug}`} key={item.id} className=" flex flex-col gap-4 bg-white w-full h-fit">
+                              <div  className="overflow-hidden border bg-red-50 ">
+                                 <img src={item.image} alt={item.imageAlt} className="w-full h- object-cober" />
                               </div>
-                              <div className="flex flex-col justify-between space-y-2">
+                              <div className="space-y-4">
                                  <p className="font-semibold font-[Roboto] text-[0.875rem]">{item.title}</p>   
-                                 <p className="text-red-800 text-[0.85rem] font-[Roboto] group-hover:underline transition-all duration-300">
-                                    Explore {item.title}
+                                 <p className="">
+                                    {item.excerpt}
                                  </p>
+                                 <Link to={`/treatments/${item.slug}`} className="group relative w-fit flex border px-2 py-1 text-14px] font-light border border ">
+                                    <div className="absolute inset-0 w-0 h-full bg-black group-hover:w-full transition-all duration-500"/>
+                                    <p className="relative group-hover:text-white transition-all duration-500">
+                                       Learn More
+                                    </p>
+                                 </Link>
                               </div> 
-                          </Link>   
+                          </article>   
                         )}
                         </div>
                       </div>

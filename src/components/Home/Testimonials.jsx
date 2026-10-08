@@ -6,7 +6,7 @@ import Carousel from "../carousel"
 
 export default function Testmonials(){
     return(
-        <section className="relative w-full bg-white  w-full py-20 space-y-10 relative overflow-hidden">
+        <section className="relative w-full bg-white  w-full py-20 space-y-10 relative overflow-hidden lg:pb-60">
             <header className="w-[92%] md:w-[50%] mx-auto text-center space-y-6">
                 <h2 className="heading-one">From our clients</h2>
                 <p className="p">

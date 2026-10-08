@@ -12,7 +12,7 @@ export default function Footer() {
            const currentYear = new Date().getFullYear();
            return (
             <footer className="relative w-full bg-black text-white pb-10">
-                <div className="w-[92%] lg:w-[85%] mx-auto grid  md:grid-cols-3 gap-3 rounded-xl md:rounded-3xl p-6 bg-blue-950 -translate-y-10">
+                <div className="w-[92%] lg:w-[85%] mx-auto grid  md:grid-cols-3 gap-3 rounded-xl md:rounded-3xl p-6 bg-blue-950 gradient-to-tr from-black via-blue-950 lack to-black lue-950 -translate-y-10">
                       {/*company info */}
                       <div className="w-full h-20">
                          <div className="flex items-center gap-2">
@@ -68,10 +68,10 @@ export default function Footer() {
                                    </Link>
                                 </li>
                              </ul>
-                             <button className="flex items-center gap-2 mt-6 border-b text-white/50 italic text-white/30 border-white/20">
-                                view all services
+                             <Link to='/services' className="w-fit flex items-center gap-2 mt-6 border-b text-white/50 italic text-white/30 border-white/20">
+                                All services
                                 <ArrowRight className="size-4 -rotate-[35deg]"/>
-                             </button>
+                             </Link>
 
                           </div>
 
@@ -115,7 +115,7 @@ export default function Footer() {
                                    </Link>
                                 </li>
                              </ul>
-                             <Link to="/treatments" className=" flex items-center gap-2 mt-6 border-b text-white/50 italic border-white/20">
+                             <Link to="/treatments" className="w-fit flex items-center gap-2 mt-6 border-b text-white/50 italic border-white/20">
                                 All treatments
                                 <ArrowRight className="size-4 -rotate-[35deg]"/>
                              </Link>

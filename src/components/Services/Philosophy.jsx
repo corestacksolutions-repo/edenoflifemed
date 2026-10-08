@@ -3,7 +3,7 @@ import PhilosophyRenderer from "./PhilosophyRenderer";
 
 const Philosophy = () => {
   return (
-    <section className="w-[90%] max-w-7xl mx-auto my-10 p-5 md:p-6 flex flex-col lg:flex-row gap-8 rounded-3xl items-start bg-emerald-50 border border-emerald-900/5">
+    <section className="w-[90%] max-w-7xl mx-auto my-10 p-5 md:p-6 flex flex-col lg:flex-row gap-8 rounded-3xl items-start bg-emerald-50 border border-emerald-900/5 my-20">
       {/* Philosophy Header */}
       <div className="w-full lg:basis-[25%] flex gap-3 text-emerald-800">
         {/* Philosophy Icon */}
