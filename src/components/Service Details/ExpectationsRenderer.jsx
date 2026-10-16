@@ -15,16 +15,16 @@ const ExpectationsRenderer = ({expectations}) => {
               p-4
               rounded-xl
               bg-white/60
-              border border-emerald-900/5
+              border border-blue-900/5
               last:border-r-0
             "
           >
 
             {/* Icon */}
-            <div className="relative shrink-0 w-[48px] h-[48px] rounded-full flex items-center justify-center bg-emerald-600 text-white">
+            <div className="relative shrink-0 w-[48px] h-[48px] rounded-full flex items-center justify-center bg-blue-600 text-white">
               <Icon size={21} />
 
-              <div className="absolute -right-1 -bottom-1 w-[18px] h-[18px] rounded-full bg-blue-600 flex items-center justify-center border-2 border-white">
+              <div className="absolute -right-1 -bottom-1 w-[18px] h-[18px] rounded-full bg-green-600 flex items-center justify-center border-2 border-white">
                 <IoCheckmarkOutline size={11} />
               </div>
             </div>

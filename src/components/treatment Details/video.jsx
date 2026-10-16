@@ -4,7 +4,7 @@ export default function VideoContainer({treatment}) {
         <section className="w-full my-10 lg:mb-40">
             <header className="text-center my-10 lg:my-20">
                 <h2 className="text-[2.12rem] font-[Roboto] font-semibold my-6">
-                    Massage in action
+                    {treatment.title} in action
                 </h2>
             </header>
             <div className="relativ w-[92%] lg:w-[85%] mx-auto grid lg:grid-cols-3 gap-3">

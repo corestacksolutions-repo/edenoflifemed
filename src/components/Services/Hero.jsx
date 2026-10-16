@@ -7,11 +7,22 @@ import { ChevronRight } from "lucide-react";
 
 const Hero = () => {
   const [currentIndex , setCurrentIndex] = useState(2);
-  const currentService = servicesData[currentIndex]
-  console.log("services data", servicesData[currentIndex])
+
+  {/*services selected for hero animation */}
+   // random treatments
+  function getRandomServices(s, c) {
+      return [...s]
+             .sort(() => Math.random() - 0.5)
+             .slice(0, c);
+      }
+  
+  const selectedServices = getRandomServices(servicesData, 4);
+  
+  const currentService = selectedServices[currentIndex]
+ 
   {/* next service function */}
   const handleNext = () =>{
-      setCurrentIndex(prev => (prev+1) % servicesData.length)
+      setCurrentIndex(prev => (prev+1) % selectedServices.length)
   }
 
   useEffect(()=>{
@@ -91,7 +102,7 @@ const Hero = () => {
 
          {/*slide indicators */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-10  flex gap-2 w-fit mx-auto">
-               {servicesData.map((_, index) => (
+               {selectedServices.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}

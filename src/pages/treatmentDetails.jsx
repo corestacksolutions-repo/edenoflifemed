@@ -18,10 +18,12 @@ export default function TreatmentDetail(){
         const  treatment = treatments.find(
             (item) => item.slug === slug
         )
+
         // related treatments
         const relatedTreatments = treatments.filter(
             (item)=> item.title != treatment.title 
         )
+
         // random treatments from related treatments
         function getRandomTreatments(t, c) {
            return [...t]
@@ -37,11 +39,10 @@ export default function TreatmentDetail(){
         return(
               <>
                 <Hero  treatment={treatment}/>
-                <OverView treatment={treatment} />
-                <VideoContainer treatment={treatment} />
-                
-                <Session treatment={treatment} />
-                <Suitability treatment={treatment} />
+                <OverView treatment={treatment}/>
+                <VideoContainer treatment={treatment}/>
+                <Session treatment={treatment}/>
+                <Suitability treatment={treatment}/>
                 <Expectations treatment={treatment}/>
                 <CTA treatment={treatment}/>
                 

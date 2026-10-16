@@ -1,10 +1,10 @@
 import bg from '../../assets/treatment page/treats.jpg';
-import { PiFlowerLotusDuotone } from "react-icons/pi";
-
+import { BsHeartPulseFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Hero = ({hero}) => {
   return (
-    <section className="w-full h-[380px] overflow-hidden relative bg-emerald-950">
+    <section className="w-full h-[380px] lg:mt-8 overflow-hidden relative bg-emerald-950">
       
       {/* Background Image */}
       <img
@@ -14,18 +14,21 @@ const Hero = ({hero}) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-emerald-950/95 via-emerald-900/85 to-emerald-500/10" />
+      <div className="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-black/90 -950/95 via-black/70 -900/85 to-black/10 -500/10" />
 
       {/* Text Box */}
       <div className="relative z-20 w-[90%] max-w-7xl h-full mx-auto px-2 sm:px-5 flex flex-col justify-center py-10">
         
         {/* Mini Heading */}
-        <div className="relative flex items-center gap-3 w-fit text-blue-600 uppercase tracking-[0.12em] font-semibold text-xs sm:text-sm">
-          <PiFlowerLotusDuotone size={28} />
+        <div className="relative flex items-center gap-3 w-fit text-red-800 tracking-[0.12em] font-semibold text-xs sm:text-sm">
+          <BsHeartPulseFill size={28} />
 
-          <span> {hero.hero.eyebrow}</span>
+          <span className="flex gap-1 text-sm"> 
+             <Link to={`/services`}>services</Link>
+             {hero.hero.eyebrow}
+          </span>
 
-          <div className="absolute left-0 -bottom-2 w-[32px] h-[1px] bg-blue-600" />
+          <div className="hidden absolute left-0 -bottom-2 w-[32px] h-[1px] bg-blue-600" />
         </div>
 
         {/* Heading */}

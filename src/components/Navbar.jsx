@@ -118,7 +118,7 @@ const Navbar = () => {
                             text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
                             {data.slice(0, data.length / 2).map((item)=>(
                               <li key={item.id}>
-                                <Link to={`/${activeGroup}/${item.slug}`} 
+                                <Link to={`/${activeGroup}/${item.slug}`}  onClick={()=>setActiveGroup(null)} 
                                   className="hover:text-blue-400 transition-colors duration-300">
                                   {item.title}
                                 </Link>
@@ -130,7 +130,7 @@ const Navbar = () => {
                            text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
                              {data.slice(data.length / 2).map((item)=>(
                              <li key={item.id}>
-                               <Link to={`/${activeGroup}/${item.slug}`} 
+                               <Link to={`/${activeGroup}/${item.slug}`}  onClick={()=>setActiveGroup(null)}
                                 className="hover:text-blue-400 transition-colors duration-300">
                                  {item.title}
                                </Link>
@@ -141,9 +141,9 @@ const Navbar = () => {
 
                         {activeGroup==='services'
                         ?
-                         <Link to={`/services`} onClick={()=>setActiveGroup(null)} className="relative flex border min-h-40 w-full rounded-3xl overflow-hidden">
+                         <Link to={`/services`} onClick={()=>setActiveGroup(null)} className="relative flex border w-full rounded-3xl overflow-hidden">
                           <img src="https://i.pinimg.com/736x/bc/e8/f6/bce8f621543d0960fad099a07f95a3a2.jpg" 
-                            alt="cupping" className="absolute inset-0 w-full h-full object-cober" />
+                            alt="cupping" className="absolute inset-0 m-auto w-full h-full object-cober" />
                             {/*overlay */}
                          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-white/0 via-black/70 to-white/0"/>
                          

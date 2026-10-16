@@ -78,6 +78,7 @@ export default function Services(){
                                  variants={card}
                                  className="relative group w-full shadow bg-gradient-to-tr from-blue-200 via-blue-100/80 to-blue-200  space-y-4 p-8 rounded-xl"   
                           >
+                           
                              <div className="w-fit p-3 rounded-full border border-blue-100">
                                <Icon className="size-6"/>
                              </div>
@@ -96,12 +97,14 @@ export default function Services(){
                               </Link>
                           </motion.article>
                         )})}
-                        
-                        <Link to="/services "
-                              className="w-full md:w-fit absolute bottom-[-80px] md:bottom-0 mt:8 md:right-0 px-6 py-3 flex bg-red-700/90 rounded-xl font-bold z-10">
-                             <span className="m-auto text-white">See all</span> 
-                        </Link>
-                      
+                  
+
+                        <div className="w-full h-full flex justify-end items-end">
+                           <Link to="/services"
+                             className="w-full md:w-fit mt:8 md:mt-0 text-red-900 underline tetx-sm z-10">
+                             See all 
+                           </Link>
+                         </div>
                 </motion.div>
 
                 <footer className="">

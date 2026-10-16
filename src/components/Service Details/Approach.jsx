@@ -10,16 +10,16 @@ const Approach = ({approach}) => {
 
         {/* Section Header */}
         <div className="w-full lg:basis-[25%] shrink-0">
-          <p className="text-blue-700 uppercase tracking-[0.12em] text-sm font-semibold">
+          <p className="text-red-900 uppercase tracking-[0.12em] text-sm font-semibold">
             Our Approach
           </p>
 
-          <h3 className="text-[2.25rem] md:text-4xl leading-[110%] mt-3 font-serif text-emerald-950">
+          <h3 className="text-[2.25rem] md:text-4xl leading-[110%] mt-3 font-serif text-blue-950">
             Natural. Evidence-informed.{" "}
-            <span className="text-blue-700">You.</span>
+            <span className="text-red-950">You.</span>
           </h3>
 
-          <div className="mt-5 w-[40px] h-[2px] bg-blue-700" />
+          <div className="mt-5 w-[40px] h-[2px] bg-red-900" />
         </div>
 
         {/* Approach */}

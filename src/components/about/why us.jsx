@@ -5,7 +5,7 @@ import careBenefits from "../../data/why us";
 import { ChevronDown } from "lucide-react";
 
 export default function ChooseUs(){
-      const [isExpanded, setIsExpanded] = useState(null);
+      const [isExpanded, setIsExpanded] = useState(1);
       const handleExpansion = (id) =>{
             setIsExpanded(isExpanded === id ? null : id)
             console.log(isExpanded)
@@ -20,7 +20,7 @@ export default function ChooseUs(){
                  <div className="my-10  space-y-3">
                     {careBenefits.map((item)=>
                       <article key={item.id} onClick={()=> handleExpansion(item.id)} 
-                               className={`${isExpanded ===item.id ? 'h-fit': 'h-[56px]'} transition-all duration-500 w-full rounded-3xl border overflow-hidden`}>
+                               className={`${isExpanded ===item.id ? 'h-fit': 'h-[56px]'} transition-all duration-500 w-full rounded-3xl border overflow-hidden px-4`}>
                         <div className="flex justify-between items-center  borr p-3 rounded-3xl">
                            <h3 className="font-[Roboto] font-semibold text-lg text-">
                             {item.title}

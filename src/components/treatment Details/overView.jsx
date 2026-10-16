@@ -9,7 +9,7 @@ export default function OverView({treatment}){
             <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-3 grid-rows-auto gap-6">
                   {/*image */}
                  <figure className="row-start-1 z-10 bg-gray-100/60 w-full h-full rounded-2xl overflow-hidden rounded-3xl">
-                   <img src= {treatment.image} alt={treatment.imageAlt} className="w-full h-full object-cover" />
+                   <img src= {treatment.image} alt={treatment.imageAlt} className="w-full h-full object-cover hover:scale-110 transion-all duration-500" />
                  </figure>
 
                  {/*content */}
@@ -32,7 +32,7 @@ export default function OverView({treatment}){
                            {treatment.mayHelpWith.title}
                          </h4>
                         {treatment.mayHelpWith.items.map((item, index)=>
-                          <span key={index} className="flex gap-3 items-center">
+                          <span key={index} className="flex gap-3 items-center ml-1">
                               <div className="size-[10px] bg-black rounded-full text-white"/>
                               <p key={item} className="text-[16px]">
                                 {item}

@@ -15,17 +15,17 @@ const Overview = ({overview}) => {
         <div className="w-full lg:basis-[38%]">
           
           <header>
-            <p className="text-blue-700 uppercase tracking-[0.12em] text-sm font-semibold">
+            <p className="text-blue-900 uppercase tracking-[0.12em] text-sm font-semibold">
               {overview.eyebrow}
             </p>
 
-            <h3 className="text-[2.25rem] md:text-4xl leading-[110%] mt-3 mb-8 font-serif relative text-emerald-950">
+            <h3 className="text-[2.25rem] md:text-4xl leading-[110%] mt-3 mb-8 font-[Roboto] relative">
               {/* Understand. Heal.{" "}
               <span className="text-blue-700">Thrive.</span> */}
 
               {overview.heading}
 
-              <span className="absolute h-[2px] w-[40px] bg-blue-700 -bottom-4 left-0" />
+              <span className="absolute h-[2px] w-[40px] bg-blue-900 -bottom-4 left-0" />
             </h3>
           </header>
 
@@ -46,11 +46,11 @@ const Overview = ({overview}) => {
             <div className="flex items-center gap-4">
               <SlClock
                 size={23}
-                className="shrink-0 text-blue-700"
+                className="shrink-0 text-blue-950"
               />
 
               <p className="tracking-wide text-sm text-black/65">
-                <span className="font-semibold text-emerald-950">
+                <span className="font-semibold text-blue-950">
                   Duration:
                 </span>{" "}
                 {overview.duration}
@@ -60,11 +60,11 @@ const Overview = ({overview}) => {
             <div className="flex items-center gap-4">
               <RxPeople
                 size={23}
-                className="shrink-0 text-blue-700"
+                className="shrink-0 text-blue-950"
               />
 
               <p className="tracking-wide text-sm text-black/65">
-                <span className="font-semibold text-emerald-950">
+                <span className="font-semibold text-blue-950">
                   Ideal for:
                 </span>{" "}
                 {overview.idealFor}
