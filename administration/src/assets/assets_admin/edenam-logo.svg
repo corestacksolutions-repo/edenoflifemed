@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">EDENAM Natural Medicine</title>
+  <desc id="desc">EDENAM logo with the original blue-violet sparkle icon and Outfit typography.</desc>
+  <defs>
+    <linearGradient id="iconGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5798FF"/>
+      <stop offset="52%" stop-color="#4269F4"/>
+      <stop offset="100%" stop-color="#4B20E9"/>
+    </linearGradient>
+    <linearGradient id="dotGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#598CFF"/>
+      <stop offset="100%" stop-color="#4B20E9"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;800&amp;display=swap');
+    .wordmark {
+      font-family: 'Outfit', sans-serif;
+      font-size: 190px;
+      font-weight: 800;
+      letter-spacing: -5px;
+      fill: #073A9B;
+    }
+    .subtitle {
+      font-family: 'Outfit', sans-serif;
+      font-size: 76px;
+      font-weight: 500;
+      letter-spacing: -1.8px;
+      fill: #596273;
+    }
+  </style>
+
+  <!-- Original sparkle icon -->
+  <rect x="78" y="100" width="330" height="330" rx="108" fill="url(#iconGradient)"/>
+  <path d="M243 160 C230 218 205 243 135 265 C205 278 230 303 243 365 C257 303 282 278 352 265 C282 243 257 218 243 160 Z" fill="#FFFFFF"/>
+  <path d="M235 365 H251 V430 H235 Z" fill="#FFFFFF"/>
+  <circle cx="430" cy="96" r="31" fill="url(#dotGradient)"/>
+
+  <!-- Original text sizing and alignment; Outfit loaded explicitly above -->
+  <text class="wordmark" x="492" y="300">EDENAM</text>
+  <text class="subtitle" x="500" y="398">Natural Medicine</text>
+</svg>

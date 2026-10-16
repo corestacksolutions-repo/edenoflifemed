@@ -8,7 +8,6 @@ export const createConsultation = async ({
             email,
             phone,
             country,
-            // date_time,
             purpose,
             message
         }) => {
@@ -38,7 +37,6 @@ export const createConsultation = async ({
             full_name,
             email,
             phone,
-            // date_time,
             country,
             purpose,
             message,
