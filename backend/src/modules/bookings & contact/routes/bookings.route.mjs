@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { checkSchema } from 'express-validator'
 import { handleRequestValidation } from '../../../middlewares/validateRequest.mjs'
-import { consultationValidationSchema } from '../consultation.validation.mjs'
-import { appointmentValidationSchema } from '../appointment.validation.mjs'
+import { consultationValidationSchema } from '../validations/consultation.validation.mjs'
+import { appointmentValidationSchema } from '../validations/appointment.validation.mjs'
 import * as consultationController from "../controllers/consultation.controller.mjs";
 import * as appointmentController from "../controllers/appointment.controller.mjs";
 
