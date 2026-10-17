@@ -3,7 +3,7 @@ export default function RelatedTreatment({relatedTreatments}){
      
      return(
           <section className="w-full bg-blue-50 py-10 ">
-               <header className="w-[90%] lg:w-[70%] mx-auto border-t pt-10">
+               <header className="w-[90%] lg:w-[70%] mx-auto pt-10">
                     <h2 className="font-bold text-center text-xl">
                          Related Treaments
                     </h2>
@@ -12,7 +12,7 @@ export default function RelatedTreatment({relatedTreatments}){
                     {relatedTreatments.map((item)=>
                     <Link to={`/treatments/${item.slug}`}
                           key={item.id}
-                          className="w-fit border border-emerald-950/10 text-center rounded-full shandow px-4 py-2 font-semibold bg-emerald-900/10"
+                          className="w-fit border border-blue-600/20 text-center text-blue-400 rounded-full shandow px-4 py-2 font-semibold "
                     >
                          {item.title}
                      </Link>

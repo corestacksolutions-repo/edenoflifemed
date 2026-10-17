@@ -14,12 +14,12 @@ export default function Expectations({treatment}){
                 </header>
                 <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-3 gap-x-3 gap-y-6 my-6">
                      {/**before */}
-                     <article className="w-full border border-blue-800/40 p-6 rounded-2xl  bg-blue-100">
+                     <article className="w-full border border-red-400/40 p-6 rounded-2xl  bg-red-100/70">
                          
                          <h3 className="font-bold text-lg mb-4">Before Treatment</h3>
                          {treatment.expectations.before.map((item)=>
                            <span key={item} className="flex gap-3 items-center">
-                              <div className="size-[30px] shrink-0 border border-black/50 rounded-full"/>
+                              <div className="size-[30px] shrink-0 bg-red-400/60 rounded-full"/>
                               <p className="my-2 text-sm tracking-wide" >
                                  {item} 
                               </p>
@@ -32,7 +32,7 @@ export default function Expectations({treatment}){
                          <h3 className="font-bold text-lg mb-3">During Treatment</h3>
                          {treatment.expectations.during.map((item)=>(
                            <span key={item} className="flex gap-3 items-center">
-                              <div className="size-[30px] shrink-0 border border-black/50 rounded-full"/>
+                              <div className="size-[30px] shrink-0 bg-sky-400/60 rounded-full"/>
                               <p  className="my-2 text-sm tracking-wide" >
                                  {item} 
                               </p>
@@ -45,7 +45,7 @@ export default function Expectations({treatment}){
                          <h3 className="font-bold text-lg mb-3">After Treatment</h3>
                          {treatment.expectations.after.map((item)=>(
                            <span key={item} className="flex gap-3 items-center">
-                              <div className="size-[30px] shrink-0 border border-black/50 rounded-full"/>
+                              <div className="size-[30px] shrink-0 bg-green-800/60 rounded-full"/>
                               <p  className="my-2 text-sm tracking-wide" >
                                  {item} 
                               </p>

@@ -1373,13 +1373,13 @@ const treatments = [
       "Quantum Resonance Magnetic Analysis (QRMA) is a computer-based assessment approach that records selected measurements and produces a report for review. At Eden of Life, it can be used as an additional source of information during a broader consultation and wellness assessment.",
   },
 
-  assessment: {
+  approach: {
     title: "How Does the Assessment Work?",
     content:
       "The assessment involves using the analyser according to the device's operating procedure to collect selected measurements. The resulting computer-generated information is then reviewed and discussed with the practitioner in the context of your individual concerns and health goals.",
   },
 
-  whatItCanProvide: {
+  mayHelpWith: {
     title: "What the Assessment Can Provide",
     items: [
       "Additional information for a wellness consultation",

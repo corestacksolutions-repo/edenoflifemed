@@ -7,11 +7,22 @@ import treatmentsData from "../../data/treatments";
 const Hero = () => {
       const [currentIndex , setCurrentIndex] = useState(2);
       const currentTreatment = treatmentsData[currentIndex]
-      console.log("services data", treatmentsData[currentIndex])
+      
+      {/*selected for hero animation */}
+      // random treatments
+      function getRandomTreatments(t, c) {
+          return [...t]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, c);
+          }
+       const selectedTreatments = getRandomTreatments(treatmentsData, 4);
+
+
+
       {/* next treatment function */}
-      const handleNext = () =>{
-          setCurrentIndex(prev => (prev+1) % treatmentsData.length)
-      }
+        const handleNext = () =>{
+          setCurrentIndex(prev => (prev+1) % selectedTreatments.length)
+       }
     
       useEffect(()=>{
          const timerId = setInterval(handleNext, 5000);
@@ -91,7 +102,7 @@ const Hero = () => {
 
          {/*slide indicators */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-10  flex gap-2 w-fit mx-auto">
-               {treatmentsData.map((_, index) => (
+               {selectedTreatments.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}

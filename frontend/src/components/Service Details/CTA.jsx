@@ -14,7 +14,7 @@ const CTA = ({cta}) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-emerald-950/95 via-emerald-900/85 to-emerald-500/10" />
+      <div className="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-black/95 via-black/85 to-black/10" />
 
       {/* Content */}
       <div className="relative z-20 w-[90%] max-w-7xl h-full mx-auto px-2 sm:px-5 flex flex-col justify-center">
@@ -33,19 +33,19 @@ const CTA = ({cta}) => {
 
           {/* CTA */}
           <Link
-            to="/booking"
+            to="/consultation"
             className="
               w-fit
               mt-6
               flex items-center gap-2
               justify-center
-              text-emerald-900
+              text-red-900
               font-medium
               bg-white
               rounded-lg
               py-2.5 px-4
               text-sm
-              hover:bg-blue-50
+              hover:bg-red-50
               transition-colors duration-300
             "
           >

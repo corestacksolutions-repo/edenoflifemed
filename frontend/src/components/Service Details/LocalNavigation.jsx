@@ -20,8 +20,8 @@ const LocalNavigation = () => {
                 rounded-lg
                 text-sm
                 text-black/50
-                hover:text-emerald-800
-                hover:bg-emerald-50
+                hover:text-red-800
+                hover:bg-red-50
                 transition-all duration-300
               "
             >
@@ -41,11 +41,11 @@ const LocalNavigation = () => {
             text-center
             text-white
             font-medium
-            bg-emerald-800
+            bg-red-800
             rounded-lg
             py-2.5 px-5
             text-sm
-            hover:bg-emerald-900
+            hover:bg-red-900
             transition-colors duration-300
           "
         >

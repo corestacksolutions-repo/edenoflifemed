@@ -21,12 +21,12 @@ const BenefitsRenderer = ({benefits}) => {
           >
 
             {/* Icon */}
-            <div className="shrink-0 bg-emerald-600/10 w-[44px] h-[44px] rounded-full flex items-center justify-center text-emerald-700">
+            <div className="shrink-0 bg-blue-600/10 w-[44px] h-[44px] rounded-full flex items-center justify-center text-blue-700">
               <Icon size={21} />
             </div>
 
             {/* Benefit Details */}
-            <div className="flex flex-col gap-2 text-emerald-950">
+            <div className="flex flex-col gap-2 text-blue-950">
               <h4 className="font-semibold text-[0.95rem]">
                 {title}
               </h4>

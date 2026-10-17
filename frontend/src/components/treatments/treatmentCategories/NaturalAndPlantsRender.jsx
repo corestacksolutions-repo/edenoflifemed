@@ -17,34 +17,27 @@ export default function NaturalAndPlantsRender({treatments}){
                         it may be appropriate for you.
                       </p>
                 </header>
-                <div className=" my-10 mb-40 ">
-                        {treatments.map((item)=>{
-                            const reverse= item.id % 2 !== 0
-                            return(
-                            <article key={item.id} className={`grid md:grid-cols-2 w-full ${reverse ? "lg:[&>*:first-child]:order-2" : ""} my-8`}>
-                                <div className="border relative h-full my-auto flex flex-col justify-center gap-4 p-2 px-6">
-                                    <h3 className="font-bold text-[1.25rem] tracking-[-1px] leading-[40px]">
-                                        {item.title}
-                                    </h3>
-                                    <p className="p">
-                                        A computer-based wellness assessment device that records selected body measurements 
-                                        and generates a detailed report for review. The assessment provides additional information 
-                                        that can help to better understand areas of your wellbeing and guide further discussion 
-                                        about your health and lifestyle.
+                <div className="w-[92%]  md:w-[85%] lg:w-[60%] mx-auto grid md:grid-cols-2 lg:grd-cols-4 lg:gap-y-10 gap-10">
+                        {treatments.map((item)=>
+                           <article to={`/treatments/${item.slug}`} key={item.id} className=" flex flex-col gap-4 bg-white w-full h-fit">
+                              <div  className="overflow-hidden border bg-red-50 ">
+                                 <img src={item.image} alt={item.imageAlt} className="w-full h- object-cober" />
+                              </div>
+                              <div className="space-y-4">
+                                 <p className="font-semibold font-[Roboto] text-[0.875rem]">{item.title}</p>   
+                                 <p className="">
+                                    {item.excerpt}
+                                 </p>
+                                 <Link to={`/treatments/${item.slug}`} className="group relative w-fit flex border px-2 py-1 text-14px] font-light border border ">
+                                    <div className="absolute inset-0 w-0 h-full bg-black group-hover:w-full transition-all duration-500"/>
+                                    <p className="relative group-hover:text-white transition-all duration-500">
+                                       Learn More
                                     </p>
-                                    <Link to={`/treatments/${item.slug}`} className="group relative w-fit flex border border-black/40 px-4 py-2 text-14px] font-light border border ">
-                                        <div className="absolute inset-0 w-0 h-full bg-black group-hover:w-full transition-all duration-500"/>
-                                        <p className="relative group-hover:text-white transition-all duration-500">
-                                          Explore 
-                                        </p>
-                                    </Link> 
-                                </div>
-                                <figure className="">
-                                  <img src={item.image} alt={item.imageAlt} className="w-full max-h-[450px] object-contain" />
-                                </figure>
-                            </article>    
-                         )})}
-                      </div>
+                                 </Link>
+                              </div> 
+                          </article>   
+                        )}
+                        </div>
            </section>
        )
 }

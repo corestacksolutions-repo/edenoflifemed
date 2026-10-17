@@ -10,15 +10,15 @@ const Expectations = ({expectations}) => {
 
         {/* Section Header */}
         <div className="w-full lg:basis-[25%] shrink-0">
-          <p className="text-blue-700 uppercase tracking-[0.12em] text-sm font-semibold">
+          <p className="text-red-900 uppercase tracking-[0.12em] text-sm font-semibold">
             What to Expect
           </p>
 
-          <h3 className="text-[2.25rem] md:text-4xl leading-[110%] mt-3 font-serif text-emerald-950">
+          <h3 className="text-[2.25rem] md:text-4xl leading-[110%] mt-3 font-serif text-blue-950">
             Your journey with us
           </h3>
 
-          <div className="mt-5 w-[40px] h-[2px] bg-blue-700" />
+          <div className="mt-5 w-[40px] h-[2px] bg-red-900" />
         </div>
 
         {/* Expectations */}

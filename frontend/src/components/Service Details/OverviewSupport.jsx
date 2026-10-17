@@ -15,12 +15,12 @@ const OverviewSupport = ({support}) => {
     <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
 
       {/* Conditions / Requirements */}
-      <div className="bg-emerald-50 border border-emerald-900/5 p-5 md:p-6 rounded-2xl">
+      <div className="bg-gradient-to-tr from-blue-200 via-blue-200/40 to-blue-200  border border-blue-950/5 p-5 md:p-6 rounded-2xl">
 
         {/* Heading */}
         <div className="flex items-center gap-4 text-emerald-900 mb-6">
           <div className="w-[48px] h-[48px] p-1 shrink-0 rounded-full flex items-center justify-center bg-white border border-emerald-900/10 text-emerald-700">
-            <FaHandHoldingHeart size={25} />
+            <FaHandHoldingHeart size={25} className="text-red-800"/>
           </div>
 
           <h4 className="text-xl md:text-2xl font-serif leading-tight">
@@ -33,9 +33,9 @@ const OverviewSupport = ({support}) => {
           {support.suitableFor.map((point, index) => (
             <div
               key={index}
-              className="text-emerald-800 flex items-start gap-3"
+              className="text-black flex items-start gap-3"
             >
-              <div className="w-[20px] h-[20px] shrink-0 mt-0.5 rounded-full flex items-center justify-center bg-emerald-500 text-white">
+              <div className="w-[20px] h-[20px] shrink-0 mt-0.5 rounded-full flex items-center justify-center bg-black text-white">
                 <IoCheckmark size={14} />
               </div>
 

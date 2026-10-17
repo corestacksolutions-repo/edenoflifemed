@@ -10,8 +10,15 @@ const contactDetails =[
         id:1,
         icon:LuPhone,
         title:"Phone",
-        lineOne:"+265 981 457 286",
-        lineTwo:"+265 981 457 286",
+        lineOne:"+265 991 960 995",
+        lineTwo:"+265 881 960 995",
+        tell:[
+             {
+               id:1,
+               lineOne:"+265991960995", 
+               lineTwo:"+265881960995",
+             }
+        ]
      },
      {
         id:2,
@@ -19,13 +26,21 @@ const contactDetails =[
         title:"Email",
         lineOne:"info@edenoflifemed.org",
         lineTwo:"manager@edenoflifemed.org",
+        mail:[
+             {
+               id:1,
+               lineOne:"info@edenoflifemed.org",
+               lineTwo:"manager@edenoflifemed.org",
+             }
+        ]
      },
      {
         id:3,
         icon:LuMapPin,
         title:"Adress",
-        lineOne:"Area 6, Plot 8",
-        lineTwo:"Mzuzu, Malawi",
+        lineOne:"P.O Box 1226",
+        lineTwo:"Area 6, MXC House near TNM Tower",
+        lineThree:"Mzuzu, Malawi",
      },
       {
         id:4,

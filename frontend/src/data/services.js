@@ -68,7 +68,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         ========================= */
 
         hero: {
-            eyebrow: "Treatments / Naturopathic Consultation",
+            eyebrow: "Naturopathic Consultation",
 
             description:
                 "A comprehensive assessment of your health to understand your needs, explore possible contributing factors, and develop a personalized wellness plan.",
@@ -258,7 +258,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: Flower2,
 
         hero: {
-            eyebrow: "Treatments / Herbal Medicine",
+            eyebrow: "Herbal Medicine",
 
             description:
                 "A personalized approach to using plant-based preparations as part of a broader natural wellness plan.",
@@ -423,7 +423,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: Apple,
 
         hero: {
-            eyebrow: "Treatments / Nutrition Therapy",
+            eyebrow: "Nutrition Therapy",
 
             description:
                 "Personalized nutrition guidance designed to help you build practical and sustainable habits around food and wellbeing.",
@@ -588,7 +588,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: Sparkles,
 
         hero: {
-            eyebrow: "Treatments / Detox & Cleansing",
+            eyebrow: "Detox & Cleansing",
 
             description:
                 "A supportive wellness approach focused on healthy habits, nutrition, hydration, and lifestyle practices.",
@@ -753,7 +753,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: HeartPulse,
 
         hero: {
-            eyebrow: "Treatments / Stress & Mental Wellness",
+            eyebrow: "Stress & Mental Wellness",
 
             description:
                 "A supportive approach to understanding lifestyle factors that may influence stress, rest, and emotional wellbeing.",
@@ -918,7 +918,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: ShieldCheck,
 
         hero: {
-            eyebrow: "Treatments / Immune Support",
+            eyebrow: "Immune Support",
 
             description:
                 "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",
@@ -1087,7 +1087,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         ========================= */
 
         hero: {
-            eyebrow: "Treatments / Naturopathic Consultation",
+            eyebrow: "Naturopathic Consultation",
 
             description:
                 "A comprehensive assessment of your health to understand your needs, explore possible contributing factors, and develop a personalized wellness plan.",
@@ -1277,7 +1277,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: Flower2,
 
         hero: {
-            eyebrow: "Treatments / Herbal Medicine",
+            eyebrow: "Herbal Medicine",
 
             description:
                 "A personalized approach to using plant-based preparations as part of a broader natural wellness plan.",
@@ -1442,7 +1442,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: Apple,
 
         hero: {
-            eyebrow: "Treatments / Nutrition Therapy",
+            eyebrow: "Nutrition Therapy",
 
             description:
                 "Personalized nutrition guidance designed to help you build practical and sustainable habits around food and wellbeing.",
@@ -1607,7 +1607,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: Sparkles,
 
         hero: {
-            eyebrow: "Treatments / Detox & Cleansing",
+            eyebrow: "Detox & Cleansing",
 
             description:
                 "A supportive wellness approach focused on healthy habits, nutrition, hydration, and lifestyle practices.",
@@ -1772,7 +1772,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: HeartPulse,
 
         hero: {
-            eyebrow: "Treatments / Stress & Mental Wellness",
+            eyebrow: "Stress & Mental Wellness",
 
             description:
                 "A supportive approach to understanding lifestyle factors that may influence stress, rest, and emotional wellbeing.",
@@ -1927,7 +1927,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
     {
         id: 12,
 
-        title: "Men's Health Support",
+        title: "Immune Support",
 
         slug: "immune-support",
 
@@ -1937,7 +1937,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: ShieldCheck,
 
         hero: {
-            eyebrow: "Treatments / Immune Support",
+            eyebrow: "Immune Support",
 
             description:
                 "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",
@@ -2085,7 +2085,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
     },
 
     /* =====================================================
-       IMMUNE SUPPORT
+       MENS HEALTH SUPPORT
     ===================================================== */
 
     {
@@ -2101,7 +2101,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: ShieldCheck,
 
         hero: {
-            eyebrow: "Treatments / Immune Support",
+            eyebrow: "Men's Health Support",
 
             description:
                 "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",
@@ -2248,336 +2248,9 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         },
     },
 
+    
     /* =====================================================
-       IMMUNE SUPPORT
-    ===================================================== */
-
-    {
-        id: 14,
-
-        title: "Men's Health Support",
-
-        slug: "immune-support",
-
-        excerpt:
-            "Personalized wellness guidance focused on lifestyle habits that support your body's normal defenses.",
-
-        icon: ShieldCheck,
-
-        hero: {
-            eyebrow: "Treatments / Immune Support",
-
-            description:
-                "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",
-
-            heroImage: immuneSupportHero
-        },
-
-        overview: {
-            eyebrow: "Overview",
-
-            heading: "Support. Strengthen. Thrive.",
-
-            paragraphs: [
-                "Supporting immune wellbeing starts with the everyday habits that help your body function at its best. We look at nutrition, rest, stress, movement, and lifestyle as part of the bigger picture.",
-
-                "Your recommendations are tailored around your individual needs and focused on practical habits that can become part of your everyday routine.",
-            ],
-
-            duration: "45 - 60 minutes",
-
-            idealFor:
-                "Those looking to strengthen everyday habits that support general immune wellbeing.",
-
-            suitableFor: [
-                "Want to support your general wellbeing",
-                "Want to review lifestyle habits related to immune health",
-                "Want guidance around nutrition and rest",
-                "Are looking for personalized wellness recommendations",
-                "Want to build healthier everyday routines",
-            ],
-
-            image: overviewImage,
-        },
-
-        benefits: [
-            {
-                id: 1,
-                title: "Lifestyle Support",
-                description:
-                    "Explore everyday habits that contribute to overall health and immune wellbeing.",
-                icon: Activity,
-            },
-
-            {
-                id: 2,
-                title: "Nutrition Guidance",
-                description:
-                    "Discuss nourishing dietary habits that can form part of a balanced wellness routine.",
-                icon: Apple,
-            },
-
-            {
-                id: 3,
-                title: "Rest & Recovery",
-                description:
-                    "Consider the role of healthy rest and recovery in maintaining everyday wellbeing.",
-                icon: Moon,
-            },
-
-            {
-                id: 4,
-                title: "Personalized Care",
-                description:
-                    "Receive recommendations that take your individual lifestyle and goals into account.",
-                icon: UserRound,
-            },
-        ],
-
-        expectations: [
-            {
-                id: 1,
-                title: "Review",
-                description:
-                    "We discuss your current lifestyle, nutrition, rest, and wellness habits.",
-                icon: ClipboardList,
-            },
-
-            {
-                id: 2,
-                title: "Identify",
-                description:
-                    "We identify areas where healthy lifestyle changes may be beneficial.",
-                icon: Search,
-            },
-
-            {
-                id: 3,
-                title: "Recommend",
-                description:
-                    "You receive practical recommendations suited to your individual needs.",
-                icon: Lightbulb,
-            },
-
-            {
-                id: 4,
-                title: "Support",
-                description:
-                    "You leave with clear steps for strengthening your everyday wellness routine.",
-                icon: ShieldCheck,
-            },
-        ],
-
-        approach: [
-            {
-                id: 1,
-                title: "Whole-Person",
-                description:
-                    "Immune wellbeing is considered within the context of your overall health and lifestyle.",
-                icon: Heart,
-            },
-
-            {
-                id: 2,
-                title: "Nutrition-Focused",
-                description:
-                    "We consider nourishing dietary habits as part of a balanced wellness strategy.",
-                icon: Apple,
-            },
-
-            {
-                id: 3,
-                title: "Lifestyle-Based",
-                description:
-                    "Rest, movement, stress, and everyday habits are considered alongside nutrition.",
-                icon: Activity,
-            },
-
-            {
-                id: 4,
-                title: "Personalized",
-                description:
-                    "Your wellness recommendations are shaped around your individual needs and goals.",
-                icon: UserRound,
-            },
-        ],
-
-        cta: {
-            heading: "Give your wellbeing more support.",
-
-            description:
-                "Book a consultation and explore practical ways to support healthier everyday habits.",
-
-            image: immuneSupportCTA
-        },
-    },
-
-    /* =====================================================
-       IMMUNE SUPPORT
-    ===================================================== */
-
-    {
-        id: 15,
-
-        title: "Children's & Family Wellness",
-
-        slug: "immune-support",
-
-        excerpt:
-            "Personalized wellness guidance focused on lifestyle habits that support your body's normal defenses.",
-
-        icon: ShieldCheck,
-
-        hero: {
-            eyebrow: "Treatments / Immune Support",
-
-            description:
-                "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",
-
-            heroImage: immuneSupportHero
-        },
-
-        overview: {
-            eyebrow: "Overview",
-
-            heading: "Support. Strengthen. Thrive.",
-
-            paragraphs: [
-                "Supporting immune wellbeing starts with the everyday habits that help your body function at its best. We look at nutrition, rest, stress, movement, and lifestyle as part of the bigger picture.",
-
-                "Your recommendations are tailored around your individual needs and focused on practical habits that can become part of your everyday routine.",
-            ],
-
-            duration: "45 - 60 minutes",
-
-            idealFor:
-                "Those looking to strengthen everyday habits that support general immune wellbeing.",
-
-            suitableFor: [
-                "Want to support your general wellbeing",
-                "Want to review lifestyle habits related to immune health",
-                "Want guidance around nutrition and rest",
-                "Are looking for personalized wellness recommendations",
-                "Want to build healthier everyday routines",
-            ],
-
-            image: overviewImage,
-        },
-
-        benefits: [
-            {
-                id: 1,
-                title: "Lifestyle Support",
-                description:
-                    "Explore everyday habits that contribute to overall health and immune wellbeing.",
-                icon: Activity,
-            },
-
-            {
-                id: 2,
-                title: "Nutrition Guidance",
-                description:
-                    "Discuss nourishing dietary habits that can form part of a balanced wellness routine.",
-                icon: Apple,
-            },
-
-            {
-                id: 3,
-                title: "Rest & Recovery",
-                description:
-                    "Consider the role of healthy rest and recovery in maintaining everyday wellbeing.",
-                icon: Moon,
-            },
-
-            {
-                id: 4,
-                title: "Personalized Care",
-                description:
-                    "Receive recommendations that take your individual lifestyle and goals into account.",
-                icon: UserRound,
-            },
-        ],
-
-        expectations: [
-            {
-                id: 1,
-                title: "Review",
-                description:
-                    "We discuss your current lifestyle, nutrition, rest, and wellness habits.",
-                icon: ClipboardList,
-            },
-
-            {
-                id: 2,
-                title: "Identify",
-                description:
-                    "We identify areas where healthy lifestyle changes may be beneficial.",
-                icon: Search,
-            },
-
-            {
-                id: 3,
-                title: "Recommend",
-                description:
-                    "You receive practical recommendations suited to your individual needs.",
-                icon: Lightbulb,
-            },
-
-            {
-                id: 4,
-                title: "Support",
-                description:
-                    "You leave with clear steps for strengthening your everyday wellness routine.",
-                icon: ShieldCheck,
-            },
-        ],
-
-        approach: [
-            {
-                id: 1,
-                title: "Whole-Person",
-                description:
-                    "Immune wellbeing is considered within the context of your overall health and lifestyle.",
-                icon: Heart,
-            },
-
-            {
-                id: 2,
-                title: "Nutrition-Focused",
-                description:
-                    "We consider nourishing dietary habits as part of a balanced wellness strategy.",
-                icon: Apple,
-            },
-
-            {
-                id: 3,
-                title: "Lifestyle-Based",
-                description:
-                    "Rest, movement, stress, and everyday habits are considered alongside nutrition.",
-                icon: Activity,
-            },
-
-            {
-                id: 4,
-                title: "Personalized",
-                description:
-                    "Your wellness recommendations are shaped around your individual needs and goals.",
-                icon: UserRound,
-            },
-        ],
-
-        cta: {
-            heading: "Give your wellbeing more support.",
-
-            description:
-                "Book a consultation and explore practical ways to support healthier everyday habits.",
-
-            image: immuneSupportCTA
-        },
-    },
-
-    /* =====================================================
-       IMMUNE SUPPORT
+       CHRONIC HEALTH CONDITION SUPPORT
     ===================================================== */
 
     {
@@ -2593,7 +2266,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: ShieldCheck,
 
         hero: {
-            eyebrow: "Treatments / Immune Support",
+            eyebrow: "Chronic Health Condition Support",
 
             description:
                 "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",
@@ -2741,13 +2414,13 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
     },
 
     /* =====================================================
-       IMMUNE SUPPORT
+       PREVENTIVE HEALTH AND WELLNESS PROGRAMMES
     ===================================================== */
 
     {
         id: 17,
 
-        title: "Preventive Healthand Wellness Programmes",
+        title: "Preventive Health and Wellness Programmes",
 
         slug: "immune-support",
 
@@ -2757,7 +2430,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: ShieldCheck,
 
         hero: {
-            eyebrow: "Treatments / Immune Support",
+            eyebrow: "Preventive Health and Wellness Programmes",
 
             description:
                 "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",
@@ -2905,13 +2578,13 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
     },
 
     /* =====================================================
-       IMMUNE SUPPORT
+       NATURAL PAIN AND INFLAMATION SUPPORT
     ===================================================== */
 
     {
         id: 18,
 
-        title: "Natural Painand Inflammation Support",
+        title: "Natural Pain and Inflammation Support",
 
         slug: "immune-support",
 
@@ -2921,7 +2594,7 @@ import immuneSupportCTA from '../assets/booking page/prep.jpg'
         icon: ShieldCheck,
 
         hero: {
-            eyebrow: "Treatments / Immune Support",
+            eyebrow: "Natural Pain and Inflammation Support",
 
             description:
                 "A personalized wellness approach focused on nutrition, lifestyle, rest, and other habits that support everyday immune health.",

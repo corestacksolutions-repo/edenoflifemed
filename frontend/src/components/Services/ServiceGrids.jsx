@@ -23,7 +23,7 @@ const ServiceGrids = () => {
   };
 
   return (
-    <section className="h-full lg:h-[90%] relative">
+    <section id="services" className="scroll-mt-40 h-full lg:h-[90%] relative">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Individual Card */}
             {
@@ -33,7 +33,7 @@ const ServiceGrids = () => {
                   <GiTreeBranch size={65} className="-rotate-180 absolute top-4 right-2 text-gray-300/15" />
 
                   {/* Icon */}
-                  <div className="bg-blue-100 w-[42px] h-[42px] rounded-full flex items-center justify-center text-emerald-800 shrink-0">
+                  <div className="bg-blue-100 w-[42px] h-[42px] rounded-full flex items-center justify-center text-blue-800 shrink-0">
                     <Icon size={20} />
                   </div>
 
@@ -60,9 +60,10 @@ const ServiceGrids = () => {
           <footer className="mx-auto w-fit my-6">
                <div className="flex gap-1 mx-auto">
                     {Array.from({ length: pageCount }).map((_, index) => (
-                        <button
-                          key={index}
+                        <a
+                          href="#services"
                           onClick={() => setCurrentPage(index + 1)}
+                          id="#services"
                           className={`px-2 py-1 text-xs ${
                             currentPage === index + 1
                               ? "bg-black text-white"
@@ -70,7 +71,7 @@ const ServiceGrids = () => {
                           } transition-all duration-500`}
                         >
                           {index + 1}
-                        </button>
+                        </a>
                       ))}
                </div>
           </footer>

@@ -2,6 +2,12 @@
 import { FaClock, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { PiMapPinFill, } from "react-icons/pi";
 import { TbMailFilled } from "react-icons/tb";
+import { 
+  LuClock, 
+  LuMail, 
+  LuMapPin, 
+  LuPhone 
+} from "react-icons/lu";
 
 import backgroundLeaf from "../../assets/contact page/flower.png"
 import contactDetails from "../../data/contactDetails";
@@ -15,33 +21,98 @@ const ContactDetails = () => {
                 <div className="w-full  h-full my-auto space-y-4 rounded-xl">
                     {/*contact details*/}
                     <div className="space-y-4">
-                        {
-                           contactDetails.map(({id, title, lineOne, lineTwo, lineThree, icon: Icon}) => (
-                            <div key={id} className="flex gap-6 items-center border p-2 rounded-xl bg-gradient-to-tr from-blue-200 via-blue-200/40 to-blue-200">
+                            <div className="flex gap-6 items-center border p-2 rounded-xl bg-gradient-to-tr from-blue-200 via-blue-200/40 to-blue-200">
                                 {/* Icon */}
                                 <div className="flex items-center justify-center text-white bg-black size-[44px] shrink-0 rounded-full">
-                                    <Icon size={20} />
+                                    <LuPhone size={20}/>
                                 </div>
                 
                                 {/* Text Elements */}
                                 <div className="flex flex-col leading-none">
                                     <h4 className="font-semibold mb-1">
-                                        {title}
+                                       Phone
+                                    </h4>
+                
+                                    <a className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
+                                        +265 991 960 995
+                                    </a>
+                                    <a className="tracking-wide font-[Roboto] font-light text-[13px]">
+                                        +265 881 960 995
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/*Email */}
+                            <div className="flex gap-6 items-center border p-2 rounded-xl bg-gradient-to-tr from-blue-200 via-blue-200/40 to-blue-200">
+                                {/* Icon */}
+                                <div className="flex items-center justify-center text-white bg-black size-[44px] shrink-0 rounded-full">
+                                    < LuMail size={20}/>
+                                </div>
+                
+                                {/* Text Elements */}
+                                <div className="flex flex-col leading-none">
+                                    <h4 className="font-semibold mb-1">
+                                       Email
+                                    </h4>
+                
+                                    <a className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
+                                        info@edenoflifemed.org
+                                    </a>
+                                    <a className="tracking-wide font-[Roboto] font-light text-[13px]">
+                                       manager@edenoflifemed.org
+                                    </a>
+                                </div>
+                            </div>
+
+                             {/*Address */}
+                            <div className="flex gap-6 items-center border p-2 rounded-xl bg-gradient-to-tr from-blue-200 via-blue-200/40 to-blue-200">
+                                {/* Icon */}
+                                <div className="flex items-center justify-center text-white bg-black size-[44px] shrink-0 rounded-full">
+                                    <LuMapPin size={20}/>
+                                </div>
+                
+                                {/* Text Elements */}
+                                <div className="flex flex-col leading-none space-y-2">
+                                    <h4 className="font-semibold mb-1">
+                                       Adres
                                     </h4>
                 
                                     <p className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
-                                        {lineOne}
+                                        P.O Box 1226
                                     </p>
                                     <p className="tracking-wide font-[Roboto] font-light text-[13px]">
-                                        {lineTwo}
+                                      Area 6, MXC House near TNM Tower
                                     </p>
-                                     <p className="tracking-wide font-[Roboto] font-light text-[13px] mt-2">
-                                        {lineThree}
+                                    <p className="tracking-wide font-[Roboto] font-light text-[13px]">
+                                      Mzuzu, Malawi
                                     </p>
                                 </div>
                             </div>
 
-                        ))}
+                            {/*Hours */}
+                            <div className="flex gap-6 items-center border p-2 rounded-xl bg-gradient-to-tr from-blue-200 via-blue-200/40 to-blue-200">
+                                {/* Icon */}
+                                <div className="flex items-center justify-center text-white bg-black size-[44px] shrink-0 rounded-full">
+                                    <LuClock size={20}/>
+                                </div>
+                
+                                {/* Text Elements */}
+                                <div className="flex flex-col leading-none space-y-2">
+                                    <h4 className="font-semibold mb-1">
+                                       Hours
+                                    </h4>
+                
+                                    <p className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
+                                        Monday - Friday: 8:00 AM - 5:00 PM
+                                    </p>
+                                    <p className="tracking-wide font-[Roboto] font-light text-[13px]">
+                                        Sunday: Saturday: Closed
+                                    </p>
+                                    <p className="tracking-wide font-[Roboto] font-light text-[13px]">
+                                        Sunday: 9:00 AM - 1:00 PM
+                                    </p>
+                                </div>
+                            </div>
                     </div>
 
                     {/*whatsapp */}
