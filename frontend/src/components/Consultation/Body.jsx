@@ -9,7 +9,7 @@ import Form from "./Form";
 const Body = () => {
 
     return (
-        <section className="w-full mb-10 pb-10">
+        <section className="w-full mt-20 mb-10 pt-20 pb-10">
 
             {/* Main Consultation Area */}
             <div className="w-[92%] md:w-[85%] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">

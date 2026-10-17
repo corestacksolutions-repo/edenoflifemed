@@ -94,7 +94,7 @@ const Form = () => {
             onSubmit={handleSubmit}
             className="md:col-span-2 md:pl-16 w-full space-y-8"
         >
-            <header className="my-12 md:my-0 md:mb-24">
+            <header className="my-6 md:my-0 md:mb-16">
                 <h2 className="font-bold font-[Roboto] text-2xl">
                     Reach Out to Our Team
                 </h2>

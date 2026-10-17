@@ -5,7 +5,7 @@ import Body from '../components/Appointment/Body'
 const AppointmentBooking = () => {
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
       <Body />
     </div>
   )

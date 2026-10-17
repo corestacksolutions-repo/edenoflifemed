@@ -6,7 +6,7 @@ import Map from '../components/contact/map'
 const Contact = () =>{
        return(
             <>
-              <Hero/>
+              {/* <Hero/> */}
               <ContactDetails/>
               <Map/>
             </>

@@ -10,7 +10,7 @@ import Form from "./form";
 
 const ContactDetails = () => {
     return (
-        <div className="w-full text-black">
+        <div className="w-full text-black mt-14 pt-14  mb-10  pb-10">
             <div className="w-[92%] lg:w-[85%]  m-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
                 <div className="w-full  h-full my-auto space-y-4 rounded-xl">
                     {/*contact details*/}
