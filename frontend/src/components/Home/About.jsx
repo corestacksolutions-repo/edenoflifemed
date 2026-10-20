@@ -3,11 +3,14 @@ import medicalPractioner from "../../assets/images/about-images/edenam-practione
 import medicine from "../../assets/images/about-images/medicine.jpg"
 import aboutmetrics from "../../data/about-metrics"
 import { easeOut, motion } from "framer-motion"
+import { BookMarkedIcon, MarsStroke } from "lucide-react"
+import { BsTextRight } from "react-icons/bs"
+import { LuCheck } from "react-icons/lu"
 
 
 export default function About(){
       return(
-           <section className="relative w-full z-10 bg-white w-full py-20 mt-[70vh] lg:mt-[100vh] z-20">
+           <section className="relative w-full z-10 bg-white w-full py-20 mt-[100vh] lg:mt-[100vh] z-20">
                 <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 gap-6">
 
                     <motion.figure className="w-full overflow-hidden rounded-xl"
@@ -43,8 +46,8 @@ export default function About(){
                          <div className="grid md:grid-cols-2 gap-4 w-full mt-8">                            
                             {aboutmetrics.map((metric) => (
                                 <span key={metric.id} className="flex items-center gap-4  w-full h-fit ">
-                                    <div className="size-10 bg-blue-800  rounded-full">
-
+                                    <div className="flex size-6 bg-blue-900  rounded-full">
+                                      <LuCheck className="size-3 m-auto text-white"/>
                                     </div>
                                     <div className="">
                                         <h3 className="font-semibold text-blue-900">{metric.title}</h3>

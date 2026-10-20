@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import logo from "../assets/logo/logo2.png";
+import logo from "../assets/logo/lgo.png";
 
 import treatmentsData from "../data/treatments";
 import servicesData from "../data/services";
@@ -67,16 +67,14 @@ const Navbar = () => {
         setIsExpanded(isExpanded === item ? null : item);
     }
     return (
-        <header className={`fixed top-0 w-full  z-50  lg:py-3 ${visible ? 'opacity-100 translate-y-0' : 'lg:opac ity-0 lg:-t ranslate-y-full'} transition-all delay-300 duration-1000 bg-white shadow-md`}>
-            <nav className=" hidden w-[92%] lg:w-[85%] max-w-[1200px] mx-auto   py-3 lg:flex items-center justify-between">
-                 <NavLink to="/" className="flex items-center gap-2 rounded-r-full  rounded ">
-                     <p className="size-[40px] rounded-full bg-red-800 border border-black"></p>
-                     <p className="uppercase text-xl font-bold text-blue-800">edelnam</p>
-                    <img src={logo} alt="Eden of Life logo" className="hidden w-[62px] h-[62px] md:w-[72px] md:h-[72px] rounded-full object-cover  shadow-lg transition-all duration-300 group-hover:scale-105" />
+        <header className={`fixed top-0 w-full  z-50  lg: ${visible ? 'opacity-100 translate-y-0' : 'lg:opac ity-0 lg:-t ranslate-y-full'} transition-all delay-300 duration-1000 bg-white shadow-md`}>
+            <nav className=" hidden w-[92%] mx-auto   py-3 lg:flex items-center justify-between">
+                 <NavLink to="/" className="relative size-[80px] rounded-full flex items-center gap-2">
+                    <img src={logo} alt="Eden of Life logo" className="absolute inset-0 w-full h-full scale-120 rounded-full object-cover transition-all duration-300 group-hover:scale-105" />
                 </NavLink>
 
                 <nav className="relative font-[Roboto]">
-                  <div className="relative z-10 flex items-center gap-8 md:gap-16 px px-2 py-[5.5px]  rounded-full bg-white/50 backdrop-blur-[4px] borde border-blue-500/20" >
+                  <div className="relative z-10 flex items-center gap-4 md:gap-8 px px-2 py-[5.5px]  rounded-full bg-white/50 backdrop-blur-[4px] borde border-blue-500/20" >
                     <NavLink to="/about" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-blac k/5 px-3 py-2 rounded-full transition-colors duration-300">
                         About
                     </NavLink>
@@ -90,10 +88,6 @@ const Navbar = () => {
                         Treatments
                         <ChevronDown className={`size-5 ${activeGroup==='treatments'? 'rotate-180':''} transition-all duration-500`}/>
                     </button>
-                    
-                    <NavLink to="/blogs" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bla ck/5 px-3 py-2 rounded-full transition-colors duration-300">
-                        News
-                    </NavLink>
 
                     <NavLink to="/blogs" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bla ck/5 px-3 py-2 rounded-full transition-colors duration-300">
                         Blogs

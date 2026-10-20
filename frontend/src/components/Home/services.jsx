@@ -79,7 +79,7 @@ export default function Services(){
                                  className="relative group w-full shadow bg-gradient-to-tr from-blue-200 via-blue-100/80 to-blue-200  space-y-4 p-8 rounded-xl"   
                           >
                            
-                             <div className="w-fit p-3 rounded-full border border-blue-100">
+                             <div className="w-fit rounded-full">
                                <Icon className="size-6"/>
                              </div>
                              <h3 className="font-semibold text-blue-800">
