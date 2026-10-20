@@ -75,7 +75,7 @@ export default function Footer() {
                           {/*home, contact, booking */}
                           <div className="w-full h-full flex flex-col">
                               <h3 className="font-[Roboto]">Company</h3>
-                              <ul className="relative space-y-3 mt-3 text-white/50 h-full">
+                              <ul className="md:relative space-y-3 mt-3 text-white/50 h-full">
                                   <li className="">
                                       <Link to="/" className=" hover:text-white transition-all duration-300">
                                         Home
@@ -97,7 +97,7 @@ export default function Footer() {
                                       </Link> 
                                   </li>
                                    <li className="">
-                                      <Link to="/consultation" className="absolute bottom-0 px-3 py-1 bg-red-800 mt-3 text-white/70 transition-all duration-300">
+                                      <Link to="/consultation" className="md:absolute bottom-0 px-3 py-1 bg-red-800 mt-3 whitespace-nowrap text-white/70 transition-all duration-300">
                                         Book Appointment
                                       </Link> 
                                   </li>
@@ -109,23 +109,21 @@ export default function Footer() {
                 </div>
                 <footer className="w-[92%] lg:w-[85%] mx-auto flex items-center justify-between mt-8 border-t border-white/10 py-2">
                     <div className="flex items-center gap-3 flex-wrap">
-                     <a href="/" className="">
+                     <a href="/" target="_blank" className="">
                         <LiaLinkedin className="cursor-pointer text-3xl text-white/20"/>
                      </a>
-                     <a href="/" className="">
+                     <a href="https://www.facebook.com/profile.php?id=61563483795198" target="_blank" className="">
                        <LiaFacebook className="cursor-pointer text-3xl text-white/20"/>
                      </a>
-                     <a href="/" className="">
-                       <PiTiktokLogo className="cursor-pointer text-2xl text-white/20"/>
+                     <a href="/" target="_blank" className="">
+                       <PiTiktokLogo className="cursor-pointer text-3xl text-white/20"/>
                      </a>
-                     <a href="/" className="">
+                     <a href="/" target="_blank" className="">
                        <LuInstagram className="cursor-pointer text-2xl text-white/20"/>
                      </a>
-                     <a href="/" className="">
+                     <a href="/" target="_blank" className="">
                        <BsTwitterX className="cursor-pointer text-2xl text-white/20"/>
-                     </a>
-                       
-                       
+                     </a>   
                     </div>
                     <div className="text-white/30 italic text-[0.9rem] flex items-center justify-end px-2">
                       © {currentYear} Eden of Life. All rights reserved.

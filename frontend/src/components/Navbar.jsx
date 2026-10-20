@@ -40,14 +40,21 @@ const Navbar = () => {
     */}
     const [activeGroup, setActiveGroup] = useState(null); // default active group
     const data = {
-        services: servicesData,
-        treatments: treatmentsData
-    }[activeGroup];
+        services   : servicesData,
+        treatments : treatmentsData
+    } [activeGroup] ;
+    
     const handleGroupChange = (group) => {
         setActiveGroup(!activeGroup ? group : null)  
     };
+    
+    {/*services / treatments chunk size*/}
+    //const chunkSize = Math.ceil(data.length / 3)
 
-  {/*
+    const handleMouseOver = ()=>{
+      console.log('mouse is overed');
+    }
+    {/*
        ==============================
        menu toggle for mobile
        ==============================
@@ -100,20 +107,29 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 20 }}
-                      className="fixed top-[6rem] left-0 z-10 border-t border-black/5 w-full  min-h-[40vh] bg-gray-50  overflow-hidden">
+                      className="fixed top-[6rem] left-0 z-10 border-t border-black/5 w-full  min-h-[40vh] bg-gray-200  overflow-hidden">
                       
                       <div className="w-[100%] mx-auto grid grid-cols-4 p-6">
                          {/*all services/treatments link */}
-                         <div className="border h-full w-full">
-
-                        </div>
+                         <ul className="
+                            w-full flex flex-col gap-3 
+                            text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
+                            {data.slice(0, data.length/3).map((item)=>(
+                              <li key={item.id}>
+                                <Link to={`/${activeGroup}/${item.slug}`} onMouseEnter={()=>handleMouseOver} onClick={()=>setActiveGroup(null)} 
+                                  className="tracking-wider hover:text-blue-600 transition-colors duration-300">
+                                  {item.title}
+                                </Link>
+                              </li>))
+                            }
+                        </ul>
                         <ul className="
                             w-full flex flex-col gap-3 
                             text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
-                            {data.slice(0, data.length / 2).map((item)=>(
+                            {data.slice(data.length/3, data.length/3 * 2).map((item)=>(
                               <li key={item.id}>
-                                <Link to={`/${activeGroup}/${item.slug}`}  onClick={()=>setActiveGroup(null)} 
-                                  className="hover:text-blue-400 transition-colors duration-300">
+                                <Link to={`/${activeGroup}/${item.slug}`} onMouseEnter={()=>handleMouseOver} onClick={()=>setActiveGroup(null)} 
+                                  className="tracking-wider hover:text-blue-600 transition-colors duration-300">
                                   {item.title}
                                 </Link>
                               </li>))
@@ -122,10 +138,10 @@ const Navbar = () => {
                         <ul className="
                            w-full flex flex-col gap-3 
                            text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
-                             {data.slice(data.length / 2).map((item)=>(
+                             {data.slice((data.length/3) * 2).map((item)=>(
                              <li key={item.id}>
                                <Link to={`/${activeGroup}/${item.slug}`}  onClick={()=>setActiveGroup(null)}
-                                className="hover:text-blue-400 transition-colors duration-300">
+                                className="tracking-wider hover:text-blue-600 transition-colors duration-300">
                                  {item.title}
                                </Link>
                              </li>))
@@ -180,11 +196,9 @@ const Navbar = () => {
             ===========================================================*/}
             <div className=" w-full lg:hidden bg-white blue-950/50">
                 <div className="w-full flex items-center justify-between p-3 shadow-md">
-                    <NavLink to="/" className="flex items-center gap-2">
-                     <p className="size-[60px] rounded-full bg-black red-800"></p>
-                     <p className="hidden uppercase text-xl font-bold text-white">edelnam</p>
-                    <img src={logo} alt="Eden of Life logo" className="hidden w-[80px] h-[80px] md:w-[80px] md:h-[80px] rounded-full object-cover  shadow-lg transition-all duration-300 group-hover:scale-105" />
-                    </NavLink>
+                   <NavLink to="/" className="size-[60px] rounded-full flex items-center gap-2">
+                      <img src={logo} alt="Eden of Life logo" className="w-full h-full scale-120 rounded-full object-cover transition-all duration-300 group-hover:scale-105" />
+                   </NavLink>
 
                     <button onClick={toggleMenu} className="bgwhite/90 rounded-xl">
                         <HiMenu className="size-8  black/70"/>
@@ -231,7 +245,7 @@ const Navbar = () => {
                         Services
                         <LuPlus className={`size-5 ${isExpanded==="s"?'-rotate-45':''} transition-all duration-500`}/>
                       </button>
-                        <ul className={`flex flex-col ${isExpanded==="s" ? 'h-[250px] opacity-100 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
+                        <ul className={`flex flex-col ${isExpanded==="s" ? 'h-[750px] opacity-100 pr-4 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
                             {servicesData.map((item)=>
                                 <Link key={item.id} to={`/services/${item.slug}`} onClick={toggleMenu} className="my-2 borderborder-white/30 pl-14">
                                   {item.title}
@@ -243,7 +257,7 @@ const Navbar = () => {
                         Treatments
                         <LuPlus className={`size-5 ${isExpanded==="t" ? '-rotate-45':''} transition-all duration-500`}/>
                       </button>
-                         <ul className={`flex flex-col ${isExpanded==="t" ? 'h-[510px] opacity-100 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
+                         <ul className={`flex flex-col ${isExpanded==="t" ? 'h-[510px] opacity-100 pr-4 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
                             {treatmentsData.map((item)=>
                                 <Link key={item.id} to={`/treatments/${item.slug}`} onClick={toggleMenu}  className="my-2 borderborder-white/30 pl-14">
                                   {item.title}
