@@ -5,7 +5,7 @@ import Hero from "../components/Consultation/Hero"
 const ConsultationBooking = () => {
   return (
     <>
-        <Hero />
+        {/* <Hero /> */}
         <Body />
     </>
   )
