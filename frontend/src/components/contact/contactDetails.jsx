@@ -33,10 +33,10 @@ const ContactDetails = () => {
                                        Phone
                                     </h4>
                 
-                                    <a className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
+                                    <a href="tel:+265991960995" className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
                                         +265 991 960 995
                                     </a>
-                                    <a className="tracking-wide font-[Roboto] font-light text-[13px]">
+                                    <a href="tel:+265881960995" className="tracking-wide font-[Roboto] font-light text-[13px]">
                                         +265 881 960 995
                                     </a>
                                 </div>
@@ -55,10 +55,10 @@ const ContactDetails = () => {
                                        Email
                                     </h4>
                 
-                                    <a className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
+                                    <a href="mailto:info@edenoflifemed.org" className="tracking-wide font-[Roboto] font-light text-[13px] my-2">
                                         info@edenoflifemed.org
                                     </a>
-                                    <a className="tracking-wide font-[Roboto] font-light text-[13px]">
+                                    <a href="mailto:manager@edenoflifemed.org" className="tracking-wide font-[Roboto] font-light text-[13px]">
                                        manager@edenoflifemed.org
                                     </a>
                                 </div>
@@ -128,9 +128,10 @@ const ContactDetails = () => {
                                 Connect with us on WhatsApp for 
                                 instant support.
                             </p>
-                            <button className="md:w-fit flex items-center gap-2 bg-emerald-800 shadow text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition duration-300">
-                              <FaWhatsapp className="text-[1.2rem]"/>  Chat on WhatsApp
-                            </button>
+                            <a href="https://wa.me/+265991960995" className="md:w-fit flex items-center gap-2 bg-emerald-800 shadow text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition duration-300">
+                              <FaWhatsapp className="text-[1.2rem]"/>  
+                              Chat on WhatsApp
+                            </a>
                         </div> 
                     </article>
 

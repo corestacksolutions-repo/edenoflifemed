@@ -3,11 +3,13 @@ import bgvideo from "../../assets/videos/bgvideo.mp4";
 import video from "../../assets/videos/treatments/massage.mp4";
 import {  PiHeartbeatFill } from "react-icons/pi";
 import { BsArrowRight,} from "react-icons/bs";
-
+import testimonials from "../../data/testimonials";
+import treatments from "../../data/treatments";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className="w-full fixed inset-0 z-0 h-[80dvh] lg:h-[100dvh] flex bg-black/10 ">
+        <div className="w-full fixed inset-0 z-0 h-[98vh] lg:h-[100dvh] flex bg-black/10 ">
 
             {/* Video Background */}
             <video src={video} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
@@ -19,9 +21,9 @@ const Hero = () => {
             <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black via-black/70 to-transparent" />
 
             {/* Hero Content */}
-            <div className="relative w-[92%] lg:w-[85%] h-fit mx-auto mt-[30%] lg:m-auto flex flex-col items-start lg:items-center gap-6 text-white rounded-lg lg:pt-16">
+            <div className="relative top-1/2 -translate-y-1/2 w-[92%] lg:w-[85%] min-h-[75vh] lg:h-fit py-4 mx-auto mt-[30%] my-auto flex flex-col items-start lg:items-center gap-6 text-white rounded-lg lg:pt-16">
 
-                <h1 className="text-4xl md:text-8xl text-start lg:text-center font-[Roboto]  font-bold display text-blue-900">
+                <h1 className="text-4xl md:text-8xl text-start lg:text-center font-[Roboto]  font-bold display text-[#000080]">
                     Eden of Life Natural Medicine    
                 </h1>
 
@@ -29,7 +31,7 @@ const Hero = () => {
                     Hope for your life
                 </h2>
 
-                <p className="font-body w-full md:w-[40%] font-[Roboto] lg:text-center text-[1.3rem] text-white/80 tracking-wide">
+                <p className="font-body w-full md:w-[40%] font-[Roboto] lg:text-center text-[1.3rem] text-white/50 tracking-wide">
                     A place to find natural, holistic, and personalized care that help you live a 
                     healthier and happier life.
                 </p>
@@ -41,7 +43,13 @@ const Hero = () => {
                     <span className="absolute inset-0 rounded-lg bg-red-800/20 opacity-0 transition duration-300 hover:opacity-100" />
                     <BsArrowRight size={20} />
                 </Link>
-
+                
+                {/*for mobile only */}
+                <div className="fixed left-0 z-50 bottom-10 w-[65px] h-[65px] py-1 bg-emerald-600 shadow h-[10vh]  flex items-center -gap-6 rounded-full">
+                    <a href="https://wa.me/+265991960995" className="m-auto">
+                      <FaWhatsapp className="size-8"/>
+                    </a>
+                </div>
 
             </div>
         </div>

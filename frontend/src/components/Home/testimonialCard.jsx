@@ -8,7 +8,7 @@ export default function TestimonialCard({testimonial}) {
                  <p className="hidden md:block text-3xl font-bold font-[Roboto]  my-4">
                     {testimonial.name}
                 </p> 
-                <p className="text-lg italic ">
+                <p className="text-lg italic text-center md:text-left">
                     {testimonial.quote}
                 </p>
             </div>

@@ -1,24 +1,35 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FaceAngry, LucideX } from "lucide-react";
 import { 
    LiaFacebook, 
    LiaLinkedin 
 } from "react-icons/lia";
-
+import logo from "../assets/logo/lgo.png";
+import services from "../data/services";
+import treatments from "../data/treatments";
 
 import { Link } from "react-router-dom";
+import { BsTiktok, BsTwitterX } from "react-icons/bs";
+import { PiTiktokLogo } from "react-icons/pi";
+import { LuInstagram } from "react-icons/lu";
 
 export default function Footer() {
            const currentYear = new Date().getFullYear();
+
+           {/*first 7 services */}
+           const selectedServices = services.slice(0,7);
+           {/*first 7 treatments */}
+           const selectedTreatments = treatments.slice(0,7);
            return (
             <footer className="relative w-full bg-black text-white pb-10">
                 <div className="w-[92%] lg:w-[85%] mx-auto grid  md:grid-cols-3 gap-3 rounded-xl md:rounded-3xl p-6 bg-blue-950 gradient-to-tr from-black via-blue-950 lack to-black lue-950 -translate-y-10">
                       {/*company info */}
                       <div className="w-full h-20">
                          <div className="flex items-center gap-2">
-                            <span className="size-[45px] rounded-full bg-red-900">
-                            </span>
-                            <h2 className="text-2xl text-white font-bold uppercase">Edenam</h2>
+                            <Link className="size-[45px]">
+                               <img src={logo} alt="company-logo" className="w-full h-full" />
+                            </Link>
+                            <h2 className="text-2xl text-white font-bold uppercase">Edelnam</h2>
                          </div>
                             <p className="hidden text-[1.15rem] text-white leading-tight">
                                 Hope for your life
@@ -31,46 +42,16 @@ export default function Footer() {
                           {/*services */}
                           <div className="w-full h-full">
                              <h3 className="font-[Roboto]">Services</h3>
-                             <ul className="space-y-3 mt-3 text-white/50">
-                                <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
-                                      Natural Medicine Services
+                             <ul className="flex flex-col gap-2 mt-3 text-white/50">
+                                 {selectedServices.map((item)=>
+                                   <Link key={item.id} to={`/services/${item.slug}`} className=" hover:text-white transition-all duration-300">
+                                      {item.title}
                                    </Link>
-                                </li>
-                                <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
-                                      Health Assessments
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
-                                      NutritionalCounselling
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/services" className=" hover:text-white transition-all duration-300">
-                                      Therapeutic Diet Planning
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/services" className="text-white/50 hover:text-white transition-all duration-300">
-                                      Digestive Health Support
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/services" className="text-white/50 hover:text-white transition-all duration-300">
-                                     Nutritional Supplements
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/services" className="text-white/50 hover:text-white transition-all duration-300">
-                                      HerbalMedicine.
-                                   </Link>
-                                </li>
+                                 )}
                              </ul>
                              <Link to='/services' className="w-fit flex items-center gap-2 mt-6 border-b text-white/50 italic text-white/30 border-white/20">
                                 All services
-                                <ArrowRight className="size-4 -rotate-[35deg]"/>
+                                <ArrowRight className="hidden size-4 -rotate-[35deg]"/>
                              </Link>
 
                           </div>
@@ -78,53 +59,23 @@ export default function Footer() {
                           {/*treatments */}
                           <div className="w-full h-full">
                              <h3 className="font-[Roboto]">Treatments</h3>
-                             <ul className="space-y-3 mt-3 text-white/50">
-                                <li>
-                                   <Link to="/treatments/massage" className=" hover:text-white transition-all duration-300">
-                                      Massage
+                              <ul className="flex flex-col gap-2 mt-3 text-white/50">
+                                 {selectedTreatments.map((item)=>
+                                   <Link key={item.id} to={`/treatments/${item.slug}`} className=" hover:text-white transition-all duration-300">
+                                      {item.title}
                                    </Link>
-                                </li>
-                                <li>
-                                   <Link to="/treatments/cupping" className=" hover:text-white transition-all duration-300">
-                                      Cupping
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/treatments/acupuncture" className=" hover:text-white transition-all duration-300">
-                                      Acupuncture
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/treatments/physiotherapy" className=" hover:text-white transition-all duration-300">
-                                      Physiotherapy
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/treatments/hydrotherapy" className="text-white/50 hover:text-white transition-all duration-300">
-                                      Hydrotherapy
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/treatments/phototherapy" className="text-white/50 hover:text-white transition-all duration-300">
-                                     Photo therapy
-                                   </Link>
-                                </li>
-                                <li>
-                                   <Link to="/treatments/quantum-resistance" className="text-white/50 hover:text-white transition-all duration-300">
-                                      Quantum Resistance
-                                   </Link>
-                                </li>
+                                 )}
                              </ul>
                              <Link to="/treatments" className="w-fit flex items-center gap-2 mt-6 border-b text-white/50 italic border-white/20">
                                 All treatments
-                                <ArrowRight className="size-4 -rotate-[35deg]"/>
+                                <ArrowRight className="hidden size-4 -rotate-[35deg]"/>
                              </Link>
                           </div>
 
                           {/*home, contact, booking */}
                           <div className="w-full h-full flex flex-col">
                               <h3 className="font-[Roboto]">Company</h3>
-                              <ul className="space-y-3 mt-3 text-white/50">
+                              <ul className="md:relative space-y-3 mt-3 text-white/50 h-full">
                                   <li className="">
                                       <Link to="/" className=" hover:text-white transition-all duration-300">
                                         Home
@@ -145,21 +96,34 @@ export default function Footer() {
                                         Contact
                                       </Link> 
                                   </li>
+                                   <li className="">
+                                      <Link to="/consultation" className="md:absolute bottom-0 px-3 py-1 bg-red-800 mt-3 whitespace-nowrap text-white/70 transition-all duration-300">
+                                        Book Appointment
+                                      </Link> 
+                                  </li>
 
                               </ul>
-
-                              <Link to="/booking" className="hidden w-fit flex items-center gap-2 font-semibold bg-red-900 px-4  py-3 text-white/60 rounded-lg">
-                                Book an Appointment
-                                <ArrowRight className="size-4"/>
-                             </Link>
                           </div>
 
                       </div>
                 </div>
                 <footer className="w-[92%] lg:w-[85%] mx-auto flex items-center justify-between mt-8 border-t border-white/10 py-2">
-                    <div className="flex items-center gap-2">
-                       <LiaLinkedin className="cursor-pointer text-3xl text-white/20"/>
+                    <div className="flex items-center gap-3 flex-wrap">
+                     <a href="/" target="_blank" className="">
+                        <LiaLinkedin className="cursor-pointer text-3xl text-white/20"/>
+                     </a>
+                     <a href="https://www.facebook.com/profile.php?id=61563483795198" target="_blank" className="">
                        <LiaFacebook className="cursor-pointer text-3xl text-white/20"/>
+                     </a>
+                     <a href="/" target="_blank" className="">
+                       <PiTiktokLogo className="cursor-pointer text-3xl text-white/20"/>
+                     </a>
+                     <a href="/" target="_blank" className="">
+                       <LuInstagram className="cursor-pointer text-2xl text-white/20"/>
+                     </a>
+                     <a href="/" target="_blank" className="">
+                       <BsTwitterX className="cursor-pointer text-2xl text-white/20"/>
+                     </a>   
                     </div>
                     <div className="text-white/30 italic text-[0.9rem] flex items-center justify-end px-2">
                       © {currentYear} Eden of Life. All rights reserved.
@@ -173,7 +137,7 @@ export default function Footer() {
                      rel="noopener noreferrer"
                      referrerPolicy="no-referrer"
                      className="ml-2 text-blue-950 italic">
-                     Costack Solutions
+                     Corestack Solutions
                   </a>
                 </div>
             </footer>

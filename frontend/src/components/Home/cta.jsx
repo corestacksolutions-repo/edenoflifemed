@@ -17,7 +17,7 @@ export default function CTA() {
                      <span className="text-xl font-[roboto] text-white/80 font-[Rubik]">
                         Your health,your priority
                      </span> 
-                     <h2 className="text-[2.2rem] text-white/80 lg:text-5xl font-[Roboto] font-bold leading-tight">
+                     <h2 className="text-[2rem] text-white/80 lg:text-4xl font-[Roboto] font-bold leading-tight">
                         Let's discuss the next chapter of your life today.
                      </h2>
                      <div className="flex flex-col md:flex-row gap-x-4 gap-y-1">

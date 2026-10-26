@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import logo from "../assets/logo/logo2.png";
+import logo from "../assets/logo/lgo.png";
 
 import treatmentsData from "../data/treatments";
 import servicesData from "../data/services";
@@ -40,14 +40,21 @@ const Navbar = () => {
     */}
     const [activeGroup, setActiveGroup] = useState(null); // default active group
     const data = {
-        services: servicesData,
-        treatments: treatmentsData
-    }[activeGroup];
+        services   : servicesData,
+        treatments : treatmentsData
+    } [activeGroup] ;
+    
     const handleGroupChange = (group) => {
         setActiveGroup(!activeGroup ? group : null)  
     };
+    
+    {/*services / treatments chunk size*/}
+    //const chunkSize = Math.ceil(data.length / 3)
 
-  {/*
+    const handleMouseOver = ()=>{
+      console.log('mouse is overed');
+    }
+    {/*
        ==============================
        menu toggle for mobile
        ==============================
@@ -67,16 +74,14 @@ const Navbar = () => {
         setIsExpanded(isExpanded === item ? null : item);
     }
     return (
-        <header className={`fixed top-0 w-full  z-50  lg:py-3 ${visible ? 'opacity-100 translate-y-0' : 'lg:opac ity-0 lg:-t ranslate-y-full'} transition-all delay-300 duration-1000 bg-white shadow-md`}>
-            <nav className=" hidden w-[92%] lg:w-[85%] max-w-[1200px] mx-auto   py-3 lg:flex items-center justify-between">
-                 <NavLink to="/" className="flex items-center gap-2 rounded-r-full  rounded ">
-                     <p className="size-[40px] rounded-full bg-red-800 border border-black"></p>
-                     <p className="uppercase text-xl font-bold text-blue-800">edelnam</p>
-                    <img src={logo} alt="Eden of Life logo" className="hidden w-[62px] h-[62px] md:w-[72px] md:h-[72px] rounded-full object-cover  shadow-lg transition-all duration-300 group-hover:scale-105" />
+        <header className={`fixed top-0 w-full  z-50  lg: ${visible ? 'opacity-100 translate-y-0' : 'lg:opac ity-0 lg:-t ranslate-y-full'} transition-all delay-300 duration-1000 bg-white shadow-md`}>
+            <nav className=" hidden w-[92%] mx-auto   py-3 lg:flex items-center justify-between">
+                 <NavLink to="/" className="relative size-[80px] rounded-full flex items-center gap-2">
+                    <img src={logo} alt="Eden of Life logo" className="absolute inset-0 w-full h-full scale-120 rounded-full object-cover transition-all duration-300 group-hover:scale-105" />
                 </NavLink>
 
                 <nav className="relative font-[Roboto]">
-                  <div className="relative z-10 flex items-center gap-8 md:gap-16 px px-2 py-[5.5px]  rounded-full bg-white/50 backdrop-blur-[4px] borde border-blue-500/20" >
+                  <div className="relative z-10 flex items-center gap-4 md:gap-8 px px-2 py-[5.5px]  rounded-full bg-white/50 backdrop-blur-[4px] borde border-blue-500/20" >
                     <NavLink to="/about" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-blac k/5 px-3 py-2 rounded-full transition-colors duration-300">
                         About
                     </NavLink>
@@ -90,10 +95,6 @@ const Navbar = () => {
                         Treatments
                         <ChevronDown className={`size-5 ${activeGroup==='treatments'? 'rotate-180':''} transition-all duration-500`}/>
                     </button>
-                    
-                    <NavLink to="/blogs" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bla ck/5 px-3 py-2 rounded-full transition-colors duration-300">
-                        News
-                    </NavLink>
 
                     <NavLink to="/blogs" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-400 hover:bg-bla ck/5 px-3 py-2 rounded-full transition-colors duration-300">
                         Blogs
@@ -106,20 +107,29 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 20 }}
-                      className="fixed top-[6rem] left-0 z-10 border-t border-black/5 w-full  min-h-[40vh] bg-gray-50  overflow-hidden">
+                      className="fixed top-[6rem] left-0 z-10 border-t border-black/5 w-full  min-h-[40vh] bg-gray-200  overflow-hidden">
                       
                       <div className="w-[100%] mx-auto grid grid-cols-4 p-6">
                          {/*all services/treatments link */}
-                         <div className="border h-full w-full">
-
-                        </div>
+                         <ul className="
+                            w-full flex flex-col gap-3 
+                            text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
+                            {data.slice(0, data.length/3).map((item)=>(
+                              <li key={item.id}>
+                                <Link to={`/${activeGroup}/${item.slug}`} onMouseEnter={()=>handleMouseOver} onClick={()=>setActiveGroup(null)} 
+                                  className="tracking-wider hover:text-blue-600 transition-colors duration-300">
+                                  {item.title}
+                                </Link>
+                              </li>))
+                            }
+                        </ul>
                         <ul className="
                             w-full flex flex-col gap-3 
                             text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
-                            {data.slice(0, data.length / 2).map((item)=>(
+                            {data.slice(data.length/3, data.length/3 * 2).map((item)=>(
                               <li key={item.id}>
-                                <Link to={`/${activeGroup}/${item.slug}`}  onClick={()=>setActiveGroup(null)} 
-                                  className="hover:text-blue-400 transition-colors duration-300">
+                                <Link to={`/${activeGroup}/${item.slug}`} onMouseEnter={()=>handleMouseOver} onClick={()=>setActiveGroup(null)} 
+                                  className="tracking-wider hover:text-blue-600 transition-colors duration-300">
                                   {item.title}
                                 </Link>
                               </li>))
@@ -128,10 +138,10 @@ const Navbar = () => {
                         <ul className="
                            w-full flex flex-col gap-3 
                            text-sm tracking-wide text-black/80 font-light font-[Roboto] pl-9">
-                             {data.slice(data.length / 2).map((item)=>(
+                             {data.slice((data.length/3) * 2).map((item)=>(
                              <li key={item.id}>
                                <Link to={`/${activeGroup}/${item.slug}`}  onClick={()=>setActiveGroup(null)}
-                                className="hover:text-blue-400 transition-colors duration-300">
+                                className="tracking-wider hover:text-blue-600 transition-colors duration-300">
                                  {item.title}
                                </Link>
                              </li>))
@@ -186,11 +196,9 @@ const Navbar = () => {
             ===========================================================*/}
             <div className=" w-full lg:hidden bg-white blue-950/50">
                 <div className="w-full flex items-center justify-between p-3 shadow-md">
-                    <NavLink to="/" className="flex items-center gap-2">
-                     <p className="size-[60px] rounded-full bg-black red-800"></p>
-                     <p className="hidden uppercase text-xl font-bold text-white">edelnam</p>
-                    <img src={logo} alt="Eden of Life logo" className="hidden w-[80px] h-[80px] md:w-[80px] md:h-[80px] rounded-full object-cover  shadow-lg transition-all duration-300 group-hover:scale-105" />
-                    </NavLink>
+                   <NavLink to="/" className="size-[60px] rounded-full flex items-center gap-2">
+                      <img src={logo} alt="Eden of Life logo" className="w-full h-full scale-120 rounded-full object-cover transition-all duration-300 group-hover:scale-105" />
+                   </NavLink>
 
                     <button onClick={toggleMenu} className="bgwhite/90 rounded-xl">
                         <HiMenu className="size-8  black/70"/>
@@ -237,7 +245,7 @@ const Navbar = () => {
                         Services
                         <LuPlus className={`size-5 ${isExpanded==="s"?'-rotate-45':''} transition-all duration-500`}/>
                       </button>
-                        <ul className={`flex flex-col ${isExpanded==="s" ? 'h-[250px] opacity-100 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
+                        <ul className={`flex flex-col ${isExpanded==="s" ? 'h-[750px] opacity-100 pr-4 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
                             {servicesData.map((item)=>
                                 <Link key={item.id} to={`/services/${item.slug}`} onClick={toggleMenu} className="my-2 borderborder-white/30 pl-14">
                                   {item.title}
@@ -249,7 +257,7 @@ const Navbar = () => {
                         Treatments
                         <LuPlus className={`size-5 ${isExpanded==="t" ? '-rotate-45':''} transition-all duration-500`}/>
                       </button>
-                         <ul className={`flex flex-col ${isExpanded==="t" ? 'h-[510px] opacity-100 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
+                         <ul className={`flex flex-col ${isExpanded==="t" ? 'h-[510px] opacity-100 pr-4 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
                             {treatmentsData.map((item)=>
                                 <Link key={item.id} to={`/treatments/${item.slug}`} onClick={toggleMenu}  className="my-2 borderborder-white/30 pl-14">
                                   {item.title}
