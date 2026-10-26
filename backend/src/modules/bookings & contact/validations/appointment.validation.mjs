@@ -73,14 +73,14 @@ export const appointmentValidationSchema = {
     email: {
         trim: true,
 
-        notEmpty: {
-            errorMessage: "Email address is required.",
-        },
+        // notEmpty: {
+        //     errorMessage: "Email address is required.",
+        // },
 
-        isEmail: {
-            errorMessage:
-                "Please provide a valid email address.",
-        },
+        // isEmail: {
+        //     errorMessage:
+        //         "Please provide a valid email address.",
+        // },
 
         normalizeEmail: true,
     },

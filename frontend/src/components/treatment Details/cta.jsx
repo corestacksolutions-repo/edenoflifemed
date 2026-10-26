@@ -19,10 +19,11 @@ export default function CTA ({treatment}){
                          {treatment.cta.description}
                       </p>
                       <div className="w-fit relative flex items-center gap-4 mx-auto">
-                          <Link to={`/consultation`}
+                          <Link to={`/appointment`}
                                 className="shadow p-3 rounded-xl bg-red-800 text-white font-semibold hover:bg-red-900 transition-all duration-300" 
                           >
-                            {treatment.cta.primaryLabel}  
+                            {/* {treatment.cta.primaryLabel}   */}
+                            Book an Appointment
                           </Link>
                           <Link to={`/consultation`}
                                 className="hidden shadow p-3 lg:px-10 rounded-xl bg-white text-blue-900 font-semibold hover:bg-blue-900 hover:text-white transition-all duration-300" 

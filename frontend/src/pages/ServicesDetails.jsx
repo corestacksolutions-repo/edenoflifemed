@@ -19,7 +19,7 @@ const ServiceDetails = () => {
     // if (!treatment) return <p>Treatment not found!</p>
 
   return (
-    <main className="w-full min-h-screen overflow-x-hidden z-0 bg-white">
+    <main className="w-full pb-10 min-h-screen overflow-x-hidden z-0 bg-white">
         <Hero 
             hero={service}
         />

@@ -26,8 +26,8 @@ export default function Nav(){
                   </li>
 
 
-                  <Link to='/consultation' className="shrink-0 px-3 py-1  rounded-lg list-none text-white font-normal text-lg bg-red-800 ">
-                     book consultament
+                  <Link to='/appointment' className="shrink-0 px-3 py-1  rounded-lg list-none text-white font-normal text-lg bg-red-800 ">
+                     book appointment
                   </Link>
                </nav>
            </section>

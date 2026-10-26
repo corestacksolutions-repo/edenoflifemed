@@ -97,8 +97,8 @@ export default function Footer() {
                                       </Link> 
                                   </li>
                                    <li className="">
-                                      <Link to="/consultation" className="md:absolute bottom-0 px-3 py-1 bg-red-800 mt-3 whitespace-nowrap text-white/70 transition-all duration-300">
-                                        Book Appointment
+                                      <Link to="/appointment" className="md:absolute bottom-0 px-3 py-1 bg-red-800 mt-3 whitespace-nowrap text-white/70 transition-all duration-300">
+                                        Book an Appointment
                                       </Link> 
                                   </li>
 
@@ -137,7 +137,7 @@ export default function Footer() {
                      rel="noopener noreferrer"
                      referrerPolicy="no-referrer"
                      className="ml-2 text-blue-950 italic">
-                     Corestack Solutions
+                     CoreStack Solutions
                   </a>
                 </div>
             </footer>

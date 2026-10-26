@@ -185,7 +185,7 @@ const Form = () => {
                         htmlFor="email"
                         className="block text-sm mb-1"
                     >
-                        Email
+                        Email (Optional)
                     </label>
 
                     <input
@@ -194,7 +194,7 @@ const Form = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        required
+                        
                         autoComplete="email"
                         className="w-full p-2 border-b border-black outline-none bg-transparent focus:border-red-800 transition-colors"
                         placeholder="johndoe@email.com"

@@ -33,7 +33,7 @@ const CTA = ({cta}) => {
 
           {/* CTA */}
           <Link
-            to="/consultation"
+            to="/appointment"
             className="
               w-fit
               mt-6
@@ -50,7 +50,7 @@ const CTA = ({cta}) => {
             "
           >
             <LuCalendarCheck size={18} />
-            Book a Consultation
+            Book an Appointment
           </Link>
 
         </div>
