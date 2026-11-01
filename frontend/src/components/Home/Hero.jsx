@@ -9,8 +9,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className="w-full fixed inset-0 z-0 h-[98vh] lg:h-[100dvh] flex bg-black/10 ">
-
+        <div className="w-full fixed inset-0 z-0 h-[98vh] md:h-[70vh] lg:h-[100dvh] flex bg-black/10 ">
+          <div className="relative w-full h-full">
             {/* Video Background */}
             <video src={video} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
             
@@ -21,9 +21,9 @@ const Hero = () => {
             <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black via-black/70 to-transparent" />
 
             {/* Hero Content */}
-            <div className="relative top-1/2 -translate-y-1/2 w-[92%] lg:w-[85%] min-h-[75vh] lg:h-fit py-4 mx-auto mt-[30%] my-auto flex flex-col items-start lg:items-center gap-6 text-white rounded-lg lg:pt-16">
+            <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[92%] lg:w-[85%] md:h-fit py-4 my-auto flex flex-col items-start lg:items-center gap-6 text-white rounded-lg lg:pt-16">
 
-                <h1 className="text-4xl md:text-8xl text-start lg:text-center font-[Roboto]  font-bold display text-[#000080]">
+                <h1 className="text-4xl md:text-6xl lg:text-8xl text-start lg:text-center font-[Roboto]  font-bold display text-[#000080]">
                     Eden of Life Natural Medicine    
                 </h1>
 
@@ -31,27 +31,28 @@ const Hero = () => {
                     Hope for your life
                 </h2>
 
-                <p className="font-body w-full md:w-[40%] font-[Roboto] lg:text-center text-[1.3rem] text-white/50 tracking-wide">
+                <p className="font-body w-full lg:w-[40%] font-[Roboto] lg:text-center text-[1.3rem] text-white/50 tracking-wide">
                     A place to find natural, holistic, and personalized care that help you live a 
                     healthier and happier life.
                 </p>
 
                 {/* Booking CTA */}
-                <Link to="/consultation" className="group cursor-pointer relative mt-3 bg-red-800 text-white hover:text-white/80 font-medium tracking-wide py-3 px-7 flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-red-950/30 z-10">
+                <Link to="/consultation" className="group cursor-pointer rounded-full relative mt-3 bg-red-800 text-white hover:text-white/80 font-medium tracking-wide py-3 px-7 flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-red-950/30 z-10">
                     
-                    <div className="hidden absolute inset-0 w-0 opacity-0 group-hover:w-full group-hover:opacity-100 h-full bg-white transition-ll duration-500" />
+                    <div className="hidden absolute inset-0 w-0 opacity-0  group-hover:w-full group-hover:opacity-100 h-full bg-white transition-ll duration-500" />
                     Book an Appointment
                     <BsArrowRight size={20} />
                 </Link>
                 
                 {/*for mobile only */}
-                <div className="fixed left-0 z-50 bottom-10 w-[65px] h-[65px] py-1 bg-emerald-600 shadow h-[10vh]  flex items-center -gap-6 rounded-full">
+                <div className="hidden fixed left-0 z-50 bottom-10 w-[65px] h-[65px] py-1 bg-emerald-600 shadow h-[10vh]  flex items-center -gap-6 rounded-full">
                     <a href="https://wa.me/+265991960995" className="m-auto">
                       <FaWhatsapp className="size-8"/>
                     </a>
                 </div>
 
             </div>
+          </div>
         </div>
     );
 };

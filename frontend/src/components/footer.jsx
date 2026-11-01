@@ -4,14 +4,14 @@ import {
    LiaFacebook, 
    LiaLinkedin 
 } from "react-icons/lia";
-import logo from "../assets/logo/lgo.png";
+import logo from "../assets/logo/gro.jpg";
 import services from "../data/services";
 import treatments from "../data/treatments";
 
 import { Link } from "react-router-dom";
-import { BsTiktok, BsTwitterX } from "react-icons/bs";
-import { PiTiktokLogo } from "react-icons/pi";
-import { LuInstagram } from "react-icons/lu";
+import { BsFacebook, BsTiktok, BsTwitterX } from "react-icons/bs";
+import { PiFacebookLogo, PiTiktokLogo } from "react-icons/pi";
+import { LuFacebook, LuInstagram, LuYoutube } from "react-icons/lu";
 
 export default function Footer() {
            const currentYear = new Date().getFullYear();
@@ -26,10 +26,10 @@ export default function Footer() {
                       {/*company info */}
                       <div className="w-full h-20">
                          <div className="flex items-center gap-2">
-                            <Link className="size-[45px]">
+                            <Link className="size-[45px] rounded-full overflow-hidden">
                                <img src={logo} alt="company-logo" className="w-full h-full" />
                             </Link>
-                            <h2 className="text-2xl text-white font-bold uppercase">Edelnam</h2>
+                            <h2 className="hidden text-2xl text-white font-bold uppercase">Edelnam</h2>
                          </div>
                             <p className="hidden text-[1.15rem] text-white leading-tight">
                                 Hope for your life
@@ -107,30 +107,41 @@ export default function Footer() {
 
                       </div>
                 </div>
-                <footer className="w-[92%] lg:w-[85%] mx-auto flex items-center justify-between mt-8 border-t border-white/10 py-2">
+                <footer className="w-[92%] lg:w-[85%] mx-auto flex flex-col md:flex-row items-center gap-y-6 justify-between mt-8 border-t border-white/10 py-2">
                     <div className="flex items-center gap-3 flex-wrap">
-                     <a href="/" target="_blank" className="">
-                        <LiaLinkedin className="cursor-pointer text-3xl text-white/20"/>
+                     <a href="https://www.linkedin.com/in/eden-of-life-natural-medicine-center-96444a442" 
+                        target="_blank" className="hover:scale-110 transition-all duration-300">
+                        <LiaLinkedin className="size-8 cursor-pointer text-white/20"/>
                      </a>
-                     <a href="https://www.facebook.com/profile.php?id=61563483795198" target="_blank" className="">
-                       <LiaFacebook className="cursor-pointer text-3xl text-white/20"/>
+                     <a href="/" 
+                        target="_blank" 
+                        className="hover:scale-110 transition-all duration-300">
+                       <BsTwitterX className="cursor-pointer size-6 text-white/20"/>
+                     </a> 
+                     <a href="https://www.facebook.com/profile.php?id=61563483795198" 
+                        target="_blank" 
+                        className="hover:scale-110 transition-all duration-300">
+                       <LuFacebook className="cursor-pointer size-6 text-white/20"/>
                      </a>
-                     <a href="/" target="_blank" className="">
-                       <PiTiktokLogo className="cursor-pointer text-3xl text-white/20"/>
+                     <a href="https://www.tiktok.com/@eden.of.life.natu?_r=1&_ZS-9AiAizqvT79" 
+                        target="_blank" 
+                        className="hover:scale-110 transition-all duration-300">
+                       <PiTiktokLogo className="cursor-pointer size-6 text-white/20"/>
                      </a>
-                     <a href="/" target="_blank" className="">
-                       <LuInstagram className="cursor-pointer text-2xl text-white/20"/>
+                     
+                       <a href="/" target="_blank" className="">
+                       <LuInstagram className="cursor-pointer size-6 text-white/20"/>
+                     </a> 
+                     <a href="https://www.youtube.com/@eden-of-life-medicinemedicine" target="_blank" className="">
+                       <LuYoutube className="cursor-pointer size-7 text-white/20"/>
                      </a>
-                     <a href="/" target="_blank" className="">
-                       <BsTwitterX className="cursor-pointer text-2xl text-white/20"/>
-                     </a>   
                     </div>
                     <div className="text-white/30 italic text-[0.9rem] flex items-center justify-end px-2">
                       © {currentYear} Eden of Life. All rights reserved.
                     </div>
                 </footer>
 
-                <div className="absolute left-1/2 -translate-x-1/2 text-white/10 whitespace-nowrap">
+                <div className="hidden absolute left-1/2 -translate-x-1/2 text-white/10 whitespace-nowrap">
                   Powered by 
                   <a href="https://www.corestacksolutions.tech" 
                      target="_blank"

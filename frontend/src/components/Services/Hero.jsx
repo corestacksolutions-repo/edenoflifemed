@@ -39,13 +39,14 @@ const Hero = () => {
           initial={{opacity:0, x:10}}
           whileInView={{opacity:1, x:0}}
           transition={{duration:0.8, ease: "easeOut"}}
-          src={bgImage} 
+          src="https://i.pinimg.com/1200x/38/d4/44/38d444fb6d848430a048b8bc7b947f8f.jpg"
           alt="Background image of some remedy ingredients" 
-          className="w-full h-full object-cover absolute inset-0 z-0"
+          className="w-full h-full object-cover absolute inset-0 z-0 "
         />
       </AnimatePresence>
       {/* Dark Overlay */}
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-white/90 via-white/60 to-transparent backdrop-blur-px" />
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black via-black/0 to-transparent backdrop-blur-px" />
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/50 via-white/0 to-transparent backdrop-blur-px" />
 
        {/*hero content*/} 
        <AnimatePresence mode="wait">

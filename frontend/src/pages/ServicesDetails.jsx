@@ -13,10 +13,10 @@ const ServiceDetails = () => {
     const { serviceId } = useParams()
 
     const service = services.find(
-        (treatment) => treatment.slug === serviceId
+        (service) => service.slug === serviceId
     )
     console.log(service)
-    // if (!treatment) return <p>Treatment not found!</p>
+    // if (!service) return <p>Treatment not found!</p>
 
   return (
     <main className="w-full min-h-screen overflow-x-hidden z-0 bg-white">

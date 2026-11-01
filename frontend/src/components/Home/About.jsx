@@ -10,21 +10,21 @@ import { LuCheck } from "react-icons/lu"
 
 export default function About(){
       return(
-           <section className="relative w-full z-10 bg-white w-full py-20 mt-[100vh] lg:mt-[100vh] z-20">
+           <section className="relative w-full z-10 bg-white w-full py-20 mt-[100vh] md:mt-[70vh] lg:mt-[100vh] z-20">
                 <div className="w-[92%] lg:w-[85%] mx-auto grid md:grid-cols-2 gap-6">
 
-                    <motion.figure className="w-full overflow-hidden rounded-xl"
+                    <motion.figure className="w-full  overflow-hid rounded-xl"
                       initial={{opacity:0, x:-80}}
                       whileInView={{opacity:1, x:0}}
                       viewport={{once:true, amount:0.8}}
                       transition={{duration:2, ease: "easeOut"}}
                     >
-                        <img src={medicalPractioner} alt="Medical Practitioner" className="w-full h-full object-cover" />
+                        <img src={medicalPractioner} alt="Medical Practitioner" className="w-full h-full object-contain" />
                     </motion.figure>
                                      
 
                     {/*about content */}
-                    <motion.div className="space-y-8 "
+                    <motion.div className="space-y-8"
                         initial={{opacity:0, x:80}}
                         whileInView={{opacity:1, x:0}}
                         viewport={{once:true, amount:0.8}}
