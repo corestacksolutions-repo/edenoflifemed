@@ -25,13 +25,13 @@ const CTA = () => {
 
           {/* Leading Text */}
           <p className="my-3 text-sm text-white/75 leading-relaxed">
-            Book a consultation and let our care team support you.
+            Book an Appointment and let our care team support you.
           </p>
 
           {/* Action Button */}
-          <Link to="/consultation" className="flex items-center mt-4 gap-2 cursor-pointer text-center justify-center text-white font-medium bg-red-800 rounded-lg py-2.5 px-3 text-sm hover:bg-red-900 transition-colors duration-300">
+          <Link to="/appointment" className="flex items-center mt-4 gap-2 cursor-pointer text-center justify-center text-white font-medium bg-red-800 rounded-lg py-2.5 px-3 text-sm hover:bg-red-900 transition-colors duration-300">
             <LuCalendarCheck size={18} />
-            Book a Consultation
+            Book an Appointment
           </Link>
         </div>
       </div>

@@ -25,8 +25,8 @@ const CTA = () =>{
                    </p>
 
                    <div className="w-full md:w-fit text-center md:text-left flex flex-col md:flex-row gap-4">
-                      <Link to='/consultation' className='px-6 w-full md:w-fit text-white gap-3 bg-red-900 rounded-xl p-3 p2 font-semibold'> 
-                         Book a consultation
+                      <Link to='/appointment' className='px-6 w-full md:w-fit text-white gap-3 bg-red-900 rounded-xl p-3 p2 font-semibold'> 
+                         Book an Appointment
                       </Link>
                       <Link to='/contact' className='px-12 w-full md:w-fit bg-green-800 border border-green-900/70 rounded-xl p-3 -2 font-semibold'>
                           Contact us

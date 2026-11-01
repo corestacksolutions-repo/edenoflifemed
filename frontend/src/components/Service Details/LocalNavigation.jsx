@@ -33,7 +33,7 @@ const LocalNavigation = () => {
 
         {/* CTA */}
         <Link
-          to="/booking"
+          to="/appointment"
           className="
             shrink-0
             flex items-center justify-center gap-2
@@ -50,7 +50,7 @@ const LocalNavigation = () => {
           "
         >
           <LuCalendarCheck size={18} />
-          Book a Consultation
+          Book an Appointment
         </Link>
 
       </div>

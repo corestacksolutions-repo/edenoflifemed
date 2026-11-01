@@ -39,7 +39,7 @@ export const adminGetAppointments = async (req, res, next) => {
 export const adminGetConsultations = async (req, res, next) => {
     try {
         const consultations = await adminService
-                        .adminGetAppointments()
+                                .adminGetConsultations()
 
         return res.json({
             success: true,
