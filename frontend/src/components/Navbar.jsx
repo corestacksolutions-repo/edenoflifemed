@@ -75,7 +75,7 @@ const Navbar = () => {
         setIsExpanded(isExpanded === item ? null : item);
     }
     return (
-        <header className={`fixed top-0 w-full  z-50  lg: ${visible ? 'opacity-100 translate-y-0' : 'lg:opac ity-0 lg:-t ranslate-y-full'} transition-all delay-300 duration-1000 bg-whit shadow-d`}>
+        <header className={`fixed top-0 w-full  z-50  lg: ${visible ? 'opacity-100 translate-y-0' : 'lg:opac ity-0 lg:-t ranslate-y-full'} transition-all delay-300 duration-1000`}>
             <nav className=" hidden w-[92%] mx-auto   py-3 lg:flex items-center justify-between">
                  <NavLink to="/" className="relative">
                     <img src={logo} alt="Eden of Life logo" className="size-[80px]  rounded-full" /> 
@@ -324,7 +324,7 @@ const Navbar = () => {
             ===========================================================*/}
             <div className="lg:hidden  w-full bg-white blue-950/50">
                 <div className="bg-white w-full flex items-center justify-between p-3">
-                   <NavLink to="/" className="size-[50px] rounded-full flex items-center gap-2 shadow">
+                   <NavLink to="/" onClick={toggleMenu} className="size-[50px] rounded-full flex items-center gap-2 shadow">
                       <img src={logo} alt="logo" className="w-full h-full scale-120 rounded-full object-cover transition-all duration-300 group-hover:scale-105" />
                    </NavLink>
 
@@ -400,13 +400,14 @@ const Navbar = () => {
                                   key={item.id} 
                                   to={`/services/${item.slug}`} 
                                   onClick={toggleMenu} 
-                                  className="tracking-wider text-sm pl-6 my-[2px] text-blue-800">
+                                  className="flex items-center gap-1 tracking-wider text-sm pl-6 my-[2px] text-blue-800">
                                   {item.title}
+                                   <ArrowRight className='hidden size-3'/>
                                 </Link>
                             )} 
 
                             <Link to="/services" onClick={toggleMenu} className="w-fit flex items-center gap-1 underline tracking-wider text-sm pl-6 text-red-600">
-                               all services
+                               All services
                                <ArrowRight className='size-4'/>
                             </Link>
                         </ul>
@@ -423,7 +424,7 @@ const Navbar = () => {
                             )} 
 
                             <Link to="/treatments" onClick={toggleMenu} className="w-fit flex items-center gap-1 underline tracking-wider text-sm pl-6 text-red-600">
-                               all treatments
+                               All treatments
                                <ArrowRight className='size-4'/>
                             </Link>
                         </ul>
@@ -434,10 +435,6 @@ const Navbar = () => {
                         Contact
                       </NavLink>
 
-
-                      <NavLink onClick={toggleMenu} to="/blogs" className="w-full tracking-wide p-3 ">
-                        News
-                      </NavLink>
                        <NavLink onClick={toggleMenu} to="/blogs" className="w-full tracking-wide p-3">
                         Blogs
                       </NavLink>

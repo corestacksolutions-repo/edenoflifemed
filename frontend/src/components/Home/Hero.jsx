@@ -9,7 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className="w-full fixed inset-0 z-0  h-[98vh] md:h-[70vh] lg:h-[100dvh] flex bg-black/10 ">
+        <div className="w-full fixed inset-0 z-0  h-[95vh] md:h-[70vh] lg:h-[100dvh] flex bg-black/10 ">
           <div className="relative w-full h-full">
             {/* Video Background */}
             <video src={video} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
@@ -23,8 +23,10 @@ const Hero = () => {
             {/* Hero Content */}
             <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[92%] lg:w-[85%] md:h-fit py-4 my-auto flex flex-col items-start lg:items-center gap-6 text-white rounded-lg lg:pt-16">
 
-                <h1 className="text-4xl md:text-6xl lg:text-8xl text-start lg:text-center font-[Roboto]  font-bold display text-[#000080]">
-                    Eden of Life Natural Medicine    
+                <h1 className="text-[2.57rem] leading-tight md:text-6xl lg:text-8xl text-start lg:text-center font-[Roboto]  font-bold display text-[#000080]">
+                    Eden of Life 
+                    <br/>
+                    Natural Medicine    
                 </h1>
 
                 <h2 className="hidden mt-2 text-2xl sm:text-3xl  leading-tight font-serif font-bold">

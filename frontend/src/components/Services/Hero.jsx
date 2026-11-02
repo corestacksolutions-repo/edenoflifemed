@@ -31,7 +31,7 @@ const Hero = () => {
   }, [currentIndex])
   
   return (
-    <section className="relative w-full h-[100vh]" >
+    <section className="relative w-full h-[95vh]" >
       {/* Background Image */}
       <AnimatePresence mode="sync">
         <motion.img 
@@ -70,7 +70,7 @@ const Hero = () => {
                   duration: 0.7,
                   delay: 0.3,
                 }} 
-                className="text-[2.5rem] lg:text-[3rem] font-extrabold text- red-800 ">
+                className="text-[2.5rem] leading-tight lg:text-[3rem] font-extrabold">
                  {currentService.title}
               </motion.h1>
               <motion.p 
