@@ -6,7 +6,7 @@ import servicesData from "../data/services";
 
 import{ AnimatePresence, motion} from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, ChevronUp, X } from "lucide-react";
+import { ChevronDown, ChevronUp, X , ArrowRight } from "lucide-react";
 
 import { HiMenu, HiMenuAlt3 } from "react-icons/hi";
 import { LuPlus } from "react-icons/lu";
@@ -324,7 +324,7 @@ const Navbar = () => {
             ===========================================================*/}
             <div className="lg:hidden  w-full bg-white blue-950/50">
                 <div className="bg-white w-full flex items-center justify-between p-3">
-                   <NavLink to="/" className="size-[50px] rounded-full flex items-center gap-2">
+                   <NavLink to="/" className="size-[50px] rounded-full flex items-center gap-2 shadow">
                       <img src={logo} alt="logo" className="w-full h-full scale-120 rounded-full object-cover transition-all duration-300 group-hover:scale-105" />
                    </NavLink>
 
@@ -342,7 +342,7 @@ const Navbar = () => {
                      />
 
                       <X
-                           className={`absolut inset-0 size-6 transition-all duration-500 text-gray-500 z-50  rounded-full ${
+                           className={`absolut inset-0 size-6 transition-all duration-500  z-50  rounded-full ${
                               isOpen
                               ? "rotate-0 scale-100 opacity-100  "
                               : "-rotate-90 scale-0 opacity-0"
@@ -373,8 +373,8 @@ const Navbar = () => {
                            items-start 
                            bg-black/0 
                            font-[Roboto] 
-                           font-light
-                           text-[16px]
+                           font-normal
+                           text-[1.125rem]
                            
                            
                            
@@ -394,28 +394,38 @@ const Navbar = () => {
                         Services
                         <LuPlus className={`size-4 ${isExpanded==="s"?'-rotate-45':''} text-black/40 transition-all duration-500`}/>
                       </button>
-                        <ul className={`flex flex-col gap-2 ${isExpanded==="s" ? 'h-fit opacity-100 pr-4 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
-                            {servicesData.map((item)=>
+                        <ul className={`flex flex-col gap-2 ${isExpanded==="s" ? 'h-fit opacity-100 pr-4 pb-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
+                            {servicesData.slice(0,5).map((item)=>
                                 <Link 
                                   key={item.id} 
                                   to={`/services/${item.slug}`} 
                                   onClick={toggleMenu} 
-                                  className="tracking-wider text-sm pl-6">
+                                  className="tracking-wider text-sm pl-6 my-[2px] text-blue-800">
                                   {item.title}
                                 </Link>
                             )} 
+
+                            <Link to="/services" onClick={toggleMenu} className="w-fit flex items-center gap-1 underline tracking-wider text-sm pl-6 text-red-600">
+                               all services
+                               <ArrowRight className='size-4'/>
+                            </Link>
                         </ul>
                     {/*treatments */}
                       <button onClick={()=>handleExpansion('t')}  className="w-fit flex gap-2 justify-between items-center tracking-wide p-3">
                         Treatments
                         <LuPlus className={`size-4 ${isExpanded==="t" ? '-rotate-45':''} text-black/40 transition-all duration-500`}/>
                       </button>
-                         <ul className={`flex flex-col gap-2 ${isExpanded==="t" ? ' h-fit opacity-100 pr-4 py-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
-                            {treatmentsData.map((item)=>
-                                <Link key={item.id} to={`/treatments/${item.slug}`} onClick={toggleMenu}  className="text-sm tracking-wider pl-4">
+                         <ul className={`flex flex-col gap-2 ${isExpanded==="t" ? ' h-fit opacity-100 pr-4 pb-2':'h-0 opacity-0 pointer-events-none'} w-full transition-all duration-500`}>
+                            {treatmentsData.slice(0,5).map((item)=>
+                                <Link key={item.id} to={`/treatments/${item.slug}`} onClick={toggleMenu}  className="tracking-wider text-sm pl-6 my-[2px] text-blue-800">
                                   {item.title}
                                 </Link>
                             )} 
+
+                            <Link to="/treatments" onClick={toggleMenu} className="w-fit flex items-center gap-1 underline tracking-wider text-sm pl-6 text-red-600">
+                               all treatments
+                               <ArrowRight className='size-4'/>
+                            </Link>
                         </ul>
 
 
