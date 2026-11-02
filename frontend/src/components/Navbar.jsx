@@ -322,7 +322,7 @@ const Navbar = () => {
             {/*=========================================================
                                    MOBILE 
             ===========================================================*/}
-            <div className=" w-full bg-white blue-950/50">
+            <div className="lg:hidden  w-full bg-white blue-950/50">
                 <div className="bg-white w-full flex items-center justify-between p-3">
                    <NavLink to="/" className="size-[50px] rounded-full flex items-center gap-2">
                       <img src={logo} alt="logo" className="w-full h-full scale-120 rounded-full object-cover transition-all duration-300 group-hover:scale-105" />
