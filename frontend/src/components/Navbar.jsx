@@ -82,7 +82,7 @@ const Navbar = () => {
                 </NavLink>
 
                 <nav className="relative font-[Roboto]">
-                  <div className="relative z-10 flex items-center gap-4 md:gap-8 px px-2 py-[5.5px]  rounded-full bg-white/50 backdrop-blur-[4px] borde border-blue-500/20" >
+                  <div className="relative z-10 flex items-center gap-4 md:gap-8 px px-2 py-[5.5px]  rounded-full bg-white/50 backdrop-blur-[4px]" >
                     <NavLink to="/about" className="text-sm md:text-base font-normal tracking-wide hover:text-blue-800 hover:bg-blac k/5 px-3 py-2 rounded-full transition-colors duration-300
                      "
                       style={({isActive})=>({color: isActive? "blue" : ""})}
@@ -113,6 +113,9 @@ const Navbar = () => {
 
                              p-6
                              
+                             bg-white/80 
+                             backdrop-blur-[4px]
+
                              opacity-0
                              invisible
                              group-hover:opacity-100
@@ -176,6 +179,10 @@ const Navbar = () => {
                              bg-white
                              rounded-3xl
                              
+                             bg-white/80 
+                             backdrop-blur-[4px]
+
+
                              opacity-0
                              invisible
                              group-hover:opacity-100
