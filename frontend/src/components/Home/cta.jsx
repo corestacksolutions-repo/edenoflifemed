@@ -27,7 +27,7 @@ export default function CTA() {
                          <Link to="/appointment" className="mt-3 bg-red-800 p-3 rounded-lg hover:bg-red-00 font-bold text-center text-white/80">
                            Book an Appointment
                          </Link>
-                         <Link to="/contact" className="mt-3 border border-red-800/40 px-12 p-3 text-center  rounded-lg hover:bg-red-800/30 font-bold text-white whitespace-nowrap">
+                         <Link to="/contact" className="mt-3 border bg-green-800 px-12 p-3 text-center  rounded-lg font-bold text-white whitespace-nowrap">
                            Contact us
                          </Link>
                      </div>
