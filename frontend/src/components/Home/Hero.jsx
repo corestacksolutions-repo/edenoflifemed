@@ -9,7 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className="w-full fixed inset-0 z-0 h-[98vh] md:h-[70vh] lg:h-[100dvh] flex bg-black/10 ">
+        <div className="w-full fixed inset-0 z-0  h-[98vh] md:h-[70vh] lg:h-[100dvh] flex bg-black/10 ">
           <div className="relative w-full h-full">
             {/* Video Background */}
             <video src={video} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
