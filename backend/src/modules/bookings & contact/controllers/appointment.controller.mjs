@@ -74,7 +74,7 @@ export const createAppointment = async (req, res, next) => {
             })
         })
 
-        const paymentCreationPayload = response.json()
+        const paymentCreationPayload = await response.json()
         console.log(paymentCreationPayload)
 
         const paymentUrl = paymentCreationPayload?.data?.checkout_url
