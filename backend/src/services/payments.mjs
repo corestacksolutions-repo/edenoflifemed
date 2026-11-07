@@ -39,7 +39,7 @@ const createPayment = async (req, res) => {
     } catch (error) {
         return res.json({
             success: false,
-            message: `Failed to connect to PayChangu's server.`
+            message: `Failed to connect to PayChangu's server: ${error}`
         })
     }
 }
