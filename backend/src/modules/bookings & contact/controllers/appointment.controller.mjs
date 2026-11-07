@@ -60,7 +60,7 @@ export const createAppointment = async (req, res, next) => {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${paychanguSecretKey}`
+                Authorization: `Bearer ${process.env.PAYCHANGU_SECRET_KEY}`
             },
             body: JSON.stringify({
                 amount: payload.booking_fee,
