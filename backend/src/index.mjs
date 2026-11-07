@@ -17,8 +17,7 @@ const frontendOrigins = [
     process.env.ADMIN_URL
 ].filter(Boolean)
 
-app.use('/api/webhook', express.raw({type: "*/*"}), webhookRoute)
-
+app.use("/webhook", express.raw({ type: "*/*" }), webhookRoute);
 
 
 app.use(
