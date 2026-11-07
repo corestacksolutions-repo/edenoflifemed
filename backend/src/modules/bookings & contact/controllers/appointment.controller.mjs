@@ -41,7 +41,7 @@ export const createAppointment = async (req, res, next) => {
 
         // await createPayment()
 
-        await payments.sayHello()
+        await payments.createPayment()
         
         // return res.status(201).json({
         //     success: true,
