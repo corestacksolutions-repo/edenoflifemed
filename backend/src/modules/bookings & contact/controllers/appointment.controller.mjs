@@ -54,10 +54,12 @@ export const createAppointment = async (req, res, next) => {
                                         notes
                                     })
 
+        console.log(appointment)
+
         const response = await fetch("https://api.paychangu.com/payment", {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
                 Authorization: `Bearer ${paychanguSecretKey}`
             },
             body: JSON.stringify({
@@ -66,7 +68,7 @@ export const createAppointment = async (req, res, next) => {
                 email: payload.email ? payload.email : '',
                 first_name: payload.full_name,
                 last_name: payload.full_name,
-                callback_url: `https://edenoflifemed.vercel.app/appointment?ref=${patient_reference}`,
+                callback_url: `https://edenoflifemed.vercel.app/booking-success?ref=${patient_reference}`,
                 return_url: `https://edenoflifemed.onrender.com/webhook`,
                 tx_ref: patient_reference
             })
