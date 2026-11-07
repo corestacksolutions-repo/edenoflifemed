@@ -7,6 +7,8 @@ import * as payments from '../../../services/payments.mjs'
 dotenv.config();
 
 const frontEndUrl = process.env.FRONTEND_URL
+const paychanguSecretKey = process.env.PAYCHANGU_SECRET_KEY
+
 
 export const createAppointment = async (req, res, next) => {
     try {
