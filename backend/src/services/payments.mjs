@@ -1,10 +1,8 @@
 
 const paychanguSecretKey = process.env.PAYCHANGU_SECRET_KEY
-const frontendURL = process.env.FRONTEND_URL
-const backendURL = process.env.BACKEND_API_URL
 
-const createPayment = async (req, res) => {
-    try {
+
+const createPayment = async () => {
         
         const response = await fetch("https://api.paychangu.com/payment", {
             method: 'POST',
@@ -24,24 +22,9 @@ const createPayment = async (req, res) => {
             })
         })
 
-        const result = response.json()
-        console.log(result)
+        return response
 
-        const paymentUrl = result?.data?.checkout_url
 
-        if (!paymentUrl) return res.json({
-            success: false,
-            message: `Failed to get payment link.`
-        })
-
-        res.json({paymentUrl})
-
-    } catch (error) {
-        return res.json({
-            success: false,
-            message: `Failed to connect to PayChangu's server: ${error}`
-        })
-    }
 }
 
 // const sayHello = () => {

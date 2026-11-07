@@ -39,9 +39,20 @@ export const createAppointment = async (req, res, next) => {
                                         notes
                                     })
 
-        // await createPayment()
 
-        await payments.createPayment()
+        const result = await payments.createPayment()
+
+        const paymentCreationPayload = result.json()
+        console.log(paymentCreationPayload)
+
+        const paymentUrl = paymentCreationPayload?.data?.checkout_url
+
+        if (!paymentUrl) return res.json({
+            success: false,
+            message: `Failed to get payment link.`
+        })
+
+        res.json({paymentUrl})
         
         // return res.status(201).json({
         //     success: true,
