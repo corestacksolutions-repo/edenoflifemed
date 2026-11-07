@@ -3,6 +3,7 @@ import { generateReference } from "../../../utils/generateReference.mjs";
 import * as appointmentService from '../services/appointment.service.mjs'
 import dotenv from "dotenv";
 import * as payments from '../../../services/payments.mjs'
+import { redirect } from "react-router-dom";
 
 dotenv.config();
 
@@ -39,16 +40,48 @@ export const createAppointment = async (req, res, next) => {
                                         notes
                                     })
 
+        const response = await fetch("https://api.paychangu.com/payment", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${paychanguSecretKey}`
+            },
+            body: JSON.stringify({
+                amount: payload.booking_fee,
+                currency: 'MWK',
+                email: payload.email ? payload.email : '',
+                first_name: payload.full_name,
+                last_name: payload.full_name,
+                callback_url: `https://edenoflifemed.vercel.app/appointment?ref=${patient_reference}`,
+                return_url: `https://edenoflifemed.onrender.com/webhook`,
+                tx_ref: patient_reference
+            })
+        })
 
-        const result = await payments.createPayment()
+        const paymentCreationPayload = response.json()
+        console.log(paymentCreationPayload)
 
-        console.log(result)
+        const paymentUrl = paymentCreationPayload?.data?.checkout_url
+
+        if (!paymentUrl) return res.json({
+            success: false,
+            message: `Failed to get payment link.`
+        })
+
+
+
+
+
+        // const result = await payments.createPayment()
+
+        // console.log(result)
         
-        // return res.status(201).json({
-        //     success: true,
-        //     data: appointment,
-        //     redirectUrl: `${frontEndUrl}/booking-success?ref=${patient_reference}`,
-        // })
+        return res.status(201).json({
+            success: true,
+            data: appointment,
+            redirectUrl: paymentUrl
+            // redirectUrl: `${frontEndUrl}/booking-success?ref=${patient_reference}`,
+        })
     }catch (error) {
         return next(error)
     }
