@@ -28,6 +28,19 @@ export const createAppointment = async (req, res, next) => {
         const appointment_status = 'pending'
         const paid_amount = 0
 
+        const payload = {
+        patient_reference,
+        appointment_status,
+        paid_amount,
+        full_name,
+        email,
+        phone,
+        country,
+        date_time,
+        notes,
+        booking_fee: 4000
+    }
+
         const appointment = await appointmentService
                                     .createAppointment({
                                         patient_reference,
