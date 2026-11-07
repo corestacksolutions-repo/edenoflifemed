@@ -1,6 +1,8 @@
+import createPayment from "../../../services/payments.mjs";
 import { generateReference } from "../../../utils/generateReference.mjs";
 import * as appointmentService from '../services/appointment.service.mjs'
 import dotenv from "dotenv";
+import * as payments from '../../../services/payments.mjs'
 
 dotenv.config();
 
@@ -36,12 +38,16 @@ export const createAppointment = async (req, res, next) => {
                                         date_time,
                                         notes
                                     })
+
+        // await createPayment()
+
+        await payments.sayHello()
         
-        return res.status(201).json({
-            success: true,
-            data: appointment,
-            redirectUrl: `${frontEndUrl}/booking-success?ref=${patient_reference}`,
-        })
+        // return res.status(201).json({
+        //     success: true,
+        //     data: appointment,
+        //     redirectUrl: `${frontEndUrl}/booking-success?ref=${patient_reference}`,
+        // })
     }catch (error) {
         return next(error)
     }

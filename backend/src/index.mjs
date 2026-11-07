@@ -3,9 +3,11 @@ import cors from 'cors'
 import barrelRoute from './modules/bookings & contact/routes/barrel.route.mjs'
 import { errorHandler } from './middlewares/errorHandler.mjs'
 import adminBarrelRouter from './modules/administration/routes/adminBarrel.route.mjs'
+import webhookRoute from './modules/bookings & contact/routes/webhook.route.mjs'
 
 const app = express()
 const PORT = process.env.PORT || 8383
+
 
 const frontendOrigins = [
     "http://localhost:5173",
@@ -14,6 +16,9 @@ const frontendOrigins = [
     process.env.FRONTEND_URL,
     process.env.ADMIN_URL
 ].filter(Boolean)
+
+app.use('/api/webhook', express.raw({type: "*/*"}), webhookRoute)
+
 
 
 app.use(
