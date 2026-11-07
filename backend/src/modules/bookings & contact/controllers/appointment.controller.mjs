@@ -3,7 +3,6 @@ import { generateReference } from "../../../utils/generateReference.mjs";
 import * as appointmentService from '../services/appointment.service.mjs'
 import dotenv from "dotenv";
 import * as payments from '../../../services/payments.mjs'
-import { redirect } from "react-router-dom";
 
 dotenv.config();
 
