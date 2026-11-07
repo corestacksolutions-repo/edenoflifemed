@@ -2,7 +2,7 @@
 const paychanguSecretKey = process.env.PAYCHANGU_SECRET_KEY
 
 
-const createPayment = async () => {
+const createPayment = async (req, res) => {
         
         const response = await fetch("https://api.paychangu.com/payment", {
             method: 'POST',
@@ -22,7 +22,17 @@ const createPayment = async () => {
             })
         })
 
-        return response
+        const paymentCreationPayload = result.json()
+        console.log(paymentCreationPayload)
+
+        const paymentUrl = paymentCreationPayload?.data?.checkout_url
+
+        if (!paymentUrl) return res.json({
+            success: false,
+            message: `Failed to get payment link.`
+        })
+
+        res.json({paymentUrl})
 
 
 }
