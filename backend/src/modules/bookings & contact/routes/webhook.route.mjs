@@ -77,7 +77,7 @@ webhookRoute.post('/', async (req, res) => {
 
         console.log(`checking the newPaidAmount and the totalAppointmentFee: `, newPaidAmount, totalAppointmentFee)
 
-        const payment_status = newPaidAmount >= totalAppointmentFee ? "Paid" : "Partially Paid"
+        const payment_status = newPaidAmount >= totalAppointmentFee ? "paid" : "partially_paid"
 
         console.log(`Checking the payment status after comparing the newPaidAmount against the totalAppointmentFee: `, payment_status)
 
