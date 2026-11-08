@@ -47,6 +47,8 @@ webhookRoute.post('/', async (req, res) => {
         const amount = Number(data.amount)
         const status = data.status
 
+        console.log(`Logging out the reference, amount, and status as obtained from the webhook payload: `, reference, amount, status)
+
         if (status !== 'success' || !reference || !amount) return res.status(400).json({
             success: false,
             message: `Missing data fields in payload`
@@ -73,9 +75,28 @@ webhookRoute.post('/', async (req, res) => {
         const newPaidAmount = (checkTransactionInstance.paid_amount || 0) + amount
         const totalAppointmentFee = checkTransactionInstance.appointment_fee || 4000
 
+        console.log(`checking the newPaidAmount and the totalAppointmentFee: `, newPaidAmount, totalAppointmentFee)
+
         const payment_status = newPaidAmount >= totalAppointmentFee ? "Paid" : "Partially Paid"
 
+        console.log(`Checking the payment status after comparing the newPaidAmount against the totalAppointmentFee: `, payment_status)
+
+
         const patient_id = checkTransactionInstance.id
+        console.log(`After retrieving the data from the db using the reference, I want to know the patient_id: `, patient_id)
+
+        // We want to run a test query using the patient_id
+        const {
+            data: retrievalByPatientId,
+            error: errorRetrievingByPatientId
+        } = await supabase
+            .from('appointments')
+            .select('*')
+            .eq('id', patient_id)
+            .single()
+
+        console.log(`Checking to see if we can get a patient bu the id in the returned payload of checking transaction instance: `,retrievalByPatientId)
+        
 
         const {
             data: updateInstance,
@@ -88,6 +109,7 @@ webhookRoute.post('/', async (req, res) => {
                         payment_status
                     })
                     .eq('patient_reference', reference)
+                    .single()
 
         if (updateError) return res.json({
             success: false,
