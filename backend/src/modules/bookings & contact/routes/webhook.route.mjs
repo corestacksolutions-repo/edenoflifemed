@@ -68,12 +68,15 @@ webhookRoute.post('/', async (req, res) => {
             message: `Patient transaction instance not found.`
         })
 
+        console.log(checkTransactionInstance)
+
         const newPaidAmount = (checkTransactionInstance.paid_amount || 0) + amount
         const totalAppointmentFee = checkTransactionInstance.appointment_fee || 4000
 
         const payment_status = newPaidAmount >= totalAppointmentFee ? "Paid" : "Partially Paid"
 
         const {
+            data: updateInstance,
             error: updateError
         } = await supabase
                     .from('appointments')
@@ -88,6 +91,8 @@ webhookRoute.post('/', async (req, res) => {
             success: false,
             message: `Error updating patient transaction instance`
         })
+
+        console.log(updateInstance)
 
         res.status(200).json({
             success: true,
