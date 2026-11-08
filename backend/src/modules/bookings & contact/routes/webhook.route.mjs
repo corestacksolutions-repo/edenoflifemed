@@ -68,12 +68,14 @@ webhookRoute.post('/', async (req, res) => {
             message: `Patient transaction instance not found.`
         })
 
-        console.log(checkTransactionInstance)
+        console.log(`This is from checking the transaction instance:`, checkTransactionInstance)
 
         const newPaidAmount = (checkTransactionInstance.paid_amount || 0) + amount
         const totalAppointmentFee = checkTransactionInstance.appointment_fee || 4000
 
         const payment_status = newPaidAmount >= totalAppointmentFee ? "Paid" : "Partially Paid"
+
+        const patient_id = checkTransactionInstance.id
 
         const {
             data: updateInstance,
@@ -92,7 +94,7 @@ webhookRoute.post('/', async (req, res) => {
             message: `Error updating patient transaction instance`
         })
 
-        console.log(updateInstance)
+        console.log(`This is data from the update instance: `, updateInstance)
 
         res.status(200).json({
             success: true,
