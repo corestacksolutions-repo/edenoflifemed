@@ -96,20 +96,20 @@ webhookRoute.post('/', async (req, res) => {
             .single()
 
         console.log(`Checking to see if we can get a patient bu the id in the returned payload of checking transaction instance: `,retrievalByPatientId)
-        
+
 
         const {
-            data: updateInstance,
-            error: updateError
-        } = await supabase
-                    .from('appointments')
-                    .select('*')
-                    .update({
-                        paid_amount: newPaidAmount,
-                        payment_status
-                    })
-                    .eq('patient_reference', reference)
-                    .single()
+        data: updateInstance,
+        error: updateError
+    } = await supabase
+        .from('appointments')
+        .update({
+            paid_amount: newPaidAmount,
+            payment_status
+        })
+        .eq('id', patient_id)
+        .select('*')
+        .single()
 
         if (updateError) return res.json({
             success: false,
