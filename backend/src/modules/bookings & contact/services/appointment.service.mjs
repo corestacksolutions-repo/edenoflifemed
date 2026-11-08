@@ -21,7 +21,7 @@ export const createAppointment = async ({
         country,
         date_time,
         notes,
-        appointment_fee: 4000
+        appointment_fee: 100
     }
 
     // We need logic to check date and time if they are in the present not past

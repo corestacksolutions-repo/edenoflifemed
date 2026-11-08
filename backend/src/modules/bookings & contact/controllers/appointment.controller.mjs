@@ -38,7 +38,7 @@ export const createAppointment = async (req, res, next) => {
         country,
         date_time,
         notes,
-        booking_fee: 4000
+        booking_fee: 100
     }
 
         const appointment = await appointmentService
