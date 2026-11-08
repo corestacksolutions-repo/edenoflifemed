@@ -111,6 +111,8 @@ webhookRoute.post('/', async (req, res) => {
         .select('*')
         .single()
 
+        console.log(`Reading the supabase update error: `, updateError)
+
         if (updateError) return res.json({
             success: false,
             message: `Error updating patient transaction instance`
